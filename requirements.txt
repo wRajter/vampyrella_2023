@@ -2,10 +2,10 @@
 
 
 # data science
-numpy
-pandas
-matplotlib
-seaborn
+numpy=1.24.1
+pandas=1.5.2
+matplotlib=3.6.2
+seaborn=0.12.2
 
 # tests/linter
 # black
