@@ -1,0 +1,21 @@
+# packaging
+
+
+# data science
+numpy
+pandas
+matplotlib
+seaborn
+
+# tests/linter
+# black
+# coverage
+# flake8
+# pytest
+
+# utilities
+# six>=1.14
+# joblib
+# memoized-property
+# termcolor
+# simple-term-menu
