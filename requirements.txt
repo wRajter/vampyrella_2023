@@ -8,6 +8,7 @@ matplotlib==3.6.2
 seaborn==0.12.2
 cutadapt==4.2
 conda
+bsub
 
 # tests/linter
 # black
