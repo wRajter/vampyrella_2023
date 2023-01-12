@@ -22,3 +22,6 @@ bsub
 # memoized-property
 # termcolor
 # simple-term-menu
+
+# bioinformatics tool
+sequana-fastqc

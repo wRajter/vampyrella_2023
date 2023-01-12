@@ -1,51 +1,33 @@
 #!/bin/bash -
-#
-# This shell script splits a multiple fasta file in individual fasta
-# files, each file is then pairwised aligned with a reference dataset
-# using vsearch. The best identity (in terms of percentage of
-# identity) is kept.
 
-# Variables
-DATA="../raw_data/stampa"
-DATABASE="../raw_data/stampa/reference.fas"
-INPUT_FILE="../raw_data/stampa/input.fas"
-THRESHOLD="10000"
-STAMPA_FOLDER="stampa_analysis"
-OUTPUT_PREFIX="fasta."
 
-## Verify the uniqueness of reference sequence names
-duplicates=$(grep "^>" "${DATABASE}" | cut -d " " -f 1 | sort -d | uniq -d)
-if [[ "${duplicates}" ]] ; then
-	echo -e "WARNING!\nThe reference database contains duplicated accession numbers\n${duplicates}\n" 1>&2
-fi
+# variables
+VSEARCH="../packages/vsearch-2.22.1/bin/vsearch"
+INPUT_FILE="../raw_data/reads/ASV/X17007_asv2.fasta"
+DATABASE="../raw_data/stampa/ref_test.fas"
+INDEX=$(printf "%05g\n" $(( $LSB_JOBINDEX - 1 )))
+QUERIES="fasta.${INDEX}"
+ASSIGNMENTS="${QUERIES/fasta./hits.}"
+IDENTITY="0.5"
+MAXREJECTS=32
+THREADS=16
+NULL="/dev/null"
 
-## Compute the number of jobs
-AMPLICON_NUMBER=$(grep -c "^>" "${INPUT_FILE}")
-echo "AMPLICON_NUMBER: ${AMPLICON_NUMBER}"
-if (( AMPLICON_NUMBER % THRESHOLD == 0 )) ; then
-	MAX=$((2 * AMPLICON_NUMBER / THRESHOLD))
-else
-	MAX=$((2 * AMPLICON_NUMBER / THRESHOLD + 1 ))
-fi
 
-## The upper limit to the number of amplicons is 10,000 * THRESHOLD / 2
-if [[ ${MAX} -gt 10000 ]] ; then
-	echo -e "Too many amplicons!\nChange the threshold value or further split your dataset." 1>&2
-	exit 1
-fi
+# compare environmental sequences to known reference sequences
+"${VSEARCH}" --usearch_global "${INPUT_FILE}" \
+    --dbmask none \
+    --qmask none \
+    --rowlen 0 \
+    --notrunclabels \
+    --userfields query+id1+target \
+    --maxaccepts 0 \
+    --maxrejects "${MAXREJECTS}" \
+    --top_hits_only \
+    --output_no_hits \
+    --db "${DATABASE}" \
+    --id "${IDENTITY}" \
+    --iddef 1 \
+    --userout "${ASSIGNMENTS}" > "${NULL}" 2> "${NULL}"
 
-## Remove old analysis and create a work folder
-if  [[ -d "${DATA}/${STAMPA_FOLDER}" ]] ; then
-	echo "Removing old stampa analysis." 1>&2
-	rm -rf "${DATA}/${STAMPA_FOLDER}/"
-fi
-mkdir "${DATA}/${STAMPA_FOLDER}"
-cd "${DATA}/${STAMPA_FOLDER}/"
-pwd
-ls
-
-## Split the input fasta file into chuncks (convert vsearch abundance-style to swarm style)
-split --numeric-suffixes \
-    --lines="${THRESHOLD}" \
-    --suffix-length=5 \
-    <(sed -e '/^>/ s/;size=/_/' -e '/^>/ s/;$//' "../input.fas") "${OUTPUT_PREFIX}"
+rm -f "${QUERIES}"
