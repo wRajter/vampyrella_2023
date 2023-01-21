@@ -7,23 +7,23 @@ NCORES=12
 F_PRIMER="CTGGTTGATYCTGCCAGT"
 R_PRIMER="TGATCCTTCTGCAGGTTCACCTAC"
 LEARN=1000000 # The number of reads to use when training the error model - recommended: 1000000
-CELL="cell2"
+CELL="cell1"
 MARKER="Full18S"
 PROJECT_FILE="/home/lubo/code/wRajter/vampyrella_2023"
 RAW_READS="${PROJECT_FILE}/raw_data/PacBio/Suthaus${MARKER}/${CELL}/"
 METADATA="${PROJECT_FILE}/raw_data/qiime_input/metadata_${MARKER}_${CELL}.tsv"
 MANIFEST="${PROJECT_FILE}/raw_data/qiime_input/PacBioCCSmanifest_${MARKER}_${CELL}.tsv"
 OUTPUT="${PROJECT_FILE}/raw_data/qiime_output"
-SAMPLES="A3_${MARKER}_${CELL} \
-         Mock_${MARKER}_${CELL} \
-         NH1_${MARKER}_${CELL} \
-         NH4_${MARKER}_${CELL} \
-         Sim17_${MARKER}_${CELL} \
-         Sim22_${MARKER}_${CELL} \
-         Th16_${MARKER}_${CELL} \
-         Th38_${MARKER}_${CELL} \
-         Th40_${MARKER}_${CELL} \
-         X17007_${MARKER}_${CELL}"
+SAMPLES="A3 \
+         Mock \
+         NH1 \
+         NH4 \
+         Sim17 \
+         Sim22 \
+         Th16 \
+         Th38 \
+         Th40 \
+         X17007"
 
 
 ##################################
@@ -141,7 +141,7 @@ do
   qiime feature-table filter-seqs \
     --i-data ${OUTPUT}/dada2_output/representative_sequences_${MARKER}_${CELL}_ALLSAMPLES.qza \
     --m-metadata-file ${OUTPUT}/dada2_output/transposed_table_${MARKER}_${CELL}.qza \
-    --p-where ${SAMPLE} \
+    --p-where ${SAMPLE}_${MARKER}_${CELL} \
     --o-filtered-data ${OUTPUT}/dada2_output/representative_sequences_${MARKER}_${CELL}_${SAMPLE}.qza
 
   qiime feature-table tabulate-seqs \
