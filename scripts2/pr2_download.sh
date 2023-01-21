@@ -8,16 +8,15 @@
 VERSION="4.14.0"
 URL="https://github.com/pr2database/pr2database/releases/download"
 SOURCE="pr2_version_${VERSION}_SSU_UTAX.fasta"
-LOCATION="../raw_data/stampa"
+LOCATION="../raw_data/pr2"
 
 wget -P ${LOCATION} "${URL}/v${VERSION}/${SOURCE}.gz"
 
 gunzip -k ${LOCATION}/${SOURCE}.gz
 
-# 2. extract the V4 region from the downloaded PR2 database
-
-PRIMER_F="CCAGCASCYGCGGTAATTCC"
-PRIMER_R="TYRATCAAGAACGAAAGT"
+# 2. extract the 18S from the downloaded PR2 database
+PRIMER_F="CTGGTTGATYCTGCCAGT"
+PRIMER_R="TGATCCTTCTGCAGGTTCACCTAC"
 OUTPUT="${SOURCE/_UTAX*/}_${PRIMER_F}_${PRIMER_R}.fas"
 LOG="${OUTPUT/.fas/.log}"
 MIN_LENGTH=32
