@@ -7,32 +7,35 @@
 
 
 # variables
-RAW_DATA="/home/lubomir/projects/vampyrella_2023/raw_data"
-REP_SEQS="${RAW_DATA}/qiime_output/individual_samples/dada2_output"
-OUTPUT="${REP_SEQS}/ASVs"
-TSV_FILES="${RAW_DATA}/qiime_output/individual_samples/assignment_results/tsv_files"
 TAXON="Vampyrellida"
-MARKER="18S"
-CELL="cell1"
+MARKER="Full18S"
+CELL="cell2"
+RAW_DATA="/home/lubo/code/wRajter/vampyrella_2023/raw_data"
+# local machine at uni: "/home/lubomir/projects/vampyrella_2023/raw_data"
+REP_SEQS="${RAW_DATA}/qiime_output/dada2_output"
+OUTPUT="${REP_SEQS}/ASVs"
+TSV_FILES="${RAW_DATA}/qiime_output/assignment_results/${MARKER}_${CELL}"
+SEQTK="${RAW_DATA}/packages/seqtk"
+SAMPLES="ALLSAMPLES \
+         A3 \
+         Mock \
+         NH1 \
+         NH4 \
+         Sim17 \
+         Sim22 \
+         Th16 \
+         Th38 \
+         Th40 \
+         X17007"
 
+for SAMPLE in ${SAMPLES}
+do
+    echo "Working on sample ${SAMPLE}"
+    qiime tools export \
+        --input-path ${REP_SEQS}/representative_sequences_${MARKER}_${CELL}_${SAMPLE}.qza \
+        --output-path ${OUTPUT}/
+    mv ${OUTPUT}/dna-sequences.fasta ${OUTPUT}/representative_sequences_${MARKER}_${CELL}_${SAMPLE}.fasta
 
-for SAMPLE in "A3_${MARKER}_${CELL}" \
-              "Mock_${MARKER}_${CELL}" \
-              "NH1_${MARKER}_${CELL}" \
-              "NH4_${MARKER}_${CELL}" \
-              "Sim17_${MARKER}_${CELL}" \
-              "Sim22_${MARKER}_${CELL}" \
-              "Th16_${MARKER}_${CELL}" \
-              "Th38_${MARKER}_${CELL}" \
-              "Th40_${MARKER}_${CELL}" \
-              "X17007_${MARKER}_${CELL}";
-    do
-        echo "Working on sample ${SAMPLE}"
-        qiime tools export \
-            --input-path ${REP_SEQS}/representative_sequences_${SAMPLE}.qza \
-            --output-path ${OUTPUT}/
-        mv ${OUTPUT}/dna-sequences.fasta ${OUTPUT}/asv_${SAMPLE}.fasta
-
-        grep "${TAXON}" ${TSV_FILES}/vsearch_taxonomy_${SAMPLE}.tsv | awk '{print $1}' > ${TSV_FILES}/vamp_ids_${SAMPLE}.txt
-        seqtk subseq ${OUTPUT}/asv_${SAMPLE}.fasta ${TSV_FILES}/vamp_ids_${SAMPLE}.txt > ${OUTPUT}/${TAXON}_${SAMPLE}.fasta
-    done
+    grep "${TAXON}" ${TSV_FILES}/taxonomy_${SAMPLE}.tsv | awk '{print $1}' > ${TSV_FILES}/vamp_ids_${MARKER}_${CELL}_${SAMPLE}.txt
+    ${SEQTK}/seqtk subseq ${OUTPUT}/representative_sequences_${MARKER}_${CELL}_${SAMPLE}.fasta ${TSV_FILES}/vamp_ids_${MARKER}_${CELL}_${SAMPLE}.txt > ${OUTPUT}/${TAXON}_${MARKER}_${CELL}_${SAMPLE}.fasta
+done
