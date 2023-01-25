@@ -99,7 +99,7 @@ fi
 # rearrange fields
 rm -f ${DADA2_DIR}/asv_stats_${MARKER}_${CELL}.tsv
 echo 'Rearranging columns in the final ASV stats table...'
-sed -e "s/\r//g" ${DADA2_DIR}/asv_stats_table.tsv | awk '{print $1"\t"$2"\t"$3"\t"$4"\t"$5"\t"$6"\t"$7"\t"$8"\t"$9"\t"$10"\t"$11"\t"$12"\t"$15"\t"$16"\t"$17"\t"$18"\t"$19"\t"$20"\t"$21"\t"$22"\t"$14"\t"$13}' > ${DADA2_DIR}/asv_summary_table${MARKER}_${CELL}.tsv
+sed -e "s/\r//g" ${DADA2_DIR}/asv_stats_table.tsv | awk '{print $1"\t"$2"\t"$3"\t"$4"\t"$5"\t"$6"\t"$7"\t"$8"\t"$9"\t"$10"\t"$11"\t"$12"\t"$15"\t"$16"\t"$17"\t"$18"\t"$19"\t"$20"\t"$21"\t"$22"\t"$14"\t"$13}' > ${DADA2_DIR}/asv_summary_table_${MARKER}_${CELL}.tsv
 
 rm -f ${DADA2_DIR}/asv_stats_table.tsv
 echo "Done. Your ASV stats table is saved as asv_stats_${MARKER}_${CELL}.tsv"
