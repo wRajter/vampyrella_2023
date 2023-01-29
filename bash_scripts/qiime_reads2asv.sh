@@ -3,11 +3,11 @@
 # Activate conda qiime2-2022.11 environment before running the script
 
 # Variables
-NCORES=12
+NCORES=6
 F_PRIMER="CTGGTTGATYCTGCCAGT"
 R_PRIMER="TGATCCTTCTGCAGGTTCACCTAC"
 LEARN=1000000 # The number of reads to use when training the error model - recommended: 1000000
-CELL="cell1"
+CELL="cellCombined"
 MARKER="Full18S"
 PROJECT_FILE="/home/lubo/code/wRajter/vampyrella_2023"
 RAW_READS="${PROJECT_FILE}/raw_data/PacBio/Suthaus${MARKER}/${CELL}/"

@@ -4,7 +4,8 @@
 # Merging cell1 and cell2 reads fastq files into cellCombined file
 
 # Variables
-PROJECT_DIR="/home/lubomir/projects/vampyrella_2023"
+PROJECT_DIR="/home/lubo/code/wRajter/vampyrella_2023"
+# local machine at uni: /home/lubomir/projects/vampyrella_2023
 FASTQ_DIR="${PROJECT_DIR}/raw_data/PacBio/SuthausFull18S"
 OUTPUT="${FASTQ_DIR}/cellCombined"
 FILES="A3_18S.hifi_reads.fastq.gz \
