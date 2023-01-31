@@ -5,7 +5,7 @@ library(ggtext)
 library(RColorBrewer)
 
 # VARIABLES
-cell <- 'cell2'
+cell <- 'cell1'
 marker <- 'Full18S'
 
 
@@ -33,7 +33,7 @@ taxonomy <- read_tsv(file = sprintf('asv_summary_table_%s_%s.tsv', marker, cell)
 
 # pick a taxon of interest if you want:
 spec_taxonomy <- taxonomy %>% 
-  filter(phyllum == 'Ciliophora')
+  filter(order == 'Vampyrellida')
 
 # use taxonomy or spec taxonomy if you want a specific taxonomic group 
 asv_rel_abund <-inner_join(asv_data, taxonomy, by='asv_id') %>% 
@@ -55,7 +55,7 @@ asv_rel_abund <- asv_rel_abund %>%
          taxon = str_replace_na(taxon, replacement = 'Unclassified')) 
 
 # create a relative abundance table for a taxon level of interest (taxon_level variable)
-taxon_level <- 'domain'
+taxon_level <- 'phyllum'
 
 
 taxon_rel_abund <- asv_rel_abund %>% 
@@ -65,20 +65,20 @@ taxon_rel_abund <- asv_rel_abund %>%
   replace(is.na(.), 0)
 
 taxon_rel_abund <- taxon_rel_abund %>% 
-  mutate(sample_place = case_when(sample_id == 'Mock' ~ 'Mock',
-                                  sample_id == 'NH1' ~ 'NH location',
-                                  sample_id == 'NH4' ~ 'NH location',
-                                  sample_id == 'Sim17' ~ 'Sim location',
-                                  sample_id == 'Sim22' ~ 'Sim location',
-                                  sample_id == 'Th16' ~ 'Th location',
-                                  sample_id == 'Th38' ~ 'Th location',
-                                  sample_id == 'Th40' ~ 'Th location',
+  mutate(sample_place = case_when(sample_id == 'Mock' ~ 'Mock<br>sample',
+                                  sample_id == 'NH1' ~ 'Neuenhähnen',
+                                  sample_id == 'NH4' ~ 'Neuenhähnen',
+                                  sample_id == 'Sim17' ~ 'Simmelried',
+                                  sample_id == 'Sim22' ~ 'Simmelried',
+                                  sample_id == 'Th16' ~ 'Thielenbruch',
+                                  sample_id == 'Th38' ~ 'Thielenbruch',
+                                  sample_id == 'Th40' ~ 'Thielenbruch',
                                   sample_id == 'A3' ~ 'Deep sea',
                                   sample_id == 'X17007' ~ 'Deep sea'))
 
 # pool the taxonomic groups under certain percentage abundance (perc_treshold) 
 # to reduce number of taxa
-perc_treshold <- 6
+perc_treshold <- 10
 
 taxon_pool <- taxon_rel_abund %>%
   group_by(sample_id, taxon) %>%
@@ -108,7 +108,8 @@ inner_join(taxon_rel_abund, taxon_pool, by = 'taxon')  %>%
   theme_classic() +
   theme(legend.title = element_blank(),
         legend.key.size = unit(12, 'pt'),
-        strip.background = element_blank()) +
+        strip.background = element_blank(),
+        strip.text.x = ggtext::element_markdown()) +
   scale_fill_brewer(palette = "Paired")
 
 ggsave(sprintf('stacked_bar_%s_%s_%s.tiff', marker, cell, taxon_level), width=7, height=5)
