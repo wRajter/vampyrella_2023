@@ -13,7 +13,7 @@
 
 
 # Variables:
-CELL="cell1"
+CELL="cellCombined"
 MARKER="Full18S"
 PROJECT_DIR="/home/lubo/code/wRajter/vampyrella_2023"
 #for local machine at uni: "/home/lubomir/projects/vampyrella_2023"

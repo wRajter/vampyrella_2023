@@ -9,7 +9,7 @@
 # variables
 TAXON="Vampyrellida"
 MARKER="Full18S"
-CELL="cell1"
+CELL="cellCombined"
 RAW_DATA="/home/lubo/code/wRajter/vampyrella_2023/raw_data"
 # local machine at uni: "/home/lubomir/projects/vampyrella_2023/raw_data"
 REP_SEQS="${RAW_DATA}/qiime_output/dada2_output"

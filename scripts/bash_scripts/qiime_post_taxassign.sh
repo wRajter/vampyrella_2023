@@ -5,7 +5,7 @@
 # Variables
 PROJECT_DIR="/home/lubo/code/wRajter/vampyrella_2023"
 ASSIGNMENT_DIR="${PROJECT_DIR}/raw_data/qiime_output/assignment_results"
-CELL="cell1"
+CELL="cellCombined"
 MARKER="Full18S"
 SAMPLES="ALLSAMPLES \
          A3 \
