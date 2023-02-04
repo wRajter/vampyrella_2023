@@ -12,8 +12,8 @@ MARKER="Full18S"
 CELL="cellCombined"
 RAW_DATA="/home/lubo/code/wRajter/vampyrella_2023/raw_data"
 # local machine at uni: "/home/lubomir/projects/vampyrella_2023/raw_data"
-REP_SEQS="${RAW_DATA}/qiime_output/dada2_output"
-OUTPUT="${REP_SEQS}/ASVs"
+REP_SEQS="${RAW_DATA}/qiime_output/dada2_post_denoise"
+OUTPUT="${REP_SEQS}/fasta"
 TSV_FILES="${RAW_DATA}/qiime_output/assignment_results/${MARKER}_${CELL}"
 SEQTK="${RAW_DATA}/packages/seqtk"
 SAMPLES="ALLSAMPLES \
@@ -31,11 +31,7 @@ SAMPLES="ALLSAMPLES \
 for SAMPLE in ${SAMPLES}
 do
     echo "Working on sample ${SAMPLE}"
-    qiime tools export \
-        --input-path ${REP_SEQS}/representative_sequences_${MARKER}_${CELL}_${SAMPLE}.qza \
-        --output-path ${OUTPUT}/
-    mv ${OUTPUT}/dna-sequences.fasta ${OUTPUT}/representative_sequences_${MARKER}_${CELL}_${SAMPLE}.fasta
 
     grep "${TAXON}" ${TSV_FILES}/taxonomy_${SAMPLE}.tsv | awk '{print $1}' > ${TSV_FILES}/vamp_ids_${MARKER}_${CELL}_${SAMPLE}.txt
-    ${SEQTK}/seqtk subseq ${OUTPUT}/representative_sequences_${MARKER}_${CELL}_${SAMPLE}.fasta ${TSV_FILES}/vamp_ids_${MARKER}_${CELL}_${SAMPLE}.txt > ${OUTPUT}/${TAXON}_${MARKER}_${CELL}_${SAMPLE}.fasta
+    ${SEQTK}/seqtk subseq ${OUTPUT}/asv_${MARKER}_${CELL}_${SAMPLE}.fasta ${TSV_FILES}/vamp_ids_${MARKER}_${CELL}_${SAMPLE}.txt > ${OUTPUT}/${TAXON}_${MARKER}_${CELL}_${SAMPLE}.fasta
 done
