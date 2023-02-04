@@ -11,7 +11,6 @@ CELL="cellCombined"
 MARKER="Full18S"
 PROJECT_FILE="/home/lubo/code/wRajter/vampyrella_2023"
 RAW_READS="${PROJECT_FILE}/raw_data/PacBio/Suthaus${MARKER}/${CELL}/"
-METADATA="${PROJECT_FILE}/raw_data/qiime_input/metadata_${MARKER}_${CELL}.tsv"
 MANIFEST="${PROJECT_FILE}/raw_data/qiime_input/PacBioCCSmanifest_${MARKER}_${CELL}.tsv"
 OUTPUT="${PROJECT_FILE}/raw_data/qiime_output"
 SAMPLES="A3 \
@@ -31,19 +30,8 @@ SAMPLES="A3 \
 ##################################
 
 
-# 1. Transforming the metadata text file to the qiime artifact file
 
-mkdir -p ${OUTPUT}/metadata_qzv
-rm -f ${OUTPUT}/metadata_qzv/tabulated_metadata_${MARKER}_${CELL}.qzv
-
-echo "transforming the metadata_${MARKER}_${CELL}.tsv file into the qiime QZV artifact file"
-qiime metadata tabulate \
-  --m-input-file ${METADATA} \
-  --o-visualization ${OUTPUT}/metadata_qzv/tabulated_metadata_${MARKER}_${CELL}.qzv
-
-
-
-# 2. Importing FASTQs as QIIME2 artifact
+# 1. Importing FASTQs as QIIME2 artifact
 mkdir -p ${OUTPUT}/reads_qza
 rm -f ${OUTPUT}/reads_qza/raw_reads_${MARKER}_${CELL}.qza
 rm -f ${OUTPUT}/reads_qza/raw_reads_summary_${MARKER}_${CELL}.qzv
@@ -55,7 +43,7 @@ qiime tools import \
     --output-path ${OUTPUT}/reads_qza/raw_reads_${MARKER}_${CELL}.qza \
     --input-format SingleEndFastqManifestPhred33V2
 
-# 3. Creating reads summary file
+# 2. Creating reads summary file
 echo "Creating ${MARKER} ${CELL} reads summary file"
 qiime demux summarize \
    --i-data ${OUTPUT}/reads_qza/raw_reads_${MARKER}_${CELL}.qza \
@@ -67,9 +55,9 @@ qiime demux summarize \
 # ## DENOISING THE READS INTO AMPLICON SEQUENCE VARIANT ##
 # ########################################################
 
-# 4. Running DADA2
-mkdir -p ${OUTPUT}/dada2_output
-rm -f ${OUTPUT}/dada2_output/*_${MARKER}_${CELL}.gz*
+# 3. Running DADA2
+mkdir -p ${OUTPUT}/dada2_denoise
+rm -f ${OUTPUT}/dada2_denoise/*_${MARKER}_${CELL}.gz*
 
 echo "denoising ${MARKER} ${CELL} reads and creating ASVs using DADA2"
 qiime dada2 denoise-ccs --i-demultiplexed-seqs ${OUTPUT}/reads_qza/raw_reads_${MARKER}_${CELL}.qza \
@@ -77,37 +65,44 @@ qiime dada2 denoise-ccs --i-demultiplexed-seqs ${OUTPUT}/reads_qza/raw_reads_${M
  --p-min-len 800 --p-max-len 3000 \
  --p-n-threads ${NCORES} \
  --p-front ${F_PRIMER} --p-adapter ${R_PRIMER} \
- --o-table ${OUTPUT}/dada2_output/table_${MARKER}_${CELL}.qza \
- --o-representative-sequences ${OUTPUT}/dada2_output/representative_sequences_${MARKER}_${CELL}_ALLSAMPLES.qza \
- --o-denoising-stats ${OUTPUT}/dada2_output/stats_${MARKER}_${CELL}.qza \
+ --o-table ${OUTPUT}/dada2_denoise/table_${MARKER}_${CELL}_ALLSAMPLES.qza \
+ --o-representative-sequences ${OUTPUT}/dada2_denoise/asv_${MARKER}_${CELL}_ALLSAMPLES.qza \
+ --o-denoising-stats ${OUTPUT}/dada2_denoise/stats_${MARKER}_${CELL}_ALLSAMPLES.qza \
  --verbose
 
 
-# 5. Summarizing DADA2 output
+###################
+## POST DENOISE  ##
+###################
+
+mkdir -p ${OUTPUT}/dada2_post_denoise
+rm -f ${OUTPUT}/dada2_post_denoise/*_${MARKER}_${CELL}.gz*
+
+# 4. Summarizing DADA2 output
 echo "creating ${MARKER} ${CELL} ASVs summary"
 
 qiime feature-table summarize \
- --i-table ${OUTPUT}/dada2_output/table_${MARKER}_${CELL}.qza \
- --o-visualization ${OUTPUT}/dada2_output/dada2_table_summary_${MARKER}_${CELL}.qzv
+ --i-table ${OUTPUT}/dada2_denoise/table_${MARKER}_${CELL}_ALLSAMPLES.qza \
+ --o-visualization ${OUTPUT}/dada2_post_denoise/dada2_table_summary_${MARKER}_${CELL}_ALLSAMPLES.qzv
 
-# 6. Visualization of the representative sequences
+# 5. Visualization of the representative sequences
 echo "creating ${MARKER} ${CELL} ASVs visualization"
 
 qiime feature-table tabulate-seqs \
-  --i-data ${OUTPUT}/dada2_output/representative_sequences_${MARKER}_${CELL}_ALLSAMPLES.qza \
-  --o-visualization ${OUTPUT}/dada2_output/representative_sequences_${MARKER}_${CELL}_ALLSAMPLES.qzv
+  --i-data ${OUTPUT}/dada2_denoise/asv_${MARKER}_${CELL}_ALLSAMPLES.qza \
+  --o-visualization ${OUTPUT}/dada2_post_denoise/asv_${MARKER}_${CELL}_ALLSAMPLES.qzv
 
-# 7 Convert ASV sequences from qza to fasta format
+# 6. Convert ASV sequences from qza to fasta format
 echo "Converting the ${MARKER} ${CELL} ASVs qza file to fasta file"
 
-mkdir -p ${OUTPUT}/ASV
-rm -f ${OUTPUT}/ASV/representative_sequences_${MARKER}_${CELL}_ALLSAMPLES.fasta
+mkdir -p ${OUTPUT}/dada2_denoise/fasta
+rm -f ${OUTPUT}/dada2_post_denoise/fasta/asv_${MARKER}_${CELL}_ALLSAMPLES.fasta
 
 qiime tools export \
-  --input-path ${OUTPUT}/dada2_output/representative_sequences_${MARKER}_${CELL}_ALLSAMPLES.qza \
-  --output-path ${OUTPUT}/ASV/
+  --input-path ${OUTPUT}/dada2_denoise/asv_${MARKER}_${CELL}_ALLSAMPLES.qza \
+  --output-path ${OUTPUT}/dada2_post_denoise/fasta/
 
-mv ${OUTPUT}/ASV/dna-sequences.fasta ${OUTPUT}/ASV/representative_sequences_${MARKER}_${CELL}_ALLSAMPLES.fasta
+mv ${OUTPUT}/dada2_post_denoise/fasta/dna-sequences.fasta ${OUTPUT}/dada2_post_denoise/fasta/asv_${MARKER}_${CELL}_ALLSAMPLES.fasta
 
 
 ########################################################
@@ -117,43 +112,44 @@ mv ${OUTPUT}/ASV/dna-sequences.fasta ${OUTPUT}/ASV/representative_sequences_${MA
 # Getting a fasta file with the representative sequences for each sample
 
 
-# 8. Transposing the table (this will flip the sample and feature axes, necessary for the next step).
-rm -f ${OUTPUT}/dada2_output/transposed_table_${MARKER}_${CELL}.qz*
+# 7. Transposing the table (this will flip the sample and feature axes, necessary for the next step).
+rm -f ${OUTPUT}/dada2_post_denoise/transposed_table_${MARKER}_${CELL}_ALLSAMPLES.qz*
 
 echo "Transposing the ${MARKER} ${CELL} table"
 qiime feature-table transpose \
-  --i-table ${OUTPUT}/dada2_output/table_${MARKER}_${CELL}.qza \
-  --o-transposed-feature-table ${OUTPUT}/dada2_output/transposed_table_${MARKER}_${CELL}.qza
+  --i-table ${OUTPUT}/dada2_denoise/table_${MARKER}_${CELL}_ALLSAMPLES.qza \
+  --o-transposed-feature-table ${OUTPUT}/dada2_post_denoise/transposed_table_${MARKER}_${CELL}_ALLSAMPLES.qza
 
 qiime metadata tabulate \
-  --m-input-file ${OUTPUT}/dada2_output/transposed_table_${MARKER}_${CELL}.qza \
-  --o-visualization ${OUTPUT}/dada2_output/transposed_table_${MARKER}_${CELL}.qzv
+  --m-input-file ${OUTPUT}/dada2_post_denoise/transposed_table_${MARKER}_${CELL}_ALLSAMPLES.qza \
+  --o-visualization ${OUTPUT}/dada2_post_denoise/transposed_table_${MARKER}_${CELL}_ALLSAMPLES.qzv
 
 
-# 9. Using the transposed as feature metadata, and keep only the features found in samples 1L or 2L:
+# 8. Using the transposed table as feature metadata, and keep only the ASVs found in individual samples.
 
 for SAMPLE in ${SAMPLES}
 do
-  rm -f representative_sequences_${MARKER}_${CELL}_${SAMPLE}.qzv
-  mkdir -p ${OUTPUT}/ASV
-  rm -f ${OUTPUT}/dada2_output/ASV/representative_sequences_${MARKER}_${CELL}_${SAMPLE}.fasta
+  rm -f ${OUTPUT}/dada2_post_denoise/asv_${MARKER}_${CELL}_${SAMPLE}.qz*
+  rm -f ${OUTPUT}/dada2_post_denoise/table_${MARKER}_${CELL}_${SAMPLE}.qza
+  rm -f ${OUTPUT}/dada2_post_denoise/fasta/asv_${MARKER}_${CELL}_${SAMPLE}.fasta
 
+  # filter asv sequence table
   qiime feature-table filter-seqs \
-    --i-data ${OUTPUT}/dada2_output/representative_sequences_${MARKER}_${CELL}_ALLSAMPLES.qza \
-    --m-metadata-file ${OUTPUT}/dada2_output/transposed_table_${MARKER}_${CELL}.qza \
+    --i-data ${OUTPUT}/dada2_denoise/asv_${MARKER}_${CELL}_ALLSAMPLES.qza \
+    --m-metadata-file ${OUTPUT}/dada2_post_denoise/transposed_table_${MARKER}_${CELL}_ALLSAMPLES.qza \
     --p-where ${SAMPLE}_${MARKER}_${CELL} \
-    --o-filtered-data ${OUTPUT}/dada2_output/representative_sequences_${MARKER}_${CELL}_${SAMPLE}.qza
+    --o-filtered-data ${OUTPUT}/dada2_post_denoise/asv_${MARKER}_${CELL}_${SAMPLE}.qza
 
   qiime feature-table tabulate-seqs \
-    --i-data ${OUTPUT}/dada2_output/representative_sequences_${MARKER}_${CELL}_${SAMPLE}.qza \
-    --o-visualization ${OUTPUT}/dada2_output/representative_sequences_${MARKER}_${CELL}_${SAMPLE}.qzv
+    --i-data ${OUTPUT}/dada2_post_denoise/asv_${MARKER}_${CELL}_${SAMPLE}.qza \
+    --o-visualization ${OUTPUT}/dada2_post_denoise/asv_${MARKER}_${CELL}_${SAMPLE}.qzv
 
-  # 10 Convert ASV sequences from qza to fasta format
+  # 9 Convert ASV sequences from qza to fasta format
   echo "Converting the ${MARKER} ${CELL} ${SAMPLE} ASVs qza file to fasta file"
 
   qiime tools export \
-    --input-path ${OUTPUT}/dada2_output/representative_sequences_${MARKER}_${CELL}_${SAMPLE}.qza \
-    --output-path ${OUTPUT}/ASV/
+    --input-path ${OUTPUT}/dada2_post_denoise/asv_${MARKER}_${CELL}_${SAMPLE}.qza \
+    --output-path ${OUTPUT}/dada2_post_denoise/fasta/
 
-  mv ${OUTPUT}/ASV/dna-sequences.fasta ${OUTPUT}/ASV/representative_sequences_${MARKER}_${CELL}_${SAMPLE}.fasta
+  mv ${OUTPUT}/dada2_post_denoise/fasta/dna-sequences.fasta ${OUTPUT}/dada2_post_denoise/fasta/asv_${MARKER}_${CELL}_${SAMPLE}.fasta
 done

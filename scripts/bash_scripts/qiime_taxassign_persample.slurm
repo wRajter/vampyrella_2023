@@ -29,7 +29,7 @@ conda activate qiime2-2022.2
 for SAMPLE in ${SAMPLES}
 do
   qiime feature-classifier classify-consensus-vsearch \
-    --i-query representative_sequences_${MARKER}_${CELL}_${SAMPLE}.qza \
+    --i-query asv_${MARKER}_${CELL}_${SAMPLE}.qza \
     --i-reference-reads ref_sequences.qza \
     --i-reference-taxonomy ref_taxonomy.qza \
     --o-classification vsearch_taxonomy_${MARKER}_${CELL}_${SAMPLE}.qza \

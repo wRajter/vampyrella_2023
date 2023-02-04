@@ -17,7 +17,7 @@ source /home/lrajter/miniconda3/etc/profile.d/conda.sh
 conda activate qiime2-2022.2
 
 qiime feature-classifier classify-consensus-vsearch \
-  --i-query representative_sequences_${MARKER}_${CELL}_ALLSAMPLES.qza \
+  --i-query asv_${MARKER}_${CELL}_ALLSAMPLES.qza \
   --i-reference-reads ref_sequences.qza \
   --i-reference-taxonomy ref_taxonomy.qza \
   --o-classification vsearch_taxonomy_${MARKER}_${CELL}_ALLSAMPLES.qza \
