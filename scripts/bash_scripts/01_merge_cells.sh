@@ -4,9 +4,8 @@
 # Merging cell1 and cell2 reads fastq files into cellCombined file
 
 # Variables
-PROJECT_DIR="/home/lubo/code/wRajter/vampyrella_2023"
-# local machine at uni: /home/lubomir/projects/vampyrella_2023
-FASTQ_DIR="${PROJECT_DIR}/raw_data/PacBio/SuthausFull18S"
+RAW_DATA="../../raw_data"
+FASTQ_DIR="${RAW_DATA}/PacBio/SuthausFull18S"
 OUTPUT="${FASTQ_DIR}/cellCombined"
 FILES="A3_18S.hifi_reads.fastq.gz \
        Mock_18S.hifi_reads.fastq.gz \
@@ -19,9 +18,11 @@ FILES="A3_18S.hifi_reads.fastq.gz \
        Th40_18S.hifi_reads.fastq.gz \
        X17007_18S.hifi_reads.fastq.gz"
 
+# Cleaning
 rm -rf ${OUTPUT}/
 mkdir -p ${OUTPUT}
 
+# Merging cells
 for FILE in ${FILES}
 do
     cat ${FASTQ_DIR}/cell1/${FILE} ${FASTQ_DIR}/cell2/${FILE} > ${OUTPUT}/${FILE}
