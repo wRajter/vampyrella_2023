@@ -12,14 +12,6 @@ OTU_CLUST_DIR="${RAW_DATA}/OTU_clust/${MARKER}/${CELL}/${SIM}"
 TAX_ASSIGN_DIR="${RAW_DATA}/tax_assign_results/${MARKER}/${CELL}/${SIM}"
 FILT_OTU_DIR="${RAW_DATA}/OTU_filtered/${MARKER}/${CELL}/${SIM}"
 
-# DADA2_OUT="${RAW_DATA}/qiime_output/dada2_output"
-# TAX_ASSIGN_DIR="${RAW_DATA}/qiime_output/assignment_results/${MARKER}_${CELL}"
-# FIL_ASSIGN_OUT="${RAW_DATA}/filt_assign_output/${MARKER}/${CELL}"
-
-# MIN_FREQ_THRESHOLD=13
-# MAX_DEPTH=31807
-# SEQ_DEPTH_CUTOFF=50
-
 
 ##########################
 ## FILTER OUT RARE OTUs ##
@@ -164,3 +156,13 @@ mv ${FILT_OTU_DIR}/dna-sequences.fasta \
 qiime feature-table summarize \
    --i-table ${FILT_OTU_DIR}/otu_table_filtered.qza  \
    --o-visualization ${FILT_OTU_DIR}/table_filtered_summary.qzv
+
+# Create log file with parameters used in the analyses
+echo "Custome parameters used:
+      Minimal OTU frequency threshold: ${MIN_FREQ_THRESHOLD}
+      Maximal sequencing depth: ${MAX_DEPTH}" > ${FILT_OTU_DIR}/params.log
+
+if [ -n "${SEQ_DEPTH_CUTOFF}" ]
+then
+  echo "Sequence depth cut-off: ${SEQ_DEPTH_CUTOFF}" >> ${FILT_OTU_DIR}/params.log
+fi
