@@ -1,0 +1,21 @@
+1. Details on parameters for the tax_assign_08_otu_filt.sh script
+
+Step: Filtering out rare OTUs
+
+Minimal frequency threshold parameter:
+To calculate the cut-off for excluding rare OTUs, I use the mean sample depth.
+This number could be find in the otu_table_summarize.qzv table, which was created running the qiime_cluster2otu.sh script.
+Then, I multiply the mean sample depth by 0.001, and round to the nearest integer.
+This represents the min frequency threshold.
+
+Step: Rarefaction curves
+
+Maximum sequencing depth parameter:
+Before creating rarefaction curves, we created the summarize table: table_filt_contam_summary.
+From this summary table, we can determine the maximum depth across your samples: the maximum sample total frequency.
+This number will be used as a threshold in the next step (--p-max-depth parameter).
+
+Excluding sample(s) with based on the sequencing depth:
+After creating the rarefaction_curves.qzv file, we can examine the rarefication curves.
+If we want to exclude some sample(s) with poor sequencing depth, we can decide on a minimum depth cut-off.
+Alternatively, proceed without exluding samples based on the sequencing depth if you want to retain all the samples.
