@@ -16,7 +16,6 @@ SAMPLES=$(ls ${RAW_READS_DIR}/*reads.fastq.gz | \
           awk -F '_' '{ print $1 }')
 
 
-
 ####################################
 ## FILTERING OTUs FOR EACH SAMPLE ##
 ####################################
@@ -69,5 +68,5 @@ do
      ${PER_SAMPLE_DIR}/fasta/otu_seqs_filtered_${SAMPLE}.fasta
 done
 
-# cleaning
+# Cleaning
 rm -f ${PER_SAMPLE_DIR}/transposed_table.qz*
