@@ -5,7 +5,7 @@
 
 # Variables
 MARKER="Full18S"
-CELL="cellCombined"
+CELL="cell2"
 THRESHOLD=0.99
 SIM="sim99"
 RAW_DATA="../../raw_data"

@@ -6,7 +6,7 @@
 # Variables:
 CELL="cellCombined"
 MARKER="Full18S"
-SIM="sim97"
+SIM="sim99"
 RAW_DATA="../../raw_data"
 PER_SAMPLE_DIR="${RAW_DATA}/per_sample_results/${MARKER}/${CELL}/${SIM}"
 FILT_OTU_DIR="${RAW_DATA}/OTU_filtered/${MARKER}/${CELL}/${SIM}"

@@ -6,7 +6,7 @@
 # Variables:
 CELL="cellCombined"
 MARKER="Full18S"
-SIM="sim97"
+SIM="sim99"
 RAW_DATA="../../raw_data"
 OTU_CLUST_DIR="${RAW_DATA}/OTU_clust/${MARKER}/${CELL}/${SIM}"
 TAX_ASSIGN_DIR="${RAW_DATA}/tax_assign_results/${MARKER}/${CELL}/${SIM}"
@@ -158,6 +158,8 @@ qiime feature-table summarize \
    --o-visualization ${FILT_OTU_DIR}/table_filtered_summary.qzv
 
 # Create log file with parameters used in the analyses
+rm -f ${FILT_OTU_DIR}/params.log
+
 echo "Custome parameters used:
       Minimal OTU frequency threshold: ${MIN_FREQ_THRESHOLD}
       Maximal sequencing depth: ${MAX_DEPTH}" > ${FILT_OTU_DIR}/params.log

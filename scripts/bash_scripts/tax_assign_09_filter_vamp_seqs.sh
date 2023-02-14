@@ -10,7 +10,7 @@
 TAXON="Vampyrellida"
 MARKER="Full18S"
 CELL="cellCombined"
-SIM="sim97"
+SIM="sim99"
 RAW_DATA="../../raw_data"
 RAW_READS_DIR="${RAW_DATA}/PacBio/Suthaus${MARKER}/${CELL}"
 SUMMARY_TABLE="${RAW_DATA}/OTU_summary_tables/otu_summary_table_${MARKER}_${CELL}_${SIM}.tsv"
