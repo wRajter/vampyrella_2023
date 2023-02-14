@@ -12,7 +12,7 @@
 # Variables:
 CELL="cellCombined"
 MARKER="Full18S"
-SIM="sim97"
+SIM="sim99"
 RAW_DATA="../../raw_data"
 FILT_OTU_DIR="${RAW_DATA}/OTU_filtered/${MARKER}/${CELL}/${SIM}"
 OTU_SUMMARY_DIR="${RAW_DATA}/OTU_summary_tables"

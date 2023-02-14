@@ -4,7 +4,7 @@ Step: Filtering out rare OTUs
 
 Minimal frequency threshold parameter:
 To calculate the cut-off for excluding rare OTUs, I use the mean sample depth.
-This number could be find in the otu_table_summarize.qzv table, which was created running the qiime_cluster2otu.sh script.
+This number could be find in the otu_table_summarize.qzv table, which was created running the tax_assign_04_cluster_otu.sh script.
 Then, I multiply the mean sample depth by 0.001, and round to the nearest integer.
 This represents the min frequency threshold.
 
