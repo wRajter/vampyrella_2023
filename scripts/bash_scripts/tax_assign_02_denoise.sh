@@ -7,7 +7,7 @@ NCORES=8
 F_PRIMER="CTGGTTGATYCTGCCAGT"
 R_PRIMER="TGATCCTTCTGCAGGTTCACCTAC"
 LEARN=1000000 # The number of reads to use when training the error model - recommended: 1000000
-CELL="cell2"
+CELL="cellCombined"
 MARKER="Full18S"
 RAW_DATA="../../raw_data"
 PACBIO_READS="${RAW_DATA}/PacBio/Suthaus${MARKER}/${CELL}"
@@ -72,8 +72,9 @@ qiime dada2 denoise-ccs --i-demultiplexed-seqs ${READS_GZA_DIR}/raw_reads.qza \
 ## POST DENOISE  ##
 ###################
 
-# Cleaning
+Cleaning
 rm -f ${DENOISE_DIR}/asv_stats.qzv \
+      ${DENOISE_DIR}/asv_stats.tsv \
       ${DENOISE_DIR}/asv_table.qzv \
       ${DENOISE_DIR}/asv_seqs.qzv \
       ${DENOISE_DIR}/asv_seqs.fasta
@@ -86,6 +87,10 @@ qiime metadata tabulate \
   --m-input-file ${DENOISE_DIR}/asv_stats.qza \
   --o-visualization ${DENOISE_DIR}/asv_stats.qzv
 
+qiime tools export \
+  --input-path ${DENOISE_DIR}/asv_stats.qza \
+  --output-path ${DENOISE_DIR}/
+mv ${DENOISE_DIR}/stats.tsv ${DENOISE_DIR}/asv_stats.tsv
 
 # Summarizing DADA2 output
 echo "Creating ASVs summary..."
