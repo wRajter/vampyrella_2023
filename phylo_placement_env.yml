@@ -1,0 +1,8 @@
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  - raxml-ng=1.1.0
+  - epa-ng=0.3.8
+  - krona=2.8.1
