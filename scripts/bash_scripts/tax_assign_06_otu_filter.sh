@@ -24,17 +24,35 @@ echo "Filtering out rare OTUs..."
 
 # Cleaning
 mkdir -p ${FILT_OTU_DIR}/
-rm -f ${FILT_OTU_DIR}/table_filt.qza
+rm -f ${FILT_OTU_DIR}/table_rarefilt.biom \
+      ${FILT_OTU_DIR}/table_rarefilt.qza \
+      ${FILT_OTU_DIR}/table_rarefilt.qza \
+      ${FILT_OTU_DIR}/table_filt.qza
 
 # Filtering out rare OTUs
 
-read -p "Enter minimal OTU frequency threshold (more details in help.txt): " MIN_FREQ_THRESHOLD
+# read -p "Enter minimal OTU frequency threshold (more details in help.txt): " MIN_FREQ_THRESHOLD
 
-qiime feature-table filter-features \
-   --i-table ${OTU_CLUST_DIR}/otu_table.qza \
-   --p-min-frequency ${MIN_FREQ_THRESHOLD} \
-   --p-min-samples 1 \
-   --o-filtered-table ${FILT_OTU_DIR}/table_filt.qza
+# qiime feature-table filter-features \
+#    --i-table ${OTU_CLUST_DIR}/otu_table.qza \
+#    --p-min-frequency ${MIN_FREQ_THRESHOLD} \
+#   #  --p-min-samples 1 \
+#    --o-filtered-table ${FILT_OTU_DIR}/table_filt.qza
+
+
+# Creating the feature-table.biom file
+biom convert -i ${FILT_OTU_DIR}/table_rarefilt.tsv \
+             -o ${FILT_OTU_DIR}/table_rarefilt.biom \
+             --to-json \
+             --table-type="OTU table"
+
+# Creating the feature-table.qza file
+qiime tools import \
+  --input-path ${FILT_OTU_DIR}/table_rarefilt.biom \
+  --type 'FeatureTable[Frequency]' \
+  --input-format BIOMV100Format \
+  --output-path ${FILT_OTU_DIR}/table_filt.qza
+
 
 
 ##################################################
@@ -119,52 +137,52 @@ else
 fi
 
 
-#########################################
-## SUBSET AND SUMMARIZE FILTERED TABLE ##
-#########################################
+# #########################################
+# ## SUBSET AND SUMMARIZE FILTERED TABLE ##
+# #########################################
 
-# Now that we have our final filtered table,
-# we will need to subset the QZA of OTU sequences to the same set.
+# # Now that we have our final filtered table,
+# # we will need to subset the QZA of OTU sequences to the same set.
 
-echo "Subsetting the OTU sequences based the filtered table..."
+# echo "Subsetting the OTU sequences based the filtered table..."
 
-# Cleaning
-rm -f ${FILT_OTU_DIR}/otu_seqs_filtered.qza \
-      ${FILT_OTU_DIR}/otu_seqs_filtered.qzv \
-      ${FILT_OTU_DIR}/otu_seqs_filtered.fasta \
-      ${FILT_OTU_DIR}/table_filtered_summary.qzv
+# # Cleaning
+# rm -f ${FILT_OTU_DIR}/otu_seqs_filtered.qza \
+#       ${FILT_OTU_DIR}/otu_seqs_filtered.qzv \
+#       ${FILT_OTU_DIR}/otu_seqs_filtered.fasta \
+#       ${FILT_OTU_DIR}/table_filtered_summary.qzv
 
 
-# Subsetting
-qiime feature-table filter-seqs \
-   --i-data ${OTU_CLUST_DIR}/otu_seqs.qza \
-   --i-table ${FILT_OTU_DIR}/otu_table_filtered.qza \
-   --o-filtered-data ${FILT_OTU_DIR}/otu_seqs_filtered.qza
+# # Subsetting
+# qiime feature-table filter-seqs \
+#    --i-data ${OTU_CLUST_DIR}/otu_seqs.qza \
+#    --i-table ${FILT_OTU_DIR}/otu_table_filtered.qza \
+#    --o-filtered-data ${FILT_OTU_DIR}/otu_seqs_filtered.qza
 
-qiime feature-table tabulate-seqs \
-    --i-data ${FILT_OTU_DIR}/otu_seqs_filtered.qza \
-    --o-visualization ${FILT_OTU_DIR}/otu_seqs_filtered.qzv
+# qiime feature-table tabulate-seqs \
+#     --i-data ${FILT_OTU_DIR}/otu_seqs_filtered.qza \
+#     --o-visualization ${FILT_OTU_DIR}/otu_seqs_filtered.qzv
 
-qiime tools export \
-  --input-path ${FILT_OTU_DIR}/otu_seqs_filtered.qza \
-  --output-path ${FILT_OTU_DIR}/
+# qiime tools export \
+#   --input-path ${FILT_OTU_DIR}/otu_seqs_filtered.qza \
+#   --output-path ${FILT_OTU_DIR}/
 
-mv ${FILT_OTU_DIR}/dna-sequences.fasta \
-   ${FILT_OTU_DIR}/otu_seqs_filtered.fasta
+# mv ${FILT_OTU_DIR}/dna-sequences.fasta \
+#    ${FILT_OTU_DIR}/otu_seqs_filtered.fasta
 
-# Creating final summary table for filtered OTUs
-qiime feature-table summarize \
-   --i-table ${FILT_OTU_DIR}/otu_table_filtered.qza  \
-   --o-visualization ${FILT_OTU_DIR}/table_filtered_summary.qzv
+# # Creating final summary table for filtered OTUs
+# qiime feature-table summarize \
+#    --i-table ${FILT_OTU_DIR}/otu_table_filtered.qza  \
+#    --o-visualization ${FILT_OTU_DIR}/table_filtered_summary.qzv
 
-# Create log file with parameters used in the analyses
-rm -f ${FILT_OTU_DIR}/params.log
+# # Create log file with parameters used in the analyses
+# rm -f ${FILT_OTU_DIR}/params.log
 
-echo "Custome parameters used:
-      Minimal OTU frequency threshold: ${MIN_FREQ_THRESHOLD}
-      Maximal sequencing depth: ${MAX_DEPTH}" > ${FILT_OTU_DIR}/params.log
+# echo "Custome parameters used:
+#       Minimal OTU frequency threshold: ${MIN_FREQ_THRESHOLD}
+#       Maximal sequencing depth: ${MAX_DEPTH}" > ${FILT_OTU_DIR}/params.log
 
-if [ -n "${SEQ_DEPTH_CUTOFF}" ]
-then
-  echo "Sequence depth cut-off: ${SEQ_DEPTH_CUTOFF}" >> ${FILT_OTU_DIR}/params.log
-fi
+# if [ -n "${SEQ_DEPTH_CUTOFF}" ]
+# then
+#   echo "Sequence depth cut-off: ${SEQ_DEPTH_CUTOFF}" >> ${FILT_OTU_DIR}/params.log
+# fi
