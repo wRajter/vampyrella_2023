@@ -10,12 +10,12 @@
 
 
 # Variables:
-CELL="cell1"
+CELL="cellCombined"
 MARKER="Full18S"
-SIM="sim97"
+SIM="sim99"
 RAW_DATA="../../raw_data"
 FILT_OTU_DIR="${RAW_DATA}/OTU_filtered/${MARKER}/${CELL}/${SIM}"
-OTU_SUMMARY_DIR="${RAW_DATA}/OTU_summary_tables"
+OTU_SUMMARY_DIR="${RAW_DATA}/OTU_results"
 ASSIGNMENT_DIR="${RAW_DATA}/tax_assign_results/${MARKER}/${CELL}/${SIM}"
 TAX_LEVELS=";d__ ;p__ ;c__ ;o__ ;f__ ;g__ ;s__"
 RAW_READS_DIR="${RAW_DATA}/PacBio/Suthaus${MARKER}/${CELL}"
