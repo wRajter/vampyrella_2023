@@ -1,15 +1,16 @@
 #!/bin/bash
 
 # Inspecting reads quality and creating quality reports using fastqc and multiqc.
-# Note: activate conda fastqc environment before running the script.
+# Note: activate conda fastqc environment before running the script (conda activate fastqc).
 
-# variables
+# Variables
 NCORES=12
-CELL="cell1"
+PROJECT="Suthaus_2022"
+CELL="cellCombined"
 MARKER="Full18S"
 RAW_DATA="../../raw_data"
-RAW_READS="${RAW_DATA}/PacBio/Suthaus${MARKER}/${CELL}"
-OUTPUT_DIR="${RAW_DATA}/fastqc_out/${MARKER}/${CELL}"
+RAW_READS="${RAW_DATA}/PacBio/${PROJECT}_${MARKER}/${CELL}"
+OUTPUT_DIR="${RAW_DATA}/fastqc_out/${PROJECT}/${MARKER}/${CELL}"
 
 
 

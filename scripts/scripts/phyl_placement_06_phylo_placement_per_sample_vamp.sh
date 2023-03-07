@@ -3,6 +3,7 @@
 # Phylogenetic assignment of the environmental sequencies
 
 # Variables
+PROJECT="Suthaus_2022"
 RAW_DATA="../../raw_data"
 TAXON="vampyrellida"
 MARKER="Full18S"
@@ -10,7 +11,7 @@ CELL="cellCombined"
 REF_ALIGNMENT="${RAW_DATA}/reference_alignments/vamp_phylo_placement/review_vamp_ref_2022_adjust_names_mafft.phy"
 REF_TREE="${RAW_DATA}/phyl_placement/${TAXON}/reference_tree/T2.raxml.bestTree"
 QUERY_DIR="${RAW_DATA}/phyl_placement/eukaryotes/downstream_analyses/extract_otus"
-RAW_READS_DIR="${RAW_DATA}/PacBio/Suthaus${MARKER}/${CELL}"
+RAW_READS_DIR="${RAW_DATA}/PacBio/${PROJECT}_${MARKER}/${CELL}"
 PLACEMENT_DIR="${RAW_DATA}/phyl_placement/${TAXON}/phyl_placement_analysis"
 SAMPLES=$(ls ${RAW_READS_DIR}/*reads.fastq.gz | \
           awk -F '/' '{ print $NF }' | \

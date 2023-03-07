@@ -4,20 +4,21 @@
 # Note: Activate conda qiime2-2022.11 environment before running the script.
 
 # Variables
-MARKER="Full18S"
-CELL="cell2"
+PROJECT="Jamy_2019"
+MARKER="rDNA"
+CELL="cell"
 THRESHOLD=0.99
 SIM="sim99"
 RAW_DATA="../../raw_data"
-DENOISE_DIR="${RAW_DATA}/denoise/${MARKER}/${CELL}"
-CLUST_DIR="${RAW_DATA}/OTU_clust/${MARKER}/${CELL}/${SIM}"
+DENOISE_DIR="${RAW_DATA}/denoise/${PROJECT}/${MARKER}/${CELL}"
+CLUST_DIR="${RAW_DATA}/OTU_clust/${PROJECT}/${MARKER}/${CELL}/${SIM}"
 
 
 ################
 ## CLUSTERING ##
 ################
 
-echo "Working on ${MARKER} marker and ${CELL} cell."
+echo "Working on ${PROJECT} project ${MARKER} marker and ${CELL} cell."
 
 # Cleaning
 mkdir -p ${CLUST_DIR}/
