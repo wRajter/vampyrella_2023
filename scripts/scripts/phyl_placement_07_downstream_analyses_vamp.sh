@@ -3,6 +3,7 @@
 # Downstream (phylogenetic placement) analyses in GAPPA
 
 # Variables
+PROJECT="Suthaus_2022"
 TAXON="vampyrellida"
 MARKER="Full18S"
 CELL="cellCombined"
@@ -10,9 +11,9 @@ RAW_DATA="../../raw_data"
 PHY_PLAC_DIR="${RAW_DATA}/phyl_placement/${TAXON}"
 JPLACE_DIR="${PHY_PLAC_DIR}/phyl_placement_analysis"
 OUT_DIR="${PHY_PLAC_DIR}/downstream_analyses"
-TAXON_PATH="vamp_phylo_placement" #euk_ref
+TAXON_PATH="vamp_phylo_placement"
 TAXON_FILE="${RAW_DATA}/reference_alignments/${TAXON_PATH}/taxon_file.tsv"
-RAW_READS_DIR="${RAW_DATA}/PacBio/Suthaus${MARKER}/${CELL}"
+RAW_READS_DIR="${RAW_DATA}/PacBio/${PROJECT}_${MARKER}/${CELL}"
 SAMPLES=$(ls ${RAW_READS_DIR}/*reads.fastq.gz | \
           awk -F '/' '{ print $NF }' | \
           awk -F '_' '{ print $1 }')
@@ -92,28 +93,6 @@ do
 
 done
 
-
-
-#####################
-## EXTRACTING OTUs ##
-#####################
-
-mkdir -p ${OUT_DIR}/extract_otus
-
-
-for SAMPLE in ${SAMPLES}
-do
-  echo "Working on sample ${SAMPLE}"
-  gappa prepare extract \
-    --jplace-path ${JPLACE_DIR}/${SAMPLE}/epa_result.jplace \
-    --clade-list-file ${RAW_DATA}/reference_alignments/euk_ref/taxon_vamp.tsv \
-    --fasta-path ${JPLACE_DIR}/${SAMPLE}/query.fasta \
-    --allow-file-overwriting \
-    --color-tree-file ${OUT_DIR}/extract_otus/${SAMPLE}_tree \
-    --sequences-out-dir ${OUT_DIR}/extract_otus/${SAMPLE}_sequences \
-    --samples-out-dir ${OUT_DIR}/extract_otus/${SAMPLE}_samples \
-    --log-file ${OUT_DIR}/extract_otus/${SAMPLE}_extract_otus.log
-done
 
 
 ###################

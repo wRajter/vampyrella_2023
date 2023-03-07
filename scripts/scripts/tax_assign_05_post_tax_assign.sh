@@ -3,15 +3,19 @@
 # Creating qiime visualization and tsv table from the taxonomic assignemnt result
 
 # Variables
-CELL="cellCombined"
-MARKER="Full18S"
+PROJECT="Jamy_2019"
+MARKER="rDNA"
+CELL="cell"
 SIM="sim99"
 RAW_DATA="../../raw_data"
-ASSIGNMENT_DIR="${RAW_DATA}/tax_assign_results/${MARKER}/${CELL}/${SIM}"
+ASSIGNMENT_DIR="${RAW_DATA}/tax_assign_results/${PROJECT}/${MARKER}/${CELL}/${SIM}"
 
+
+# Cleaning
+rm -f ${ASSIGNMENT_DIR}/tax_viz.qzv \
+      ${ASSIGNMENT_DIR}/taxonomy.tsv
 
 # Exporting the taxonomic assignment result to qiime visualization file
-rm -f ${ASSIGNMENT_DIR}/${MARKER}_${CELL}/tax_viz_${SAMPLE}.qzv
 qiime metadata tabulate \
   --m-input-file ${ASSIGNMENT_DIR}/vsearch_taxonomy.qza \
   --o-visualization ${ASSIGNMENT_DIR}/tax_viz.qzv
