@@ -4,62 +4,66 @@
 # Note: Activate conda qiime2-2022.11 environment before running the script
 
 # Variables:
+PROJECT="Suthaus_2022"
 CELL="cellCombined"
 MARKER="Full18S"
-SIM="sim99"
+SIM="sim97"
 RAW_DATA="../../raw_data"
-OTU_CLUST_DIR="${RAW_DATA}/OTU_clust/${MARKER}/${CELL}/${SIM}"
-TAX_ASSIGN_DIR="${RAW_DATA}/tax_assign_results/${MARKER}/${CELL}/${SIM}"
-FILT_OTU_DIR="${RAW_DATA}/OTU_filtered/${MARKER}/${CELL}/${SIM}"
+OTU_CLUST_DIR="${RAW_DATA}/OTU_nonchimeric/${PROJECT}/${MARKER}/${CELL}/${SIM}"
+TAX_ASSIGN_DIR="${RAW_DATA}/tax_assign_results/${PROJECT}/${MARKER}/${CELL}/${SIM}"
+FILT_OTU_DIR="${RAW_DATA}/OTU_filtered/${PROJECT}/${MARKER}/${CELL}/${SIM}"
 
 
-##########################
-## CONVERTING OUT TABLE ##
-##########################
+# ##################################################
+# ## CONVERTING OTU TABLE IF USING CUSTOME FILTER ##
+# ##################################################
 
-# Filtering out rare OTUs was done in the previous step (see tax_assign_06_custome_filt.py)
-# Now, we want to filtered OTU convert into Qiime2 artifact (qza frequency feature table)
+# # Filtering out rare OTUs was done in the previous step (see tax_assign_06_custome_filt.py)
+# # Now, we want to filtered OTU convert into Qiime2 artifact (qza frequency feature table)
 
-echo "Working on ${MARKER} ${CELL} ${SIM} sample."
+# echo "Working on ${MARKER} ${CELL} ${SIM} sample."
 
-# Filtering the denoised table to remove noise/singletons
-echo "Converting filtered OTU table into qiime2 format..."
+# # Filtering the denoised table to remove noise/singletons
+# echo "Converting filtered OTU table into qiime2 format..."
 
-# Cleaning
-mkdir -p ${FILT_OTU_DIR}/
-rm -f ${FILT_OTU_DIR}/table_rarefilt.biom \
-      ${FILT_OTU_DIR}/table_rarefilt.qza \
-      ${FILT_OTU_DIR}/table_filt.qza \
-      ${FILT_OTU_DIR}/table_filt.qzv
-
-
-# Creating the feature-table.biom file
-biom convert -i ${FILT_OTU_DIR}/table_rarefilt.tsv \
-             -o ${FILT_OTU_DIR}/table_rarefilt.biom \
-             --to-hdf5
-
-# Creating the feature-table.qza file
-qiime tools import \
-  --input-path ${FILT_OTU_DIR}/table_rarefilt.biom \
-  --type 'FeatureTable[Frequency]' \
-  --input-format BIOMV210Format \
-  --output-path ${FILT_OTU_DIR}/table_filt.qza
+# # Cleaning
+# mkdir -p ${FILT_OTU_DIR}/
+# rm -f ${FILT_OTU_DIR}/table_rarefilt.biom \
+#       ${FILT_OTU_DIR}/table_rarefilt.qza \
+#       ${FILT_OTU_DIR}/table_filt.qza \
+#       ${FILT_OTU_DIR}/table_filt.qzv
 
 
-# Converting feature-table.qza to qzv
-qiime metadata tabulate \
-  --m-input-file ${FILT_OTU_DIR}/table_filt.qza \
-  --o-visualization ${FILT_OTU_DIR}/table_filt.qzv
+# # Creating the feature-table.biom file
+# biom convert -i ${FILT_OTU_DIR}/table_rarefilt.tsv \
+#              -o ${FILT_OTU_DIR}/table_rarefilt.biom \
+#              --to-hdf5
+
+# # Creating the feature-table.qza file
+# qiime tools import \
+#   --input-path ${FILT_OTU_DIR}/table_rarefilt.biom \
+#   --type 'FeatureTable[Frequency]' \
+#   --input-format BIOMV210Format \
+#   --output-path ${FILT_OTU_DIR}/table_filt.qza
+
+
+# # Converting feature-table.qza to qzv
+# qiime metadata tabulate \
+#   --m-input-file ${FILT_OTU_DIR}/table_filt.qza \
+#   --o-visualization ${FILT_OTU_DIR}/table_filt.qzv
 
 
 ##################################################
 ## FILTER OUT CONTAMINANT AND UNCLASSIFIED OTUs ##
 ##################################################
 
+echo "Working on ${PROJECT} ${MARKER} ${CELL} ${SIM}."
+
 # Removing OTUs which are likely contaminants or noise based on the taxonomic labels
 echo "Filtering out contaminant and unclassified OTUs..."
 
 # Cleaning
+mkdir -p ${FILT_OTU_DIR}/
 rm -f ${FILT_OTU_DIR}/table_filt_contam.qza
 
 # Filtering
@@ -70,11 +74,12 @@ rm -f ${FILT_OTU_DIR}/table_filt_contam.qza
 # as those sequences could be noise (e.g. possible chimeric sequences).
 
 qiime taxa filter-table \
-   --i-table ${FILT_OTU_DIR}/table_filt.qza \
+   --i-table ${OTU_CLUST_DIR}/otu_table_nonchimeric.qza \
    --i-taxonomy ${TAX_ASSIGN_DIR}/vsearch_taxonomy.qza \
    --p-include p__ \
    --p-exclude mitochondria,chloroplast \
    --o-filtered-table ${FILT_OTU_DIR}/table_filt_contam.qza
+
 
 
 ########################
@@ -152,7 +157,7 @@ rm -f ${FILT_OTU_DIR}/otu_seqs_filtered.qza \
 
 # Subsetting
 qiime feature-table filter-seqs \
-   --i-data ${OTU_CLUST_DIR}/otu_seqs.qza \
+   --i-data ${OTU_CLUST_DIR}/otu_seqs_nonchimeric.qza \
    --i-table ${FILT_OTU_DIR}/otu_table_filtered.qza \
    --o-filtered-data ${FILT_OTU_DIR}/otu_seqs_filtered.qza
 

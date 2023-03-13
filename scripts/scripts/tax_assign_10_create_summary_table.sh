@@ -13,10 +13,10 @@
 PROJECT="Suthaus_2022"
 CELL="cellCombined"
 MARKER="Full18S"
-SIM="sim99"
+SIM="sim97"
 RAW_DATA="../../raw_data"
-FILT_OTU_DIR="${RAW_DATA}/OTU_clust/${PROJECT}/${MARKER}/${CELL}/${SIM}" # change to ${RAW_DATA}/OTU_filtered/... if you want filtered OTUs
-OTU_SUMMARY_DIR="${RAW_DATA}/OTU_results"
+FILT_OTU_DIR="${RAW_DATA}/OTU_filtered/${PROJECT}/${MARKER}/${CELL}/${SIM}"
+OTU_SUMMARY_DIR="${RAW_DATA}/OTU_results/${PROJECT}"
 ASSIGNMENT_DIR="${RAW_DATA}/tax_assign_results/${PROJECT}/${MARKER}/${CELL}/${SIM}"
 TAX_LEVELS=";d__ ;p__ ;c__ ;o__ ;f__ ;g__ ;s__"
 RAW_READS_DIR="${RAW_DATA}/PacBio/${PROJECT}_${MARKER}/${CELL}"
@@ -42,9 +42,8 @@ rm -f ${OTU_SUMMARY_DIR}/feature-table.biom \
 
 # Creating the feature-table.biom file
 qiime tools export \
-  --input-path ${FILT_OTU_DIR}/otu_table.qza \
+  --input-path ${FILT_OTU_DIR}/otu_table_filtered.qza \
   --output-path ${OTU_SUMMARY_DIR}/
-# change to otu_table_filtered.qza if you want filtered OTUs
 
 # Converting biome format to tsv
 biom convert \
@@ -74,10 +73,9 @@ rm -f ${OTU_SUMMARY_DIR}/viz.qzv
 
 # Merging assignment results and otu sequences into one table
 qiime metadata tabulate \
-  --m-input-file ${FILT_OTU_DIR}/otu_seqs.qza \
+  --m-input-file ${FILT_OTU_DIR}/otu_seqs_filtered.qza \
   --m-input-file ${ASSIGNMENT_DIR}/taxonomy.tsv \
   --o-visualization ${OTU_SUMMARY_DIR}/viz.qzv
-# change to otu_seqs_filtered.qza if you want filtered OTUs
 
 # Cleaning
 rm -fr ${OTU_SUMMARY_DIR}/metadata
@@ -167,13 +165,13 @@ fi
 echo 'Rearranging columns in the final ASV stats table...'
 
 # Cleaning
-rm -f ${OTU_SUMMARY_DIR}/otu_summary_table_unfiltered_${MARKER}_${CELL}_${SIM}.tsv
+rm -f ${OTU_SUMMARY_DIR}/otu_summary_table_${MARKER}_${CELL}_${SIM}.tsv
 
 # Removing convert Windows line endings to Unix line endings and rearanging the the columns
 sed -e "s/\r//g" ${OTU_SUMMARY_DIR}/otu_summary_table.tsv | \
 awk 'BEGIN { OFS="\t" } \
            { print $1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$15,$16,$17,$18,$19,$20,$21,$22,$14,$13}' \
-              > ${OTU_SUMMARY_DIR}/otu_summary_table_unfiltered_${MARKER}_${CELL}_${SIM}.tsv
+              > ${OTU_SUMMARY_DIR}/otu_summary_table_${MARKER}_${CELL}_${SIM}.tsv
 
 rm -f ${OTU_SUMMARY_DIR}/otu_summary_table.tsv
-echo "Done. Your OTU summary table is saved as otu_summary_table_unfiltered_${MARKER}_${CELL}_${SIM}.tsv"
+echo "Done. Your OTU summary table is saved as otu_summary_table_${MARKER}_${CELL}_${SIM}.tsv"
