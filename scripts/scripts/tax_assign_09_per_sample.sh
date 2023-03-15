@@ -7,7 +7,7 @@
 PROJECT="Suthaus_2022"
 CELL="cellCombined"
 MARKER="Full18S"
-SIM="sim97"
+SIM="sim99"
 RAW_DATA="../../raw_data"
 PER_SAMPLE_DIR="${RAW_DATA}/per_sample_results/${PROJECT}/${MARKER}/${CELL}/${SIM}"
 FILT_OTU_DIR="${RAW_DATA}/OTU_filtered/${PROJECT}/${MARKER}/${CELL}/${SIM}"

@@ -10,11 +10,11 @@ CELL="cellCombined"
 RAW_DATA="../../raw_data"
 SIM="sim99"
 TAXON="eukaryotes"
-QUERY_DIR="${RAW_DATA}/per_sample_results/${MARKER}/${CELL}/${SIM}/fasta/"
+QUERY_DIR="${RAW_DATA}/per_sample_results/${PROJECT}/${MARKER}/${CELL}/${SIM}/fasta"
 REF_ALIGNMENT="${RAW_DATA}/reference_alignments/euk_ref/euk_ref_plus_vamp_18S_mafft_gblocks.phy"
-REF_TREE="${RAW_DATA}/phyl_placement/${TAXON}/reference_tree/T2.raxml.bestTree"
+REF_TREE="${RAW_DATA}/phyl_placement/${PROJECT}/${TAXON}/reference_tree/T2.raxml.bestTree"
+PLACEMENT_DIR="${RAW_DATA}/phyl_placement/${PROJECT}/${TAXON}/phyl_placement_analysis"
 RAW_READS_DIR="${RAW_DATA}/PacBio/${PROJECT}_${MARKER}/${CELL}"
-PLACEMENT_DIR="${RAW_DATA}/phyl_placement/${TAXON}/phyl_placement_analysis"
 SAMPLES=$(ls ${RAW_READS_DIR}/*reads.fastq.gz | \
           awk -F '/' '{ print $NF }' | \
           awk -F '_' '{ print $1 }')

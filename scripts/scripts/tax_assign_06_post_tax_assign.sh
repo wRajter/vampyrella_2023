@@ -6,7 +6,7 @@
 PROJECT="Suthaus_2022"
 MARKER="Full18S"
 CELL="cellCombined"
-SIM="sim97"
+SIM="sim99"
 RAW_DATA="../../raw_data"
 ASSIGNMENT_DIR="${RAW_DATA}/tax_assign_results/${PROJECT}/${MARKER}/${CELL}/${SIM}"
 

@@ -8,7 +8,7 @@ TAXON="vampyrellida"
 MARKER="Full18S"
 CELL="cellCombined"
 RAW_DATA="../../raw_data"
-PHY_PLAC_DIR="${RAW_DATA}/phyl_placement/${TAXON}"
+PHY_PLAC_DIR="${RAW_DATA}/phyl_placement/${PROJECT}/${TAXON}"
 JPLACE_DIR="${PHY_PLAC_DIR}/phyl_placement_analysis"
 OUT_DIR="${PHY_PLAC_DIR}/downstream_analyses"
 TAXON_PATH="vamp_phylo_placement"
@@ -19,13 +19,13 @@ SAMPLES=$(ls ${RAW_READS_DIR}/*reads.fastq.gz | \
           awk -F '_' '{ print $1 }')
 
 SAMPLES+=" allsamples" # add all samples combined into our sample names array
+SAMPLES+=" allsamples_except_mock" # add all samples except mock combined into our sample names array
 
 
 
-
-# ########################
-# ## HEAT TREE ANALYSIS ##
-# ########################
+# #######################
+# # HEAT TREE ANALYSIS ##
+# #######################
 
 # mkdir -p ${OUT_DIR}/heat_tree/
 
@@ -61,37 +61,37 @@ SAMPLES+=" allsamples" # add all samples combined into our sample names array
 
 
 
-# ##########################
-# ## TAXONOMIC ASSIGNMENT ##
-# ##########################
+##########################
+## TAXONOMIC ASSIGNMENT ##
+##########################
 
-# mkdir -p ${OUT_DIR}/tax_assignment/
+mkdir -p ${OUT_DIR}/tax_assignment/
 
-# for SAMPLE in ${SAMPLES}
-# do
-#   echo "Working on sample ${SAMPLE}"
-#   gappa examine assign \
-#     --jplace-path ${JPLACE_DIR}/${SAMPLE}/epa_result.jplace \
-#     --taxon-file ${TAXON_FILE} \
-#     --out-dir ${OUT_DIR}/tax_assignment/ \
-#     --per-query-results \
-#     --allow-file-overwriting \
-#     --log-file ${OUT_DIR}/tax_assignment/${SAMPLE}_tax_assignment.log \
-#     --krona
+for SAMPLE in ${SAMPLES}
+do
+  echo "Working on sample ${SAMPLE}"
+  gappa examine assign \
+    --jplace-path ${JPLACE_DIR}/${SAMPLE}/epa_result.jplace \
+    --taxon-file ${TAXON_FILE} \
+    --out-dir ${OUT_DIR}/tax_assignment/ \
+    --per-query-results \
+    --allow-file-overwriting \
+    --log-file ${OUT_DIR}/tax_assignment/${SAMPLE}_tax_assignment.log \
+    --krona
 
-#   /usr/local/bin/ktImportText ${OUT_DIR}/tax_assignment/krona.profile
+  /usr/local/bin/ktImportText ${OUT_DIR}/tax_assignment/krona.profile
 
-#   # cleaning
-#   rm ${OUT_DIR}/tax_assignment/labelled_tree.newick \
-#      ${OUT_DIR}/tax_assignment/krona.profile
-#   mv ${OUT_DIR}/tax_assignment/per_query.tsv \
-#      ${OUT_DIR}/tax_assignment/${SAMPLE}_per_query.tsv
-#   mv ${OUT_DIR}/tax_assignment/profile.tsv \
-#      ${OUT_DIR}/tax_assignment/${SAMPLE}_profile.tsv
-#   mv text.krona.html \
-#      ${OUT_DIR}/tax_assignment/${SAMPLE}_text.krona.html
+  # cleaning
+  rm ${OUT_DIR}/tax_assignment/labelled_tree.newick \
+     ${OUT_DIR}/tax_assignment/krona.profile
+  mv ${OUT_DIR}/tax_assignment/per_query.tsv \
+     ${OUT_DIR}/tax_assignment/${SAMPLE}_per_query.tsv
+  mv ${OUT_DIR}/tax_assignment/profile.tsv \
+     ${OUT_DIR}/tax_assignment/${SAMPLE}_profile.tsv
+  mv text.krona.html \
+     ${OUT_DIR}/tax_assignment/${SAMPLE}_text.krona.html
 
-# done
+done
 
 
 
@@ -101,10 +101,10 @@ SAMPLES+=" allsamples" # add all samples combined into our sample names array
 
 # merge jplace files for all sampales except the mock community
 
-# cleaning
-mkdir -p ${OUT_DIR}/labelled_tree/
-mkdir -p ${JPLACE_DIR}/allsamples_except_mock/
-rm -f ${OUT_DIR}/labelled_tree/paths.txt
+# # cleaning
+# mkdir -p ${OUT_DIR}/labelled_tree/
+# mkdir -p ${JPLACE_DIR}/allsamples_except_mock/
+# rm -f ${OUT_DIR}/labelled_tree/paths.txt
 
 # # create a variable with the paths for all the samples except the mock community
 # for SAMPLE in ${SAMPLES}
@@ -115,29 +115,30 @@ rm -f ${OUT_DIR}/labelled_tree/paths.txt
 #   fi
 # done
 
-# merge jplace files
-gappa edit merge \
-  --jplace-path \
-  ../../raw_data/phyl_placement/vampyrellida/phyl_placement_analysis/A3/epa_result.jplace \
-  ../../raw_data/phyl_placement/vampyrellida/phyl_placement_analysis/NH1/epa_result.jplace \
-  ../../raw_data/phyl_placement/vampyrellida/phyl_placement_analysis/NH4/epa_result.jplace \
-  ../../raw_data/phyl_placement/vampyrellida/phyl_placement_analysis/Sim17/epa_result.jplace \
-  ../../raw_data/phyl_placement/vampyrellida/phyl_placement_analysis/Sim22/epa_result.jplace \
-  ../../raw_data/phyl_placement/vampyrellida/phyl_placement_analysis/Th16/epa_result.jplace \
-  ../../raw_data/phyl_placement/vampyrellida/phyl_placement_analysis/Th38/epa_result.jplace \
-  ../../raw_data/phyl_placement/vampyrellida/phyl_placement_analysis/X17007/epa_result.jplace \
-  --out-dir ${JPLACE_DIR}/allsamples_except_mock/ \
-  --log-file ${JPLACE_DIR}/allsamples_except_mock/allsamples_except_mock.log \
-  --allow-file-overwriting
+# # merge jplace files
+# gappa edit merge \
+#   --jplace-path \
+#   ../../raw_data/phyl_placement/Suthaus_2022/vampyrellida/phyl_placement_analysis/A3/epa_result.jplace \
+#   ../../raw_data/phyl_placement/Suthaus_2022/vampyrellida/phyl_placement_analysis/NH1/epa_result.jplace \
+#   ../../raw_data/phyl_placement/Suthaus_2022/vampyrellida/phyl_placement_analysis/NH4/epa_result.jplace \
+#   ../../raw_data/phyl_placement/Suthaus_2022/vampyrellida/phyl_placement_analysis/Sim17/epa_result.jplace \
+#   ../../raw_data/phyl_placement/Suthaus_2022/vampyrellida/phyl_placement_analysis/Sim22/epa_result.jplace \
+#   ../../raw_data/phyl_placement/Suthaus_2022/vampyrellida/phyl_placement_analysis/Th16/epa_result.jplace \
+#   ../../raw_data/phyl_placement/Suthaus_2022/vampyrellida/phyl_placement_analysis/Th38/epa_result.jplace \
+#   ../../raw_data/phyl_placement/Suthaus_2022/vampyrellida/phyl_placement_analysis/Th40/epa_result.jplace \
+#   ../../raw_data/phyl_placement/Suthaus_2022/vampyrellida/phyl_placement_analysis/X17007/epa_result.jplace \
+#   --out-dir ${JPLACE_DIR}/allsamples_except_mock/ \
+#   --log-file ${JPLACE_DIR}/allsamples_except_mock/allsamples_except_mock.log \
+#   --allow-file-overwriting
 
-# creating the label tree
-gappa examine graft \
-  --jplace-path ${JPLACE_DIR}/allsamples_except_mock/merge.jplace \
-  --fully-resolve \
-  --out-dir ${OUT_DIR}/labelled_tree/ \
-  --file-prefix allsamples_except_mock_ \
-  --log-file ${OUT_DIR}/labelled_tree/allsamples_except_mock_labelled_tree.log \
-  --allow-file-overwriting
+# # creating the label tree
+# gappa examine graft \
+#   --jplace-path ${JPLACE_DIR}/allsamples_except_mock/merge.jplace \
+#   --fully-resolve \
+#   --out-dir ${OUT_DIR}/labelled_tree/ \
+#   --file-prefix allsamples_except_mock_ \
+#   --log-file ${OUT_DIR}/labelled_tree/allsamples_except_mock_labelled_tree.log \
+#   --allow-file-overwriting
 
 
 # creating the label trees for each sample and all samples together
