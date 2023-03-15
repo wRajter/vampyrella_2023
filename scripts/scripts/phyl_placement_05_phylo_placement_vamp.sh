@@ -4,12 +4,14 @@
 # Phylogenetic assignment of the environmental sequencies
 
 # Variables
+PROJECT="Suthaus_2022"
 TAXON="vampyrellida"
 RAW_DATA="../../raw_data/"
+PHYL_PLAC_DIR="${RAW_DATA}/phyl_placement/${PROJECT}"
 REF_ALIGNMENT="${RAW_DATA}/reference_alignments/vamp_phylo_placement/review_vamp_ref_2022_adjust_names_mafft.phy"
-REF_TREE="${RAW_DATA}/phyl_placement/${TAXON}/reference_tree/T2.raxml.bestTree"
-QUERY_SEQS="${RAW_DATA}/phyl_placement/eukaryotes/downstream_analyses/extract_otus/allsamples_sequences/Vampyrellida.fasta"
-OUT_DIR="${RAW_DATA}/phyl_placement/vampyrellida/phyl_placement_analysis/allsamples"
+REF_TREE="${PHYL_PLAC_DIR}/${TAXON}/reference_tree/T2.raxml.bestTree"
+QUERY_SEQS="${PHYL_PLAC_DIR}/eukaryotes/downstream_analyses/extract_otus/allsamples_sequences/Vampyrellida.fasta"
+OUT_DIR="${PHYL_PLAC_DIR}/${TAXON}/phyl_placement_analysis/allsamples"
 
 
 # Activate conda phylo_placement environment that should contain these three packages:

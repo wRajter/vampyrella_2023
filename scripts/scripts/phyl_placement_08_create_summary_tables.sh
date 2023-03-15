@@ -9,7 +9,8 @@
 
 # Variables:
 RAW_DATA="../../raw_data"
-TAX_ASSIGN_DIR="${RAW_DATA}/phyl_placement/vampyrellida/downstream_analyses/tax_assignment"
+PROJECT="Suthaus_2022"
+TAX_ASSIGN_DIR="${RAW_DATA}/phyl_placement/${PROJECT}/vampyrellida/downstream_analyses/tax_assignment"
 SAMPLE_LABELS=$(ls ${TAX_ASSIGN_DIR}/*_per_query.tsv | \
                 awk -F '/' '{ print $NF }' | \
                 awk -F '_' '{ print $1 }' | \
