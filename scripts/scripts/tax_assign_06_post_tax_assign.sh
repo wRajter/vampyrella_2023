@@ -3,9 +3,9 @@
 # Creating qiime visualization and tsv table from the taxonomic assignemnt result
 
 # Variables
-PROJECT="Suthaus_2022"
-MARKER="Full18S"
-CELL="cellCombined"
+PROJECT="Jamy_2019"
+MARKER="rDNA"
+CELL="cell"
 SIM="sim99"
 RAW_DATA="../../raw_data"
 ASSIGNMENT_DIR="${RAW_DATA}/tax_assign_results/${PROJECT}/${MARKER}/${CELL}/${SIM}"

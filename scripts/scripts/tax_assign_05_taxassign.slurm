@@ -10,8 +10,8 @@
 
 
 # Variables
-MARKER="Full18S"
-CELL="cell2"
+MARKER="rDNA"
+CELL="cell"
 
 source /home/lrajter/miniconda3/etc/profile.d/conda.sh
 conda activate qiime2-2022.2
