@@ -4,10 +4,10 @@
 # Note: Activate conda qiime2-2022.11 environment before running the script.
 
 # Variables
-PROJECT="Suthaus_2022"
-MARKER="Full18S"
-CELL="cell2"
-SIM="sim97"
+PROJECT="Jamy_2019"
+MARKER="rDNA"
+CELL="cell"
+SIM="sim99"
 RAW_DATA="../../raw_data"
 OTU_DIR="${RAW_DATA}/OTU_clust/${PROJECT}/${MARKER}/${CELL}/${SIM}"
 OTU_CHIM_FILT="${RAW_DATA}/OTU_nonchimeric/${PROJECT}/${MARKER}/${CELL}/${SIM}"
