@@ -7,7 +7,7 @@
 PROJECT="Jamy_2019"
 MARKER="rDNA"
 CELL="cell"
-THRESHOLD=0.99
+THRESHOLD=0.97
 SIM="sim99"
 RAW_DATA="../../raw_data"
 DENOISE_DIR="${RAW_DATA}/denoise/${PROJECT}/${MARKER}/${CELL}"
