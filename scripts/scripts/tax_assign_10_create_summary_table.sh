@@ -10,9 +10,9 @@
 
 
 # Variables:
-PROJECT="Suthaus_2022"
-CELL="cellCombined"
-MARKER="Full18S"
+PROJECT="Jamy_2019"
+CELL="cell"
+MARKER="rDNA"
 SIM="sim99"
 RAW_DATA="../../raw_data"
 FILT_OTU_DIR="${RAW_DATA}/OTU_filtered/${PROJECT}/${MARKER}/${CELL}/${SIM}"

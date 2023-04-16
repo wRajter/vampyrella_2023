@@ -1,201 +1,953 @@
 Feature ID	Taxon	Consensus
 0014148a027af3f448add13f27701ba86e885807	k__Eukaryota; d__Alveolata; p__Chrompodellids; c__Colpodellidea; o__Colpodellida; f__Alphamonaceae; g__Alphamonadea_ALPH1; s__Alphamonadea_ALPH1_sp.	0.7
+002337e76855120b5bb18d9b09e45a9f05b9a5a3	k__Eukaryota; d__Rhizaria; p__Cercozoa; c__Filosa-Sarcomonadea; o__Glissomonadida	0.7
+00830bbbeaebdd311c8ff6095f0b84a88f928620	k__Eukaryota; d__Opisthokonta; p__Metazoa; c__Arthropoda; o__Crustacea; f__Maxillopoda	1.0
+009fdf4182a800c2c604be657951392f90668546	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Sordariomycetes	1.0
+00b28173443bde031fe0d5ab9f29700bf5d29c19	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Chytridiomycota; o__Chytridiomycotina; f__Chytridiomycetes	0.6
 00bb72cfbae685c16ee393b4ab0e376b04ec083a	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Sordariomycetes	1.0
+00c96552e998b725ac1a4b4900ef9e18cf646861	k__Eukaryota; d__Alveolata; p__Ciliophora; c__Litostomatea; o__Trichostomatia; f__Isotrichidae_2	0.6
+00ce381b438c7a5d3db34a3b08c260cdf64a1633	Unassigned	1.0
 01158964bc49ddadea99e9b6df8ef16f64d460b0	k__Eukaryota; d__Opisthokonta; p__Metazoa; c__Annelida; o__Annelida_X; f__Annelida_XX	1.0
+011c403ddf092a2230e9d8dc030cc09e0e786c48	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Dothideomycetes	1.0
+014a20e5481c94c634d4b354f07e499541b4de44	k__Eukaryota; d__Stramenopiles; p__Pseudofungi	0.6
+0153b7f894b938e4e2ad125e8edcb776a091fa1b	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Leotiomycetes	1.0
+0160350733780aae5203ca7b47c0dd83802d1e71	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Basidiomycota; o__Agaricomycotina; f__Agaricomycetes; g__Agaricomycetes_X; s__Agaricomycetes_X_sp.	0.7
+0171e4f97b4368862d5b9dd325f681a2b1228977	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Basidiomycota; o__Agaricomycotina; f__Agaricomycetes	1.0
+018f896656b43a87866163adc5d69b0cf8a65b36	k__Eukaryota; d__Alveolata; p__Ciliophora	1.0
 0190cad1949f79d8b0756ab63320c99d3576d641	k__Eukaryota; d__Archaeplastida; p__Chlorophyta; c__Chlorophyceae; o__Chlamydomonadales; f__Chlamydomonadales_X; g__Chlamydomonas	0.6
+019769aa56bfe0f1909df052394d1393d4922d68	Unassigned	1.0
 019f22d73bc8f9426949bbde316d5062ce0ae52d	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Chytridiomycota; o__Chytridiomycotina; f__Chytridiomycetes	0.6
+01cc1f3ce8bf3746197c75bf8336ff3e0473b398	k__Eukaryota; d__Opisthokonta; p__Metazoa; c__Nematoda; o__Chromadorea; f__Chromadorea_X	1.0
+01fcd47b8d291cee1c4a83e7764e33dbe674ed7b	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Basidiomycota; o__Agaricomycotina; f__Tremellomycetes; g__Tremellomycetes_X; s__Tremellomycetes_X_sp.	0.7
+0224368239986d84d2978aa7ff9e2f0ef1330aec	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Leotiomycetes	0.9
+022bc960180816e094745b9af2549d80ba624b2c	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Sordariomycetes	1.0
+023e2f7d81377074d367e7651e2a258aa992608e	k__Eukaryota; d__Alveolata; p__Chrompodellids; c__Colpodellidea; o__Colpodellida; f__Alphamonaceae; g__Alphamonadea_ALPH1; s__Alphamonadea_ALPH1_sp.	0.8
+0246e75658251e41c12db5fd16a55dec5b572d98	k__Eukaryota; d__Archaeplastida; p__Streptophyta; c__Embryophyceae; o__Embryophyceae_X; f__Embryophyceae_XX	1.0
+025b73f5bd8599181a2fe3342e9db8521b9170b6	k__Eukaryota; d__Opisthokonta; p__Metazoa; c__Arthropoda; o__Hexapoda	0.6
+0273dca22f764594ceb7e69b74e68bb4783226f4	k__Eukaryota; d__Archaeplastida; p__Streptophyta; c__Embryophyceae; o__Embryophyceae_X; f__Embryophyceae_XX	1.0
+02cc7145be530b0f2179c96f9a3e0bffd6b06629	k__Eukaryota; d__Alveolata; p__Chrompodellids; c__Colpodellidea; o__Colpodellida; f__Alphamonaceae; g__Alphamonadea_ALPH1; s__Alphamonadea_ALPH1_sp.	1.0
 02cd59f3d1ea845dd4b12fbe8d867600bbba806f	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Leotiomycetes	1.0
+02d27dad98461e7bcb355bb88769ab27c77b6653	k__Eukaryota; d__Alveolata; p__Ciliophora; c__Spirotrichea; o__Hypotrichia; f__Oxytrichidae	0.7
+02da3ff19edc99f605e6055f5e90003f260200c4	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Sordariomycetes	1.0
+02fb95b09a7e5e2ebb65d019721194e6d8412415	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Basidiomycota; o__Agaricomycotina; f__Tremellomycetes	1.0
+02ffb1cb1d16d7c275abedfa2a2047a4fbfb06de	Unassigned	1.0
+03291572f49fb9bb50f26b1cefcfa5d7f3957add	k__Eukaryota; d__Rhizaria; p__Cercozoa	0.833
+03455ab257d8f561016fb37d111f8135f035199a	Unassigned	1.0
 03534c857983bca499924623ea75d573b2b2cf4a	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Sordariomycetes	1.0
+035d963e357ab8f061b263b63c1c8261c5d402ff	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Basidiomycota; o__Agaricomycotina; f__Tremellomycetes; g__Tremellomycetes_X; s__Tremellomycetes_X_sp.	0.7
+036bf3bde6d7d3535c7fa16062bda0f0c69c3675	k__Eukaryota; d__Alveolata; p__Ciliophora; c__Litostomatea; o__Trichostomatia; f__Isotrichidae_2; g__Isotrichidae_2_X; s__Isotrichidae_2_X_sp.	0.6
+038d3725af837f728f46d7481c3ea0de5341852d	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Leotiomycetes	1.0
+039158b571ca532092625f51255dfafd337ab575	k__Eukaryota; d__Rhizaria; p__Cercozoa	1.0
 03da60fd55f65f0d97c03876dddc08c697004cb5	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Leotiomycetes	1.0
+03f9c878846a3982ff91e90da6885dc79f958f62	k__Eukaryota; d__Alveolata; p__Chrompodellids; c__Colpodellidea; o__Colpodellida; f__Alphamonaceae; g__Alphamonadea_ALPH1; s__Alphamonadea_ALPH1_sp.	0.9
+04198d9eb744efb3b29efcfb24c5beec16e058be	k__Eukaryota; d__Rhizaria; p__Cercozoa; c__Filosa-Sarcomonadea; o__Glissomonadida; f__Sandonidae	0.7
+0419a6dcaf15875048340c29f8f12b6a724ce923	k__Eukaryota; d__Rhizaria; p__Cercozoa	1.0
+04301157fed524cd02a4be58544171efecde04ec	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Sordariomycetes	1.0
+047336e3cdb46db43ecc06c52883f69c70777f5a	k__Eukaryota; d__Rhizaria; p__Cercozoa	1.0
+04b1afab3f70e7530614fd3ab6b8b2e807f3b42d	k__Eukaryota; d__Rhizaria; p__Cercozoa; c__Filosa-Thecofilosea; o__Cryomonadida	0.7
+050a9d69a18e85275c069bafa518f6ad110da00a	k__Eukaryota; d__Alveolata; p__Ciliophora; c__Spirotrichea; o__Hypotrichia; f__Oxytrichidae	0.7
+059728e92c59ff04a83b75a3cce1085740d8ff49	k__Eukaryota; d__Alveolata; p__Ciliophora; c__Litostomatea; o__Trichostomatia	0.7
+05a6632a5fd75002de1217c6dc55a9c527f0c7ad	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Pezizomycetes	0.6
+05eaf0556bf493f3ac9e19c81f4a0dba96a75f73	k__Eukaryota; d__Opisthokonta; p__Fungi	1.0
+0608b022006fbea6f0b946469eef3aa86b7d799d	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Sordariomycetes	1.0
+063cd9cbc850db59b18e937ffbb082d89a4db217	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina	1.0
+063d61a57c3b4bfccccea9dc56b5a29751c89a55	k__Eukaryota; d__Archaeplastida; p__Chlorophyta; c__Chlorophyceae; o__Chlamydomonadales; f__Chlamydomonadales_X	1.0
+0648f202d484fd50636112187c989d0bd6bd1330	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Dothideomycetes	1.0
+06570f88b961a1da127ce4e4b5633f267217661c	k__Eukaryota; d__Alveolata; p__Ciliophora; c__Spirotrichea; o__Hypotrichia; f__Oxytrichidae	0.7
+0668ad9ce606dc02513c129ea9cadbd808e2fe36	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Chytridiomycota; o__Chytridiomycotina; f__Chytridiomycetes	0.6
 0698f65a79187e56a15352d54da761af71815397	k__Eukaryota; d__Alveolata; p__Chrompodellids; c__Colpodellidea; o__Colpodellida; f__Alphamonaceae; g__Alphamonadea_ALPH1; s__Alphamonadea_ALPH1_sp.	1.0
+06cf1ab77ac6cea85adec12feadb5d97413c9e5c	k__Eukaryota; d__Rhizaria; p__Cercozoa; c__Endomyxa-Phytomyxea	0.667
+06d0f918bc464ea93461dcfc50ac36e87bfb42b4	k__Eukaryota; d__Opisthokonta; p__Metazoa; c__Nematoda; o__Chromadorea; f__Chromadorea_X	1.0
+07074f2b4caea2d171a3c6c7771943b2e854ebfa	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Sordariomycetes	1.0
 0710b8e1831a4896178613b8aaf1c167730c3936	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Dothideomycetes	0.9
+07254405985234af9e0dcc013d57b9b4a4cb9805	k__Eukaryota; d__Archaeplastida; p__Chlorophyta; c__Chlorophyceae; o__Chlamydomonadales; f__Chlamydomonadales_X	0.8
+0743495fc40fde3234b8464fdd63bdc40734f3c0	k__Eukaryota; d__Amoebozoa; p__Lobosa; c__Tubulinea; o__Echinamoebida; f__Vermamoebidae; g__Hartmannella; s__Hartmannella_cantabrigiensis	1.0
+074698c8605cb37338017a36ffb73101f7f244c3	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Sordariomycetes	1.0
+076a80f44d97b6aa699a8972c45989f44323cee7	k__Eukaryota; d__Rhizaria; p__Cercozoa	1.0
 078a0a32bf9b3e4178caa4ef2ce87671a88c5586	k__Eukaryota; d__Rhizaria; p__Cercozoa	0.8
 07a3e6de3c8cf7778c9b6eda72ecdf4f3d045272	k__Eukaryota; d__Opisthokonta; p__Metazoa; c__Annelida; o__Annelida_X; f__Annelida_XX	1.0
+07b430c0ed21e794ef0e111168efcd97c1fd875e	k__Eukaryota; d__Rhizaria; p__Cercozoa	1.0
+07d0a4c56b2ba97cef6128f4851bfe0725277564	Unassigned	1.0
+07ef3eb3b8c0f73b0343039bb4ad0d3a4c663528	k__Eukaryota; d__Alveolata; p__Ciliophora; c__Spirotrichea; o__Hypotrichia; f__Oxytrichidae	0.6
 07f1fd4c15dbd07318414c1a812c315988476e21	k__Eukaryota; d__Opisthokonta; p__Fungi	1.0
+083f2d8feb3e344857ac89ddc019fe5132ffc474	k__Eukaryota; d__Alveolata; p__Chrompodellids; c__Colpodellidea; o__Colpodellida; f__Alphamonaceae; g__Alphamonadea_ALPH1; s__Alphamonadea_ALPH1_sp.	1.0
+085801348d21dcf61a0bfe12be5c77f9e01cfd1c	k__Eukaryota; d__Rhizaria; p__Cercozoa	1.0
 08765bd54bd21209356530cffb1bca6d07e1718e	Unassigned	1.0
+087d5de7a3768ff15eb51d304fbfd9d0014e50ee	k__Eukaryota; d__Alveolata; p__Ciliophora	1.0
+08a1b2071bb80696a1aaf4044999913b3703c134	Unassigned	1.0
+090507c9c414f2605944d8e7129bf7aab6322bd3	k__Eukaryota; d__Opisthokonta; p__Metazoa; c__Nematoda; o__Chromadorea; f__Chromadorea_X; g__Heterorhabditis; s__Heterorhabditis_megidis	0.667
+09177a7ab20db5d7ebe3c6a7f811ad24e098645f	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Leotiomycetes	0.7
+09186727bd871f2d51cda14b52d3d57ae3ac6742	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Basidiomycota; o__Agaricomycotina; f__Agaricomycetes	1.0
+09454a76b6a9d025a0981bf111ca296cd4f709aa	k__Eukaryota; d__Opisthokonta; p__Metazoa; c__Nematoda; o__Chromadorea; f__Chromadorea_X	1.0
+0993266db27b11615edc1228ec201cb234ad2a4e	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Basidiomycota; o__Agaricomycotina; f__Agaricomycetes	1.0
 09b51d6bc1d216dfe59984a33257b3e0be2ea08d	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Pezizomycetes	0.6
+09d460dec59124a562804f12c255c346cb5e4f09	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Eurotiomycetes	1.0
+09fcc401927052e4acfda7aba38ac441d97edb51	k__Eukaryota; d__Stramenopiles; p__Ochrophyta; c__Chrysophyceae; o__Chrysophyceae_X	0.9
+0a0f0ca25579dfb4b748a377862b83cd943bf6dc	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Sordariomycetes	1.0
 0a11cd2b60d1d747df855bf0c6eef508b1298650	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Dothideomycetes	0.9
+0a1d34b77cfa0f6aecd4243f6975833d63721b23	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina	1.0
+0a22355023fc0e5135eb158def5cfdb26ea2dd43	k__Eukaryota; d__Archaeplastida; p__Streptophyta; c__Embryophyceae; o__Embryophyceae_X; f__Embryophyceae_XX	1.0
+0a5ed128462192d8bd4f0de7c54518d079c1dd84	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Basidiomycota; o__Agaricomycotina; f__Agaricomycetes	0.6
 0a82fe1f02687955eb462ce7706bb3a7dd9c6a82	k__Eukaryota; d__Opisthokonta; p__Fungi	0.9
 0b04462699a410f0e3c9ede4110dd5241f7cdad6	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Sordariomycetes	1.0
+0b2bc3306fe7ea879fed60acda9b91a924f993c3	Unassigned	1.0
+0b34029cff5df095537c8aafebf49d8c37127af5	k__Eukaryota; d__Rhizaria; p__Cercozoa; c__Filosa-Thecofilosea	0.667
+0b3fa48ac09ed07d1e496bc7964b4e27669e0efe	k__Eukaryota; d__Alveolata; p__Ciliophora; c__Litostomatea; o__Trichostomatia	0.7
+0b7842a4a191c3d28dff22603548c68395acc217	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Saccharomycotina; f__Saccharomycetales	0.9
+0bc64876b8b61a73d46f20224f7ee31cc441f5ce	k__Eukaryota; d__Opisthokonta; p__Metazoa; c__Nematoda; o__Chromadorea; f__Chromadorea_X	1.0
 0c2baf2287f745bf87f914618c98af6012941a05	k__Eukaryota; d__Stramenopiles; p__Pseudofungi; c__Oomycota; o__Oomycota_X; f__Peronosporales	1.0
+0c45a5dbfa478eddd964d1c1de52578510af9353	k__Eukaryota; d__Archaeplastida; p__Streptophyta; c__Embryophyceae; o__Embryophyceae_X; f__Embryophyceae_XX	1.0
+0c9ed4193657e9918a0114f9a1be134a6ceff22e	k__Eukaryota; d__Archaeplastida; p__Chlorophyta; c__Trebouxiophyceae; o__Chlorellales; f__Chlorellales_X	1.0
+0ca391c266d0eddba15710b5c5fb3a69b63f1c5f	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Basidiomycota; o__Agaricomycotina; f__Tremellomycetes; g__Tremellomycetes_X; s__Tremellomycetes_X_sp.	0.6
+0cde9882f6a32a97ceffe213a71631392c87d0e5	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Basidiomycota; o__Agaricomycotina; f__Agaricomycetes	1.0
+0d985af20846019f82e2383587d92cf573e80265	Unassigned	1.0
+0db37a74f6bff0e0176a258d949d28b624307390	k__Eukaryota; d__Rhizaria; p__Cercozoa; c__Filosa-Sarcomonadea	0.6
+0ddddb34ce3b642ca9b1c3146a0943b2c9506176	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Dothideomycetes	1.0
+0e08df7308c71cc0d247e53122764638b63f4466	Unassigned	1.0
+0e2a61fd72e2b80f768ae55de01df9ee456cab7a	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Basidiomycota; o__Agaricomycotina; f__Tremellomycetes	1.0
+0e496b6bfc81cdea8807a39d7a3696d1680b2958	Unassigned	1.0
 0e4bc4da61ef0d5ba58f36702e9f1804b745008e	k__Eukaryota; d__Rhizaria; p__Cercozoa; c__Filosa-Sarcomonadea	0.6
+0e67bb32bd116d048606a561c6e7fcef03b0918b	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Sordariomycetes	1.0
+0e7acf832e7d89e8a0c02addc54f5db65ccb20b4	k__Eukaryota; d__Rhizaria; p__Cercozoa; c__Filosa-Thecofilosea; o__Cryomonadida	0.7
 0e912b7f8efd0074e2984c341487c3cc13a1b34c	k__Eukaryota; d__Alveolata; p__Ciliophora	1.0
+0e9fc86520549029e5f089233f0936371975451f	k__Eukaryota; d__Alveolata; p__Ciliophora	1.0
+0ead64d5d1cc50bc0e105121ac98bc626d9aef07	k__Eukaryota; d__Opisthokonta; p__Metazoa; c__Nematoda; o__Chromadorea; f__Chromadorea_X	1.0
+0eba6a18c28717a8f37a918eba04fd93c56012b7	k__Eukaryota; d__Alveolata	1.0
 0ebf641bffe322f3cb03a0d365fff546c7423808	k__Eukaryota; d__Alveolata; p__Ciliophora; c__Spirotrichea; o__Hypotrichia; f__Oxytrichidae	0.6
 0f0732e11ac798a35fb111c6d6f34fc348c32ffb	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Sordariomycetes	1.0
+0f25dfe9d757fb1583eed55c2cc3710f3460276f	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Dothideomycetes	0.9
 0f26ed2b6beabbdad3284d86acffe6554e7180da	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Sordariomycetes	1.0
 0f2e61387f3b3bee6289dc9f5c38ba336b014310	k__Eukaryota; d__Alveolata; p__Ciliophora; c__Spirotrichea; o__Hypotrichia; f__Oxytrichidae	0.7
+0f62ea06b8d47eada43748d3b265837a3d47394d	k__Eukaryota; d__Archaeplastida; p__Chlorophyta; c__Trebouxiophyceae; o__Chlorellales; f__Chlorellales_X	1.0
 0fb9fc63b02bf666462523fcd7de513e45136bce	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Chytridiomycota; o__Chytridiomycotina; f__Chytridiomycetes	0.7
+0fc4863dcf8e1fafe6aca212e241bc20d6c56d11	k__Eukaryota; d__Opisthokonta; p__Fungi	1.0
+0fc901f9d7e262f244a46f86b47681b53ab6b98b	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Sordariomycetes	1.0
+0fe017257ff4490cecdde44c8023ccb5e727d15a	k__Eukaryota; d__Alveolata; p__Chrompodellids; c__Colpodellidea; o__Colpodellida; f__Alphamonaceae; g__Alphamonadea_ALPH1; s__Alphamonadea_ALPH1_sp.	0.9
+0fe04800c548d3a01a2791943546ae1ffac55c79	Unassigned	1.0
+0ff85a35a2e636e7f1f88d206065ff20d325fcd1	k__Eukaryota; d__Alveolata; p__Ciliophora; c__Litostomatea; o__Trichostomatia	0.7
+100522cf486e79df9ad55194daa40e5b0125bf8f	k__Eukaryota; d__Archaeplastida; p__Chlorophyta; c__Trebouxiophyceae	1.0
+1035eb5872a16d2253a9769dfca5c93a2dba04ae	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Dothideomycetes	1.0
 10a2a2e9062a22007c6202780c0377c4e76fe61f	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Basidiomycota; o__Agaricomycotina; f__Agaricomycetes	1.0
 10e9fd5fd8628c239bfa046385af460bc1ddb6fb	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Chytridiomycota; o__Chytridiomycotina; f__Chytridiomycetes	0.8
+10efaad18b5b7a0baf14fb1d2ef1dd458f2885b3	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Sordariomycetes	1.0
 1160d1d6678c03ddb8042355cef873f0b08cd795	k__Eukaryota; d__Rhizaria; p__Cercozoa; c__Filosa-Sarcomonadea	0.6
+118d7a23ff032bea40d7e5ba88a518e8eb609ec2	k__Eukaryota; d__Rhizaria; p__Cercozoa; c__Filosa-Sarcomonadea; o__Glissomonadida	0.7
 1193e244ce928600241364bcc59dc605068f4115	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Leotiomycetes	0.9
+11a6daca756de03e2cc8876743a3ae0ac5bb0ef1	k__Eukaryota; d__Archaeplastida; p__Streptophyta; c__Embryophyceae; o__Embryophyceae_X; f__Embryophyceae_XX	1.0
+11b365dc734f3c776e76f8bb3a064b18ab8c626e	Unassigned	1.0
 11bfba634d9800464b419d1624e3a63eec9865b4	k__Eukaryota; d__Alveolata; p__Ciliophora; c__Spirotrichea; o__Hypotrichia; f__Oxytrichidae	0.7
+122247410f4bf919cd3cc395c7b596e334dda6a5	k__Eukaryota; d__Alveolata; p__Ciliophora; c__Spirotrichea; o__Hypotrichia; f__Oxytrichidae	0.7
+12622b0f678007193afa84d2c46071108823cc5d	Unassigned	1.0
+12f5cb80075cd4aff7d038902de6f5a90531875e	k__Eukaryota; d__Opisthokonta; p__Metazoa; c__Nematoda; o__Chromadorea; f__Chromadorea_X	1.0
+1377dc8c167b4d6989eb998eaee427bfa999723a	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Sordariomycetes	1.0
+13807af336111b81d286e425a4474eb066e227a2	k__Eukaryota; d__Alveolata; p__Ciliophora; c__Spirotrichea; o__Hypotrichia; f__Oxytrichidae	0.7
+138b4bc65f80308135555377b65a264cab288602	k__Eukaryota	1.0
+140d6487c18d0c97ea8cfab0c206ac0cca0f5c81	k__Eukaryota; d__Archaeplastida; p__Chlorophyta; c__Chlorophyceae; o__Chlamydomonadales; f__Chlamydomonadales_X; g__Dunaliella; s__Dunaliella_sp.	0.6
+1423a6f109413f9b0ef5b39c1b662e0d32b487da	Unassigned	1.0
 1424207d8fc1e9d791cc8542deeea398b3929a5e	k__Eukaryota; d__Alveolata; p__Ciliophora; c__Spirotrichea; o__Hypotrichia; f__Oxytrichidae	0.7
+146402a430d72684f88173fa3212d00872761114	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Chytridiomycota; o__Chytridiomycotina; f__Chytridiomycetes	0.6
+149dc792b5329e2a1b32f4251bd4f00954121399	k__Eukaryota; d__Alveolata; p__Ciliophora	1.0
+1510cf2fdd3b668da0c8fb789db76883467b48af	k__Eukaryota; d__Alveolata; p__Chrompodellids; c__Colpodellidea; o__Colpodellida; f__Alphamonaceae; g__Alphamonadea_ALPH1; s__Alphamonadea_ALPH1_sp.	0.9
 152ec9db111a32de059ec68e1be03e5188e9f405	k__Eukaryota; d__Alveolata; p__Ciliophora; c__Spirotrichea; o__Hypotrichia; f__Oxytrichidae	0.6
+1573049f178ed70af6548247ebea3212a838e14e	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Eurotiomycetes	1.0
 15bd2bcc1c23699fa33a9d53e0fa4199fa8dc18d	k__Eukaryota; d__Alveolata; p__Ciliophora	1.0
+15c316d24ce6ef6c71151116dbf68d6bc9410982	k__Eukaryota; d__Rhizaria; p__Cercozoa	1.0
+15ce9d23f6e5345e3dc5a68f59c338a7d803b254	k__Eukaryota; d__Alveolata; p__Ciliophora; c__Spirotrichea; o__Hypotrichia; f__Oxytrichidae	0.7
+16585e33cf559b2b26d3b5c42fba7264a222fcb6	k__Eukaryota; d__Rhizaria; p__Cercozoa; c__Filosa-Sarcomonadea; o__Glissomonadida; f__Sandonidae	0.6
+165e1464623c383d846f7b499e4a82bbbb3bf4d8	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Basidiomycota; o__Agaricomycotina; f__Tremellomycetes	1.0
 169a062518c2fdc8b6e535c06f70c68ea4737314	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Basidiomycota; o__Pucciniomycotina	0.8
+16a80ac728b0aee050b5522b127628da8f45609d	k__Eukaryota; d__Opisthokonta; p__Metazoa; c__Nematoda; o__Chromadorea; f__Chromadorea_X	1.0
+16ce24beb10b126b744df41849a8615b984f981d	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Sordariomycetes	1.0
+1704aba71d20e05892403280820c16a1a673b0f5	k__Eukaryota; d__Alveolata; p__Ciliophora; c__Spirotrichea; o__Hypotrichia; f__Oxytrichidae	0.7
+172aac8ba11149a2f55ab0da111c510b64a64ea6	k__Eukaryota; d__Opisthokonta; p__Metazoa; c__Nematoda; o__Chromadorea; f__Chromadorea_X	1.0
+173b0614cdbb39519e9accfe5cc310dbc46ac452	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Chytridiomycota; o__Chytridiomycotina; f__Chytridiomycetes	0.6
+1762c30f910623fdea02bb43cae37fac154f9897	k__Eukaryota; d__Stramenopiles; p__Ochrophyta; c__Bacillariophyta; o__Bacillariophyta_X; f__Raphid-pennate	1.0
 1783e342c417890f9bd75ec58beb741a0361414c	k__Eukaryota; d__Alveolata; p__Ciliophora	0.7
+17c905314a73c216d1496c2a6df74e28ed474924	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Basidiomycota; o__Agaricomycotina; f__Tremellomycetes	1.0
 18146aa4dc822622da5888ce23258d5d28dbd693	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Sordariomycetes	1.0
+1838a8bb8cced9fdba4e99e6e57c27ae2a4eff48	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Sordariomycetes	1.0
+1869ca4a4d2eee103d9ed1a1dcb1cb294fa87246	k__Eukaryota; d__Archaeplastida; p__Chlorophyta; c__Chlorophyceae; o__Chlamydomonadales; f__Chlamydomonadales_X	0.9
+18725502543fa8421ab77cba2fa3a74105d8ca2b	k__Eukaryota; d__Stramenopiles; p__Ochrophyta; c__Chrysophyceae; o__Chrysophyceae_X; f__Chrysophyceae_Clade-C	0.7
+18ba0c033acd08024378eefbbb6979a9cf66882f	k__Eukaryota; d__Rhizaria; p__Cercozoa; c__Filosa-Sarcomonadea	0.6
 18c62563264e10c36e6ab1c7d49b0be856a64577	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Dothideomycetes	1.0
+18e2dd08cf9dc08b2fe2e659da99dfab83310fc9	k__Eukaryota; d__Stramenopiles; p__Pseudofungi; c__Oomycota; o__Oomycota_X; f__Peronosporales; g__Phytophthora	0.8
 1917f4c50f3f978af36cec4f6668897707d85c07	k__Eukaryota	1.0
+1925737c1088aaa53df44dd564d8dda7f1dae9dc	Unassigned	1.0
+193c5b4e7f1811fc82896e54381444b90de901fb	k__Eukaryota; d__Rhizaria; p__Cercozoa	1.0
+199bcb13a796a4dc7cc2e54ce044e17d03f1d5e2	k__Eukaryota; d__Rhizaria; p__Cercozoa; c__Filosa-Sarcomonadea	0.6
+19aa5714d8912a463fcf9968aef26084682bd0f6	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Basidiomycota; o__Agaricomycotina; f__Tremellomycetes	1.0
 19c75ba8f22ad3f535618f773f52e8a845815b3b	k__Eukaryota; d__Alveolata; p__Apicomplexa	0.8
 1a07b71b0b04b1424c66630e2ff4f1dbac4c78ed	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Sordariomycetes	1.0
+1a086ed5cc28f5549019edc580a83186cd3f29f1	k__Eukaryota; d__Rhizaria; p__Cercozoa; c__Filosa-Thecofilosea; o__Cryomonadida	0.7
+1a097609487d6d2b2c94c8ec8825a27f97db1b19	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Chytridiomycota; o__Chytridiomycotina; f__Chytridiomycetes	0.6
+1a230dab15900400e858f3d67dc686ef2fefb027	k__Eukaryota; d__Opisthokonta; p__Fungi	1.0
+1a8843239d726ae377a1d5dea1079e2f6d207f7c	k__Eukaryota; d__Alveolata; p__Ciliophora	1.0
+1aa45e1db09c6ade19c38770148288a6c8bfbaf2	k__Eukaryota; d__Alveolata; p__Ciliophora; c__Spirotrichea; o__Hypotrichia; f__Oxytrichidae	0.7
+1ace3099f0a967e41ab7ad4e0e7fba5953a4b54c	k__Eukaryota; d__Alveolata; p__Ciliophora; c__Spirotrichea; o__Hypotrichia; f__Oxytrichidae	0.7
+1acfa6eb06a579382a828a978287df9928f6ce9f	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Sordariomycetes	1.0
+1ada8fc7877cd692891c96556f5effa864b0d4df	k__Eukaryota; d__Archaeplastida; p__Streptophyta; c__Embryophyceae; o__Embryophyceae_X; f__Embryophyceae_XX	1.0
+1b07358ba4e76af46ebc21c3f2093d310a7cddab	Unassigned	1.0
+1b9b41da8aa94e1ebe102467d767821b880b9198	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Sordariomycetes	1.0
 1bf10c9c56b00057e92a71bb5101f6cf45f21975	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Chytridiomycota; o__Chytridiomycotina; f__Chytridiomycetes	0.8
 1c5881fff192c3f0cfe09658e56214669d6a2de0	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Basidiomycota; o__Agaricomycotina; f__Agaricomycetes	1.0
+1cc4b1c6dfa66ca9da5f6322d189a1fcf26af99d	k__Eukaryota; d__Opisthokonta; p__Metazoa; c__Arthropoda; o__Crustacea; f__Maxillopoda	1.0
+1d02fd29d802c6d81bc0403f7e343f92448b17a7	Unassigned	1.0
+1d0591c03baafc5d0ab5bb9ddbcacd850f13790b	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Sordariomycetes	1.0
+1d448fecd4eaf42f788a0773cdf719b3e1107428	Unassigned	1.0
+1d53580b0b7a41a1bd9c2f5c970119a1f0b66a46	Unassigned	1.0
+1d5358a7575ea0cb3f6d9d2c8517efb05f66cb44	k__Eukaryota; d__Stramenopiles; p__Ochrophyta; c__Chrysophyceae; o__Chrysophyceae_X; f__Chrysophyceae_Clade-C	0.6
+1d9439c9d1604073907fad5688560ece67aa07bb	k__Eukaryota; d__Rhizaria; p__Cercozoa; c__Filosa-Sarcomonadea	0.6
+1e05ea4a7f731edc03855c5ce3e694ac7532a8b7	k__Eukaryota; d__Opisthokonta; p__Fungi	1.0
+1e0c7d2fa64278cfe8575da8d2956feaa76d01b6	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Pezizomycetes	0.6
 1e1f4c8faaae5ff75bd11c5ebadee6deff6ac4fd	Unassigned	1.0
+1e2b66e81ead2710c4463e76b33d260130994915	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Chytridiomycota; o__Chytridiomycotina; f__Chytridiomycetes	0.6
+1e4abcbad0fa364435488559df75b04ee4992b72	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Basidiomycota; o__Agaricomycotina; f__Agaricomycetes	1.0
+1e6727eff96d2d14bc8d89101e3e7d86149b8f41	k__Eukaryota; d__Opisthokonta; p__Fungi	1.0
+1e88b20a3f5bc86705e257034708ea13c51698c6	k__Eukaryota; d__Rhizaria; p__Cercozoa; c__Filosa-Sarcomonadea; o__Glissomonadida	0.6
+1f043c6cb2197eb43565bca4df97d794c178bb60	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Chytridiomycota; o__Chytridiomycotina; f__Chytridiomycetes	0.6
+1f5a34071314717c840f3540ce96e775f853c879	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Sordariomycetes	1.0
 1f781dc8415364eeaa0cd4024cdc8cdcc6eb782e	k__Eukaryota; d__Alveolata; p__Ciliophora; c__Litostomatea; o__Trichostomatia	0.7
+1fb9bba4a0d165a033254b710fb308e03ca2f51b	k__Eukaryota; d__Alveolata; p__Chrompodellids; c__Colpodellidea; o__Colpodellida; f__Alphamonaceae; g__Alphamonadea_ALPH1; s__Alphamonadea_ALPH1_sp.	0.9
+20377f21d54c75fd7d9a70bdf6c3a8de11b71f1c	k__Eukaryota; d__Alveolata; p__Chrompodellids; c__Colpodellidea; o__Colpodellida; f__Alphamonaceae; g__Alphamonadea_ALPH1; s__Alphamonadea_ALPH1_sp.	1.0
+209c89ada24ee75944d3f853acc44e0fecf38df6	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Leotiomycetes	1.0
+20cbe613e8f62f88cd67f949f4e899b288a3321f	k__Eukaryota; d__Alveolata; p__Ciliophora	1.0
 20de8156513e872c4debe039d5b85f5a7950b3b6	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Dothideomycetes	1.0
+2160693c1e8aeb9958491f7d48b135d0db3e8d60	k__Eukaryota; d__Opisthokonta; p__Metazoa; c__Nematoda; o__Chromadorea; f__Chromadorea_X	1.0
+216e7d284d24359cdf77de56edcf510c24f7a7f2	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Sordariomycetes	1.0
+2242789980c6dcbb65ed097f35f389ec890e8446	k__Eukaryota; d__Alveolata; p__Apicomplexa; c__Gregarinomorphea; o__Cryptogregarinorida; f__Cryptosporidiidae	0.714
+22c0eb818e22324f8f87e21148fd790691a0086b	k__Eukaryota; d__Archaeplastida; p__Chlorophyta; c__Chlorophyceae; o__Chlamydomonadales; f__Chlamydomonadales_X; g__Chlamydomonas	0.6
 22d3a751e48f0635ec286ce8a3650e3c2d055213	k__Eukaryota; d__Stramenopiles; p__Pseudofungi; c__Oomycota; o__Oomycota_X; f__Peronosporales	1.0
+22e0d4c7e76d67a65cc03e82c58e532406ff40d3	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Chytridiomycota; o__Chytridiomycotina; f__Chytridiomycetes	0.7
+230760cc0d21df2259bb93a90bc5c6c200657aed	k__Eukaryota; d__Rhizaria; p__Cercozoa; c__Filosa-Sarcomonadea; o__Glissomonadida; f__Sandonidae	0.7
+230c05a6bf9c68317d2929a3299b042343c326f2	Unassigned	1.0
+2329f6982181df3c9bcfd792fff39091506592bb	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Sordariomycetes	1.0
+2337a57d6bd5aecc98d320e62ae8d25c023e0a97	k__Eukaryota; d__Stramenopiles; p__Ochrophyta; c__Chrysophyceae; o__Chrysophyceae_X; f__Chrysophyceae_Clade-C	0.7
+2350dac227d8070bd2b552da3bb3cdd72cc62aed	k__Eukaryota; d__Opisthokonta; p__Metazoa; c__Mollusca; o__Gastropoda; f__Heterobranchia	1.0
+235218993d3b1659bc71281dc65cb49627406a0f	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Basidiomycota; o__Agaricomycotina; f__Agaricomycetes	1.0
+23da20fd7af6dd4d6ab5db0e969066514b89a6ef	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Basidiomycota; o__Agaricomycotina; f__Agaricomycetes	1.0
+24141a53dde66f05ed715aef969f3bd2495637c9	k__Eukaryota; d__Rhizaria; p__Cercozoa; c__Filosa-Sarcomonadea; o__Glissomonadida	0.7
+2414e3bb365ba2cdcbb7d8742f2cc13d680f9df0	k__Eukaryota; d__Alveolata; p__Chrompodellids; c__Colpodellidea; o__Colpodellida; f__Alphamonaceae; g__Alphamonadea_ALPH1; s__Alphamonadea_ALPH1_sp.	1.0
+24333b5263d55a337e353f4887b1068925892e0e	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Chytridiomycota; o__Chytridiomycotina; f__Chytridiomycetes	0.6
 24376d720666f0929c0afd35d93e621a6003db19	Unassigned	1.0
 243d446b4aa1213125e95cb17fe89330d3c23860	k__Eukaryota; d__Archaeplastida; p__Chlorophyta; c__Chlorophyceae; o__Chlamydomonadales; f__Chlamydomonadales_X; g__Dunaliella; s__Dunaliella_sp.	0.9
+244c07972d8d8f63c8cdb5e8acb36542cc583175	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Chytridiomycota; o__Chytridiomycotina; f__Chytridiomycetes	0.6
+24bc5bdc59b5bb8a76c810b39b55748aeea90f4b	k__Eukaryota; d__Rhizaria; p__Cercozoa	1.0
+24c38ebd02ed517363455fa25236e232b761641e	k__Eukaryota; d__Alveolata; p__Chrompodellids; c__Colpodellidea; o__Colpodellida; f__Alphamonaceae; g__Alphamonadea_ALPH1; s__Alphamonadea_ALPH1_sp.	1.0
 24ce998d787ae87e051768e5e0924413e18c4577	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Sordariomycetes	1.0
+24d8201ffa6e08f087ff430c8d1167fa4fd69ddb	k__Eukaryota; d__Rhizaria; p__Cercozoa; c__Filosa-Sarcomonadea	0.6
 24f7309b8edc30711041896c04bbafebc7d65644	k__Eukaryota; d__Stramenopiles; p__Ochrophyta; c__Chrysophyceae; o__Chrysophyceae_X; f__Chrysophyceae_Clade-C	0.7
+25233df834b0f54f53bade00ff392024ba3d8eaa	k__Eukaryota; d__Alveolata; p__Chrompodellids; c__Colpodellidea; o__Colpodellida; f__Alphamonaceae; g__Alphamonadea_ALPH1; s__Alphamonadea_ALPH1_sp.	1.0
+2555b9363140ff81447e395024fffa5e93d05162	k__Eukaryota; d__Alveolata; p__Chrompodellids; c__Colpodellidea; o__Colpodellida; f__Alphamonaceae; g__Alphamonadea_ALPH1; s__Alphamonadea_ALPH1_sp.	1.0
+259eb80a31ee40160df40c16bce4ecc9764abfeb	k__Eukaryota; d__Alveolata; p__Ciliophora; c__Spirotrichea; o__Hypotrichia; f__Oxytrichidae	0.7
+25d4f7945ad74aecabd30aee6f19df7e08925d3e	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Basidiomycota; o__Agaricomycotina; f__Tremellomycetes	1.0
+2621b65e7bdad67bd8bdae1d315787d33ec0c304	k__Eukaryota; d__Opisthokonta; p__Fungi	1.0
+2656b3c2c6a7cf40fbb5c22a45d5fda869d7e171	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Sordariomycetes	1.0
+2673a3e89b88b0b5205b0bdfebdebfddda7e884c	k__Eukaryota; d__Archaeplastida; p__Streptophyta; c__Embryophyceae; o__Embryophyceae_X; f__Embryophyceae_XX	1.0
 26f81ccec42556e48be6be10db3b48fb8bb5076f	k__Eukaryota; d__Alveolata; p__Ciliophora	0.8
+275c736aacbcea24c3d0267cfed2b6fabf6833d8	k__Eukaryota; d__Rhizaria; p__Cercozoa; c__Filosa-Thecofilosea; o__Cryomonadida	0.7
 276bd6d796ccb453b904b7f2855b92c8ec0734b2	k__Eukaryota; d__Alveolata; p__Ciliophora	1.0
+27b757cac6b29be4c0600f9af43b28dda763b500	k__Eukaryota; d__Rhizaria; p__Cercozoa; c__Filosa-Sarcomonadea	0.6
+27f9c51a180cd032adcd0bd54cf8f735c25d62db	k__Eukaryota; d__Opisthokonta; p__Metazoa; c__Nematoda; o__Chromadorea; f__Chromadorea_X	1.0
+28440e26b3487c82e775cd69da30c87c704ffe39	k__Eukaryota; d__Alveolata; p__Chrompodellids; c__Colpodellidea; o__Colpodellida; f__Alphamonaceae; g__Alphamonadea_ALPH1; s__Alphamonadea_ALPH1_sp.	1.0
+287b87e41b139ee7e288a21fac6c2668149589a1	k__Eukaryota; d__Rhizaria; p__Cercozoa	1.0
+287eded9b119bd377e4bebcd1cf2ff07e2d9be82	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Pezizomycetes	0.6
+28ccd94098f2c21f4cf2d9f38f3d2d84dacfb10b	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Chytridiomycota; o__Chytridiomycotina; f__Chytridiomycetes	0.9
+2968597a3c33439aa87d3314499c5cc02c80695b	k__Eukaryota; d__Archaeplastida; p__Chlorophyta; c__Chlorophyceae; o__Sphaeropleales; f__Sphaeropleales_X	0.9
+2996d57e8e3e5d01f8dc1ab6a6617d7017756baf	k__Eukaryota; d__Alveolata; p__Apicomplexa; c__Gregarinomorphea; o__Cryptogregarinorida; f__Cryptosporidiidae	0.667
+2a3512444257aa324bd54d8a8424ec1f2786b351	k__Eukaryota; d__Opisthokonta; p__Metazoa	1.0
+2a88ad6076754a2bdd8caa68b8fa2aec1cea36fd	k__Eukaryota; d__Opisthokonta; p__Fungi	1.0
+2a976636e0fbe00014272eb24222e41c6909c30f	k__Eukaryota; d__Alveolata; p__Ciliophora; c__Litostomatea; o__Trichostomatia	0.7
 2ac1457d232ae00dec760cc8f36cf243409658ad	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Basidiomycota; o__Agaricomycotina; f__Agaricomycetes; g__Agaricomycetes_X; s__Agaricomycetes_X_sp.	0.6
+2afda68b8a8d75c0778f60c7d7fc2c33fe2839a6	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Basidiomycota; o__Agaricomycotina; f__Agaricomycetes	1.0
+2b1739f87d228c73bf9c461cf9d14ba697ced9a0	k__Eukaryota; d__Alveolata; p__Ciliophora; c__Litostomatea; o__Trichostomatia	0.7
+2b2ff0b3c8d7b273c2e0f9ba859395fd664b1985	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Sordariomycetes	1.0
 2bae74896237452b7b40b7d4df6364166a5fe27c	k__Eukaryota; d__Opisthokonta; p__Metazoa; c__Annelida; o__Annelida_X; f__Annelida_XX	1.0
+2bb4000fa811fde79a1e1a9a2b7947e15cc83ecb	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Sordariomycetes	1.0
+2c09721080650a2be2e675b266ced1f08a4480fd	Unassigned	1.0
+2c15aec832ef9a282d38c74520f7a2ee338c05a0	k__Eukaryota; d__Stramenopiles; p__Ochrophyta; c__Chrysophyceae; o__Chrysophyceae_X	0.6
 2c4c305264b893083de1af093755c77554cd58f6	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Leotiomycetes	1.0
+2c6002841abbebcbd79ff5ff78cb1d11f8b32a7e	k__Eukaryota; d__Alveolata; p__Ciliophora; c__Litostomatea; o__Trichostomatia	0.7
+2c697344f2e831a9896e02f10e5d1b3943b8f920	k__Eukaryota; d__Opisthokonta; p__Fungi	1.0
+2c79b97f3eddfd7e5056d80c61afcc292508a2b4	k__Eukaryota; d__Rhizaria; p__Cercozoa; c__Filosa-Sarcomonadea	0.6
+2ca3372842bef0e5198f95f0426b725b946421ba	k__Eukaryota; d__Opisthokonta; p__Metazoa; c__Nematoda; o__Chromadorea; f__Chromadorea_X	1.0
+2d36f1deb223950165afa33845cf7200cc6c527d	k__Eukaryota; d__Alveolata; p__Chrompodellids; c__Colpodellidea; o__Colpodellida; f__Alphamonaceae; g__Alphamonadea_ALPH1; s__Alphamonadea_ALPH1_sp.	0.8
+2d5f06109481c1786106cb7c69a987f43af0f888	k__Eukaryota; d__Rhizaria; p__Cercozoa; c__Filosa-Thecofilosea; o__Cryomonadida	0.7
 2d8fca62ec801ce4dd5e8f599d9c8e3c03d41d22	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Dothideomycetes	1.0
+2dbceb305d4aeb881a1955638ef49a1686fe4cd9	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Chytridiomycota; o__Chytridiomycotina; f__Chytridiomycetes	0.6
+2e25f4f3be8a5edd969025436ca57f512d29d2ec	k__Eukaryota; d__Alveolata; p__Chrompodellids; c__Colpodellidea; o__Colpodellida; f__Alphamonaceae; g__Alphamonadea_ALPH1; s__Alphamonadea_ALPH1_sp.	1.0
+2e366df71a3e715b73bc7e027f89837528e12902	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Basidiomycota; o__Agaricomycotina; f__Tremellomycetes; g__Tremellomycetes_X; s__Tremellomycetes_X_sp.	0.6
+2e97881387dcd0f2550b5bb5dd2b667af053d4b8	Unassigned	1.0
 2ea81ccca7ca1c0752c9040185eda8b2e759f51a	k__Eukaryota; d__Rhizaria; p__Cercozoa; c__Filosa-Sarcomonadea	0.6
+2ef061c29692ba379a1b591893fd5b02a1762bbb	k__Eukaryota; d__Alveolata; p__Ciliophora; c__Litostomatea; o__Trichostomatia; f__Isotrichidae_2; g__Isotrichidae_2_X; s__Isotrichidae_2_X_sp.	0.6
 2f369a44240fbc33d0505e40d90baeb5915a8571	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Chytridiomycota; o__Chytridiomycotina; f__Chytridiomycetes	0.9
+2f44c8a9ba92ac9bdd4cf9f517e1d85d5df7d0cf	k__Eukaryota; d__Rhizaria; p__Cercozoa; c__Filosa-Thecofilosea; o__Cryomonadida	0.7
+2f4d9105b97ecd02c81a2be38f6ad06be45d2b3c	k__Eukaryota; d__Opisthokonta	0.9
+2f91463e67f9daaabeeea8a0aeb29e747b0d72c1	k__Eukaryota; d__Rhizaria; p__Cercozoa; c__Filosa-Sarcomonadea	0.6
 2fabed26e0a7827c1e355048ef7b1c8763e898b9	k__Eukaryota; d__Rhizaria; p__Cercozoa; c__Endomyxa-Phytomyxea	1.0
 3018abab8d9932627f276d8d9c2506290925320d	k__Eukaryota; d__Archaeplastida; p__Streptophyta; c__Embryophyceae; o__Embryophyceae_X; f__Embryophyceae_XX	1.0
 303318a8578727681bb62b3f2c3ee4b661c8724d	k__Eukaryota; d__Rhizaria; p__Cercozoa	1.0
 3046c1f6ff4ee20e1988b85906495a06458661d6	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Dothideomycetes	1.0
 305f07e8f9f6d52f5b59f0fee6eb2c79bb77f42b	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Basidiomycota; o__Agaricomycotina; f__Agaricomycetes	1.0
+30a180d6bbae3cdd63231b91df4b9f0108536b3d	k__Eukaryota; d__Rhizaria; p__Cercozoa; c__Endomyxa-Phytomyxea	0.667
+31242a352e790cb733d864789a300e36d222dd1a	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Basidiomycota; o__Pucciniomycotina; f__Microbotryomycetes	0.7
+3142de293f63e7ee9d8826e53918958ac02cb3d6	k__Eukaryota; d__Opisthokonta; p__Fungi	1.0
+320f48337cdab70dfdce5d9ce662548f0b2b633d	k__Eukaryota; d__Opisthokonta; p__Fungi	1.0
 3212c61acf490b4ebc2b655164197404539f93da	k__Eukaryota; d__Rhizaria; p__Cercozoa	1.0
+324541706e8c8b317cb6f34e8c0ad0fad2c8bda1	Unassigned	1.0
+3258ffaee3ee76cb606e2e2c5f8571be56028c87	Unassigned	1.0
+329923a97baf424c143838ec35cb1fe54292962f	k__Eukaryota; d__Alveolata; p__Ciliophora	1.0
+32d87c395c984e1fd4001fb259acafc59f640bb7	k__Eukaryota; d__Alveolata	1.0
+32dde9526688bae30678e55513e8b9286aeffcd5	k__Eukaryota; d__Alveolata; p__Chrompodellids; c__Colpodellidea; o__Colpodellida; f__Alphamonaceae; g__Alphamonadea_ALPH1; s__Alphamonadea_ALPH1_sp.	0.9
+32f126e93c8769987d0efd27375814425917ddf1	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Sordariomycetes	1.0
+32f5dd71ef9accf2a15ca3ee27077059bd2901bf	Unassigned	1.0
+33b5e9498560fbd84b49638b8250cb4f350d21f2	k__Eukaryota; d__Opisthokonta; p__Fungi	1.0
+3405db24c344ecc7c3afbe554a4509f4f01d0e1f	k__Eukaryota; d__Alveolata; p__Ciliophora; c__Spirotrichea; o__Hypotrichia; f__Oxytrichidae	0.7
+34b30dfb4f463a4c17979b0a7a5bf733e796a3aa	k__Eukaryota; d__Alveolata; p__Ciliophora; c__Spirotrichea; o__Hypotrichia; f__Oxytrichidae	0.7
+35fe7fe69d888aa6a35fc4c242a4433b709837d1	k__Eukaryota; d__Rhizaria; p__Cercozoa; c__Filosa-Thecofilosea; o__Cryomonadida	0.6
+360f8a36c1f26bd81ba7838ca1c59e5ee72f544d	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Sordariomycetes	1.0
+3616522a28703de4506e6a74ff75d4f610483dec	k__Eukaryota; d__Opisthokonta; p__Fungi	1.0
 3624698577f985322c2f2f4f7a1d8a553c36e996	k__Eukaryota; d__Alveolata; p__Ciliophora; c__Litostomatea; o__Trichostomatia	0.7
 36a85d39e885bc7161d87340483cb781d1df3397	k__Eukaryota; d__Rhizaria; p__Cercozoa; c__Filosa-Sarcomonadea	0.6
+36ce788bd1a916363c42a54ccfa6ceebfc2f31df	k__Eukaryota; d__Alveolata; p__Ciliophora	0.8
 36d9bf292052fd2bf1df3d9e7b4244b0da14c8df	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Chytridiomycota; o__Chytridiomycotina; f__Chytridiomycetes	0.7
+37168b687ee29d0278d6c146b76e3add8f4cc71f	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Saccharomycotina; f__Saccharomycetales; g__Candida	0.6
+3733ca289ea6454faa3219c6db91a33df108c0e6	k__Eukaryota; d__Stramenopiles; p__Ochrophyta; c__Chrysophyceae; o__Chrysophyceae_X	0.6
 3736022948b77a86c5eb073c377b754b9eccd81e	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Leotiomycetes	0.9
+373f266db0c083bf2d6a8b0307e95fc50c778b2c	k__Eukaryota; d__Rhizaria; p__Cercozoa; c__Filosa-Sarcomonadea; o__Glissomonadida; f__Sandonidae	0.6
+37a08ca6cc68a0d4e88a0cfdbaf353e4f066509c	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Sordariomycetes	1.0
+38016eb84e6439254062b7334a0ce1d4ff8dcd17	Unassigned	1.0
+382658f7ff3e49f7f4ecb44157f010bfa291a02e	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Dothideomycetes	1.0
+3892339c33efa6fdf59772f95dd0b434b6713b00	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina	0.7
+38c0346607465b50c3c5fde1ad08f0b31a84982e	k__Eukaryota; d__Archaeplastida; p__Chlorophyta; c__Trebouxiophyceae; o__Chlorellales; f__Chlorellales_X	1.0
+38c2987349e77472fddd0b46817c449f1624d1c5	k__Eukaryota; d__Rhizaria; p__Cercozoa	1.0
 38ed26854e5ed56069523b9e9a841b2f0956884a	k__Eukaryota; d__Alveolata	1.0
+390067a32cf406ffc67ec7386a32f8404b8104a8	k__Eukaryota; d__Alveolata; p__Chrompodellids; c__Colpodellidea; o__Colpodellida; f__Alphamonaceae; g__Alphamonadea_ALPH1; s__Alphamonadea_ALPH1_sp.	1.0
+3932f5536ef53cc4ad1e14673017732582065562	Unassigned	1.0
+39ffb8ee346434522bce949fa9f251cfccf2c0f3	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Sordariomycetes	1.0
+3a8e41da6c268470bbe48b96c6a42d5f3be45bca	Unassigned	1.0
+3aa2feb9e6632f530cc8aac56e8c66435024ef8e	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Sordariomycetes	1.0
+3c60e19ae6f25578429770c992b4831704cf68ec	k__Eukaryota; d__Opisthokonta; p__Fungi	1.0
+3c64aff7278eb15086e9d1871ffaa490446a2f40	k__Eukaryota; d__Rhizaria; p__Cercozoa; c__Filosa-Sarcomonadea	0.6
+3c71781b411c1916775f5c83aaef56e705956b45	k__Eukaryota; d__Stramenopiles; p__Ochrophyta; c__Chrysophyceae; o__Chrysophyceae_X	0.7
 3ca0a91549764d5d96f13b0b519d57be4fc7f38d	k__Eukaryota; d__Alveolata; p__Ciliophora	1.0
+3cacc6983c66326f1228bb8972b0920714c7510f	k__Eukaryota; d__Rhizaria; p__Cercozoa	0.667
+3cdf36765cf27ccf3b1de934bee696fff78d57a0	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Pezizomycetes	0.6
+3d0c85ebe667bd1b8f436571fec9047f05c02c50	k__Eukaryota; d__Rhizaria; p__Cercozoa; c__Filosa-Sarcomonadea	0.6
+3dd0ebddea59f67ec685e1c95e111dc3f46bc926	k__Eukaryota; d__Alveolata; p__Chrompodellids; c__Colpodellidea; o__Colpodellida; f__Alphamonaceae; g__Alphamonadea_ALPH1; s__Alphamonadea_ALPH1_sp.	1.0
 3e0aa27a90531059d047b17b27157a4da0a78de4	k__Eukaryota; d__Archaeplastida; p__Streptophyta; c__Embryophyceae; o__Embryophyceae_X; f__Embryophyceae_XX	1.0
+3e78d49f6af5dd630adce889d5c5011ffb304108	k__Eukaryota; d__Rhizaria; p__Cercozoa; c__Filosa-Sarcomonadea; o__Glissomonadida; f__Sandonidae	0.7
+3e9fd94a9cb3b72df476458668d4b94e08f80cf0	k__Eukaryota; d__Archaeplastida; p__Chlorophyta; c__Trebouxiophyceae; o__Chlorellales; f__Chlorellales_X	1.0
+3eb4097ef6182dbd7c47c2d13bc68494476100d5	k__Eukaryota; d__Alveolata; p__Ciliophora; c__Spirotrichea; o__Hypotrichia; f__Oxytrichidae	0.7
+3eba5e7e6c459e67bd84c1b5016d95c06125833f	k__Eukaryota; d__Alveolata; p__Chrompodellids; c__Colpodellidea; o__Colpodellida; f__Alphamonaceae; g__Alphamonadea_ALPH1; s__Alphamonadea_ALPH1_sp.	1.0
 3f5699ae4c7ac43e36d37280a0843e563e93d097	k__Eukaryota; d__Alveolata; p__Ciliophora	0.7
+3f9bcbd47c50723fc6a71b0ad7a0e62205cd60b5	k__Eukaryota; d__Alveolata; p__Ciliophora; c__Litostomatea; o__Trichostomatia	0.7
+3fa031f1875f6279edca2fa7b8178d5606f08a07	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Eurotiomycetes	1.0
+402fa3a3dfd141c6c913aed3a5faace05ace0a01	k__Eukaryota; d__Stramenopiles; p__Ochrophyta; c__Chrysophyceae; o__Chrysophyceae_X; f__Chrysophyceae_Clade-C	0.6
+4038d035b4fbe278348b20b78ca1277190198d86	Unassigned	1.0
+40725cf0229e134f7c57e3ba29129bff90d9aca0	k__Eukaryota; d__Alveolata; p__Ciliophora; c__Spirotrichea; o__Hypotrichia; f__Oxytrichidae	0.7
 4089ae649f92abbecff77ef3090da8f9d6a189df	k__Eukaryota; d__Alveolata; p__Ciliophora; c__Litostomatea; o__Trichostomatia; f__Isotrichidae_2; g__Isotrichidae_2_X; s__Isotrichidae_2_X_sp.	0.6
+409186c458bcaa712ec96565687329c10ead9822	k__Eukaryota; d__Rhizaria; p__Cercozoa	0.8
 40a30f5af25f2fba49f3b97097f68aa02ab25352	k__Eukaryota; d__Rhizaria; p__Cercozoa	1.0
 40a4e0a3be13d918ed0a23033629c09fcb52913d	k__Eukaryota; d__Opisthokonta; p__Fungi	1.0
+40becd549fd582716f344262b90c5ab3df2317f0	k__Eukaryota; d__Rhizaria; p__Cercozoa; c__Filosa-Sarcomonadea; o__Glissomonadida; f__Sandonidae	0.7
+40d38d122c9d5326a19d9670ddc21450149b5f6a	k__Eukaryota; d__Rhizaria; p__Cercozoa	1.0
+412e3b1fb3accd5597b7d9f3b782b25eb17ce2b4	k__Eukaryota; d__Alveolata; p__Ciliophora; c__Spirotrichea; o__Hypotrichia; f__Oxytrichidae	0.7
+4152f1f1fb91345610e8799e392562ca2ce2f3d0	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Chytridiomycota; o__Chytridiomycotina; f__Chytridiomycetes	0.7
+415ec7c3b7914320b132a49f85fe7685c11b6a99	k__Eukaryota; d__Archaeplastida; p__Chlorophyta; c__Chlorophyceae; o__Chlamydomonadales; f__Chlamydomonadales_X; g__Dunaliella; s__Dunaliella_sp.	0.6
 4176c8d6c3829257ab966fc3974fd38a9832fdb0	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Chytridiomycota; o__Chytridiomycotina; f__Chytridiomycetes	0.8
+417b6b581afc725cd792d79d4f13964d2475b7f6	k__Eukaryota; d__Rhizaria; p__Cercozoa	0.9
+41a75ac9d6e4e42bcd034b0735bdda2ff7a2f7e5	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina	1.0
+425936cd1e6139fb90b30dff50d5d49bc889f9b7	Unassigned	1.0
+42f203ca9012f9149b77fb1b75e54c2fc700258d	k__Eukaryota; d__Alveolata; p__Chrompodellids; c__Colpodellidea; o__Colpodellida; f__Alphamonaceae; g__Alphamonadea_ALPH1; s__Alphamonadea_ALPH1_sp.	0.9
+436c12688f46c0950b2cf5127e1943a482637a22	Unassigned	1.0
+43ecdeddfe155036fc7f0f18ac7a3ff67afac147	Unassigned	1.0
+43fcf3c9b33cc7a2b505ad66ef7ac3dc07753cf9	k__Eukaryota; d__Archaeplastida; p__Streptophyta; c__Embryophyceae; o__Embryophyceae_X; f__Embryophyceae_XX	1.0
+44ac7095f23e9b6e464fd2a26d727af8b25438c7	k__Eukaryota; d__Opisthokonta; p__Metazoa; c__Porifera; o__Porifera_X; f__Demospongiae	0.6
 44bc8c513a37a5c6568031f24568a113d6ef164b	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Sordariomycetes	1.0
 44e35a42036a66b38c0bc5987badaf866bc980cd	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Chytridiomycota; o__Chytridiomycotina; f__Chytridiomycetes	0.9
+454e836be8f7c3fd87ad573c7a91fe18dfde865e	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Chytridiomycota; o__Chytridiomycotina; f__Chytridiomycetes	0.6
+45932b160369b53e180bff27af0c3f6ad4c52565	Unassigned	1.0
+45b854174bfef8bc3f14d85e8f5478f259bedad7	k__Eukaryota; d__Alveolata; p__Ciliophora; c__Litostomatea; o__Trichostomatia	0.7
+45c4cff8f1125952a8996d4bddcb9db6f208108c	k__Eukaryota; d__Alveolata; p__Ciliophora; c__Spirotrichea; o__Hypotrichia; f__Oxytrichidae	0.7
 45d796c8395a782879ddc4bf108480cfc30e5602	k__Eukaryota; d__Archaeplastida; p__Streptophyta; c__Zygnemophyceae; o__Zygnemophyceae_X; f__Zygnemophyceae_XX	0.9
 45dddb128b852b8add335e883f4b0d0faee762f0	k__Eukaryota; d__Opisthokonta; p__Metazoa; c__Nematoda; o__Chromadorea; f__Chromadorea_X	0.7
+46000b10211ed8cdd825d7da2ee6b1bb69115073	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Chytridiomycota; o__Chytridiomycotina; f__Chytridiomycetes	0.7
+46263f16c4f291044ecfe6055728645c921ea944	k__Eukaryota; d__Archaeplastida; p__Chlorophyta; c__Chlorophyceae; o__Chlamydomonadales; f__Chlamydomonadales_X	0.8
 4632b1c569a56352ed5b7eae75b67b4dbd46a081	k__Eukaryota; d__Archaeplastida; p__Chlorophyta; c__Trebouxiophyceae	1.0
+464bdc3e120cc3f950a9f7837d6ba32e10d383e8	k__Eukaryota; d__Archaeplastida; p__Chlorophyta; c__Chlorophyceae; o__Chlamydomonadales; f__Chlamydomonadales_X	1.0
+46943f066c15ccfd7d9b40cdd0e90b1c4167c6ec	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Chytridiomycota; o__Chytridiomycotina; f__Chytridiomycetes	0.7
 47353524429f69ae0421b71dffdc130ffb8f578c	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Sordariomycetes	1.0
 4773bd13decf881c350bf73c87ba9dd1e85aa9ac	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Dothideomycetes	1.0
+4788214251f846288a5f7c9f7c61c602bb3351a9	k__Eukaryota; d__Alveolata; p__Ciliophora; c__Litostomatea; o__Trichostomatia	0.7
+47b30fd8bc5a281ade9252e6ff1e9072e4002b3e	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Chytridiomycota; o__Chytridiomycotina	0.6
+47f3bccb1f3ebed243389f07d64e3abc8d83d792	k__Eukaryota; d__Alveolata; p__Chrompodellids; c__Colpodellidea; o__Colpodellida; f__Alphamonaceae; g__Alphamonadea_ALPH1; s__Alphamonadea_ALPH1_sp.	0.8
+48288175f778d279ade74f7449d03393fe53f5fd	k__Eukaryota; d__Archaeplastida; p__Chlorophyta; c__Chlorophyceae; o__Chlamydomonadales; f__Chlamydomonadales_X; g__Chlamydomonas	0.6
 4841e2f9e54008dc992772a2e61a01a779df8fd0	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Sordariomycetes	1.0
 489019e4da22091aad275669c11570d6ef333da7	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Sordariomycetes	1.0
+48c6489e09febb6d2813973f94151a322db6cb28	k__Eukaryota; d__Rhizaria; p__Cercozoa; c__Filosa-Sarcomonadea	0.7
+48decb11533e58aa5e6b75d90a000a6f60eccfae	k__Eukaryota; d__Rhizaria; p__Cercozoa	1.0
+494b97597c3079272eb8d5afcc5682bd672b8fb5	k__Eukaryota; d__Amoebozoa; p__Lobosa; c__Tubulinea; o__Leptomyxida; f__Leptomyxidae; g__Ripidomyxa; s__Ripidomyxa_sp.	1.0
 4952c02b1441d57ec997f734188ac1054be68651	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Chytridiomycota; o__Chytridiomycotina; f__Chytridiomycetes	0.7
 49634ef1e517682a0e6ef525557f02a4eaeff7e7	Unassigned	1.0
+499e86fb13594bfa9ea238969c542f11109579b0	k__Eukaryota; d__Opisthokonta; p__Metazoa; c__Nematoda; o__Chromadorea; f__Chromadorea_X	1.0
+4a2280f70e2f3c28910a74d6c81f6f49b06095db	k__Eukaryota; d__Alveolata; p__Chrompodellids; c__Colpodellidea; o__Colpodellida; f__Alphamonaceae; g__Alphamonadea_ALPH1; s__Alphamonadea_ALPH1_sp.	1.0
 4a50a95fec2e92eaf4a0208e4a937a40b873630e	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Basidiomycota; o__Agaricomycotina; f__Agaricomycetes; g__Agaricomycetes_X; s__Agaricomycetes_X_sp.	0.6
 4a921a01c462831601125c7918b55c30903eae7d	k__Eukaryota; d__Archaeplastida; p__Chlorophyta; c__Chlorophyceae; o__Chlamydomonadales; f__Chlamydomonadales_X	0.9
+4ab8b22272810dd19ff83a12e48bb9a1aaf436c7	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Dothideomycetes	1.0
+4ae584bd15b067040ecf6e8fbb519f406a173fc6	k__Eukaryota; d__Rhizaria; p__Cercozoa; c__Filosa-Sarcomonadea; o__Glissomonadida	0.6
+4bb7855555eec1376e1508681526d2c83ae19037	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Dothideomycetes	0.9
+4bf3a77672a08182fab3a436534f6e571379911e	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Saccharomycotina; f__Saccharomycetales	0.7
+4c0715dee6e648cf560f87bec521291867e5d232	k__Eukaryota; d__Stramenopiles; p__Pseudofungi; c__Oomycota; o__Oomycota_X; f__Peronosporales	1.0
+4c2d1f2340f7977cc715d2f1deeea95bce17bbc3	k__Eukaryota; d__Opisthokonta; p__Fungi	1.0
+4c4568b025f0e860d2f4259017be8889dc6b96a2	k__Eukaryota; d__Rhizaria; p__Cercozoa; c__Filosa-Sarcomonadea	0.6
 4c6330e482d1dcff40e51cee19f63816eec00824	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Sordariomycetes	1.0
+4c6aac2748e29ef9039d0af1144470d041359e98	k__Eukaryota; d__Alveolata; p__Ciliophora; c__Spirotrichea; o__Hypotrichia; f__Oxytrichidae	0.7
+4ca01764e52c1f7c9157b4cae6953a3f10849766	k__Eukaryota; d__Alveolata; p__Chrompodellids; c__Colpodellidea; o__Colpodellida; f__Alphamonaceae; g__Alphamonadea_ALPH1; s__Alphamonadea_ALPH1_sp.	0.8
+4d2283f01eeaa2de639b17002e3b00ff05d6dbe0	k__Eukaryota; d__Rhizaria; p__Cercozoa; c__Filosa-Sarcomonadea	0.6
+4d272ed3f5d530ac50b6564ea45dbed6da9ec90a	k__Eukaryota; d__Opisthokonta; p__Metazoa; c__Nematoda; o__Enoplea; f__Enoplea_X	0.6
+4d2fb6ebe2ba18d7a4f7495eab6d8c9cef6a7ad4	k__Eukaryota; d__Opisthokonta; p__Metazoa; c__Tardigrada; o__Tardigrada_X; f__Tardigrada_XX	1.0
+4dc7ff989e69848c8a728388e9de245e0d8f3fdd	k__Eukaryota; d__Rhizaria; p__Cercozoa; c__Endomyxa-Phytomyxea	0.667
 4df61b1fb8fe3da1053b220f588a5c3b95fb18f1	k__Eukaryota; d__Alveolata; p__Chrompodellids; c__Colpodellidea; o__Colpodellida; f__Alphamonaceae; g__Alphamonadea_ALPH1; s__Alphamonadea_ALPH1_sp.	1.0
 4e0a7de6d73e5bcbb990ff3805f8b716e5a351e5	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Saccharomycotina; f__Saccharomycetales	0.7
+4e30565c9a744d19474849939f10133260390176	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Dothideomycetes	1.0
+4f28b578426638364a1f4c68d9707a0694644974	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Basidiomycota; o__Agaricomycotina; f__Agaricomycetes	1.0
 4f50cce1f598a0ccaa091d99df72c03fc3f7e94d	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Basidiomycota; o__Agaricomycotina; f__Agaricomycetes	1.0
 4f6784e5a1d9c026f4f50d92b6d1b51a50a988be	k__Eukaryota; d__Opisthokonta; p__Fungi	1.0
+4fb310c85682350c9ce96b129fcd24f95fa8082f	k__Eukaryota; d__Alveolata; p__Chrompodellids; c__Colpodellidea; o__Colpodellida; f__Alphamonaceae; g__Alphamonadea_ALPH1; s__Alphamonadea_ALPH1_sp.	0.9
+4fd11fe9f1e055b3f8eb7a0a4da7399efab488a0	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Basidiomycota; o__Pucciniomycotina	0.8
+4ffbceaf55b4492e66060fc119dd22ef7c5ed524	Unassigned	1.0
+505c38d3c0342ed755ea4791c694a2c1cd07d145	Unassigned	1.0
 511e5ecfb2d418f62823b969660f39b0b3cb3aee	k__Eukaryota; d__Opisthokonta; p__Metazoa	1.0
+513ff618401bc7b7ea6a16d9f657c408f6b2ca5c	k__Eukaryota; d__Rhizaria; p__Cercozoa; c__Filosa-Sarcomonadea; o__Glissomonadida; f__Sandonidae	0.7
 517fa270bd1487fd46e34d505743f6c7ee18dc01	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Chytridiomycota; o__Chytridiomycotina; f__Chytridiomycetes	0.6
+519d0f2c49ce94ac51b594238fa67d0fcba1e1ec	Unassigned	1.0
+51bf476b39d4fe09c2181a034e5801d039690697	k__Eukaryota; d__Opisthokonta; p__Metazoa; c__Nematoda; o__Chromadorea; f__Chromadorea_X	1.0
+51d39d38f32fc188011530cf6131175abdd6a5b9	k__Eukaryota; d__Alveolata; p__Ciliophora; c__Litostomatea; o__Trichostomatia	0.7
+522209b26e05530ad0b81f696d52b3805c94ea8e	k__Eukaryota; d__Opisthokonta	1.0
 52afaf6d78acc5eb0308f59377c0534e92f1b0ac	k__Eukaryota; d__Stramenopiles; p__Pseudofungi; c__Oomycota; o__Oomycota_X; f__Peronosporales	0.8
 5436e0f86facaec560621c4d55d11b815cb5e2a0	k__Eukaryota; d__Opisthokonta; p__Fungi	1.0
+545d8113322e2fe21a69fced310e8447c8ce97ce	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Basidiomycota; o__Agaricomycotina; f__Agaricomycetes	1.0
 54720f6e53385b896a8e206db303ada5f146c60e	k__Eukaryota; d__Alveolata; p__Chrompodellids; c__Colpodellidea; o__Colpodellida; f__Alphamonaceae; g__Alphamonadea_ALPH1; s__Alphamonadea_ALPH1_sp.	1.0
+5483d2caf8ea9245f0738276df11450104a1569e	k__Eukaryota; d__Alveolata; p__Chrompodellids; c__Colpodellidea; o__Colpodellida; f__Alphamonaceae; g__Alphamonadea_ALPH1; s__Alphamonadea_ALPH1_sp.	0.8
+548a8d0f59b262fcffc8fbbbb3c7a050ef4e5245	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Sordariomycetes	1.0
+54c7bf701a8fd600a21c40dd05fcbddcd6b182c8	k__Eukaryota; d__Alveolata; p__Ciliophora	1.0
+54d8d53dfcfc95f0f54919e11cf43476c8cb8772	k__Eukaryota; d__Rhizaria; p__Cercozoa	1.0
+54ebf0c861c86ffc50bf90d66890882bbdc2a852	k__Eukaryota; d__Alveolata; p__Chrompodellids; c__Colpodellidea; o__Colpodellida; f__Alphamonaceae; g__Alphamonadea_ALPH1; s__Alphamonadea_ALPH1_sp.	0.8
+54ecf19dc21d0b14442b7139ac5d59b7d8a3a906	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Chytridiomycota; o__Chytridiomycotina; f__Chytridiomycetes	0.6
+554101de3a06d7e9c917529f2387bbcc2f8d9ef3	k__Eukaryota; d__Alveolata; p__Ciliophora; c__Spirotrichea; o__Hypotrichia; f__Oxytrichidae	0.7
+556e3a6e01ba54f7d5b9e48ca8bebdad6d502c41	k__Eukaryota; d__Rhizaria; p__Cercozoa	1.0
+5591bff2493127ee291cfc2f9c04ff6b27ea4e5f	k__Eukaryota; d__Archaeplastida; p__Streptophyta; c__Embryophyceae; o__Embryophyceae_X; f__Embryophyceae_XX	1.0
+55c6c791d51cfb67cc66a9bcf0b2d7c19c085db5	k__Eukaryota; d__Rhizaria; p__Cercozoa; c__Filosa-Thecofilosea; o__Cryomonadida	0.7
+55ce50c2b3998fa235297081710b3509a8eea9e5	k__Eukaryota; d__Opisthokonta; p__Metazoa; c__Nematoda; o__Enoplea; f__Enoplea_X	0.9
 55cfa1daa3c1fbb3cc350840d76b186614d15371	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Chytridiomycota; o__Chytridiomycotina; f__Chytridiomycetes	0.6
 560c381cc46738134574d302741910776fbea592	k__Eukaryota; d__Rhizaria; p__Cercozoa	0.8
 560cde4bb04417a68e5fdc74ccbb7aa88c354190	k__Eukaryota; d__Rhizaria; p__Cercozoa	1.0
+572d121d5552d9a5a92579a5ae3e7140864539f4	k__Eukaryota; d__Opisthokonta; p__Metazoa; c__Nematoda	0.7
+5741817e94b094dd2c5c152bc00ff91c8a3f5e8d	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Basidiomycota; o__Agaricomycotina; f__Agaricomycetes	1.0
+57c269ed8afc45f3fbbf8c4eefbf6cb096c39d72	Unassigned	1.0
+57d32fe28385a4e30a8ba26e2ad0c9acf0573808	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Sordariomycetes	1.0
+58166a7a59b785c1c25c84d920379543a3b10e70	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Basidiomycota; o__Ustilaginomycotina; f__Exobasidiomycetes	1.0
+58d72a32438ac06af94221e6cd65a1d3dbb51c7d	k__Eukaryota; d__Archaeplastida; p__Streptophyta; c__Embryophyceae; o__Embryophyceae_X; f__Embryophyceae_XX	1.0
 596b5dd59da4d3abb8aa1fa117041f68a594b633	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Saccharomycotina; f__Saccharomycetales	1.0
 59ad8a0447fd26af33ba0f3fcc745affd7f2bf81	k__Eukaryota; d__Rhizaria; p__Cercozoa	1.0
+59b81327aeb6b56846b59d3e30919a9de1304cc1	k__Eukaryota; d__Rhizaria; p__Cercozoa; c__Filosa-Sarcomonadea	0.6
+5a618703180d71af28b4f9c27740430f261e6fd9	k__Eukaryota; d__Alveolata; p__Ciliophora; c__Litostomatea; o__Trichostomatia; f__Isotrichidae_2; g__Isotrichidae_2_X; s__Isotrichidae_2_X_sp.	0.6
+5a64dd08cac332b3b3e6c758d660fd46f8a75c20	k__Eukaryota; d__Alveolata; p__Ciliophora; c__Litostomatea; o__Trichostomatia	0.6
+5a75513cf0f52dfa14ab092d29a646d744f0b4f4	k__Eukaryota; d__Opisthokonta; p__Metazoa; c__Porifera; o__Porifera_X; f__Demospongiae	0.7
 5a9d49f37fa6c9f524766b55e0b2dcd49fc13074	Unassigned	1.0
+5aaa02941966fa8e57e041b8788adae388ca9e8e	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Basidiomycota; o__Agaricomycotina; f__Tremellomycetes; g__Tremellomycetes_X; s__Tremellomycetes_X_sp.	0.6
+5ac332a239766a1d8719b3addbd1c2c78bb14160	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Basidiomycota; o__Agaricomycotina; f__Agaricomycetes; g__Agaricomycetes_X; s__Agaricomycetes_X_sp.	0.6
+5aff33cba75be469a3825e146213a607c6d80e1a	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Sordariomycetes	1.0
+5b34a9f81c27eac2de76f716a764e05242a2f156	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Basidiomycota; o__Agaricomycotina; f__Agaricomycetes	1.0
+5b3864fccd46559633c7058e8fcdba98b25dd4db	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Basidiomycota; o__Agaricomycotina; f__Agaricomycetes	0.6
+5b4c5adc1a91322372e195a5b02d8e269d75883b	k__Eukaryota; d__Opisthokonta; p__Fungi	1.0
+5b8d53a0612e25a57b42550f4604d49247c3734d	Unassigned	1.0
+5bb4ffdd01f7a52849cc4c0e9a855f3b73c706ae	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Basidiomycota; o__Agaricomycotina; f__Agaricomycetes	1.0
 5beed36fb69f3fc3d03700bdcfc101d9dc54afa9	k__Eukaryota; d__Alveolata; p__Ciliophora	0.6
 5c2ef734fc0963f2d122c63d7c48894aa7ad937e	k__Eukaryota; d__Archaeplastida; p__Streptophyta; c__Embryophyceae; o__Embryophyceae_X; f__Embryophyceae_XX	1.0
+5c6ab1becdc52aab03b3b6c028ef8f2bc8e91c48	k__Eukaryota; d__Alveolata; p__Chrompodellids; c__Colpodellidea; o__Colpodellida; f__Alphamonaceae; g__Alphamonadea_ALPH1; s__Alphamonadea_ALPH1_sp.	1.0
+5ca03171d23a3e3bf52107f89b1146f353ba0f20	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Basidiomycota; o__Agaricomycotina; f__Agaricomycetes	1.0
+5cf33e0df7670e53df39252096ae59cf056606dd	Unassigned	1.0
 5d07200dba40e07130467fccfa0d278d1980cfa2	k__Eukaryota; d__Archaeplastida; p__Streptophyta; c__Embryophyceae; o__Embryophyceae_X; f__Embryophyceae_XX	1.0
+5d2b44ec503b9f274642e63c2ee837972a5de975	k__Eukaryota; d__Stramenopiles; p__Ochrophyta; c__Bacillariophyta; o__Bacillariophyta_X; f__Raphid-pennate	1.0
+5d8195d2bec51ac888bd425605cbb461d88205f8	Unassigned	1.0
+5de16151a48dbff0b5e6c593b5f98da8766d4357	k__Eukaryota; d__Alveolata; p__Ciliophora; c__Litostomatea; o__Trichostomatia	0.6
+5e0f6948e08e01046816241196e0f7e3282b30e3	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina	1.0
+5e64b3ae08096640fe213d71bb2e20336bf1a44d	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Chytridiomycota; o__Chytridiomycotina; f__Chytridiomycetes	0.7
 5f6d65492b381d4005591b2b930737882b94cac1	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina	1.0
+5f7130fce07055a4c1bc5da68ae0e7411dda8951	k__Eukaryota	1.0
+5fa99028fd5547f55ed501c9b2582b9403a051b9	k__Eukaryota; d__Opisthokonta; p__Metazoa; c__Arthropoda	1.0
 5ffd97d74973b2171e27e7fdd268d84e0a14fe58	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Dothideomycetes	1.0
+600afb4f9b2ed2eb9cd78b41ce3e6f20222e800f	k__Eukaryota; d__Amoebozoa; p__Lobosa; c__Tubulinea; o__Leptomyxida; f__Leptomyxidae; g__Ripidomyxa; s__Ripidomyxa_sp.	1.0
+602987c739bb6e5d1a1bd039760accab76c93690	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Basidiomycota; o__Agaricomycotina; f__Tremellomycetes	1.0
 60c1152c5e7fe794fc2d4571b46a48d4135bea67	k__Eukaryota; d__Opisthokonta; p__Metazoa; c__Porifera; o__Porifera_X; f__Demospongiae	0.6
+60ef34c764a15ec29f38c49615c1d93e70b6de36	k__Eukaryota; d__Rhizaria; p__Cercozoa	1.0
+60f355e9be3780c96e2bc629c9300c6fdc1abf5b	k__Eukaryota; d__Alveolata; p__Chrompodellids; c__Colpodellidea; o__Colpodellida; f__Alphamonaceae; g__Alphamonadea_ALPH1; s__Alphamonadea_ALPH1_sp.	1.0
+61157fbd319db6ded03e334aee785fdb44ddaf43	k__Eukaryota; d__Alveolata; p__Ciliophora; c__Litostomatea; o__Trichostomatia	0.7
+61739678261c6cf74092da8eecab83a8bd524c39	k__Eukaryota; d__Opisthokonta	1.0
 617dd60f70deb0931bd4d6e16f6d561aa5287f3a	k__Eukaryota; d__Alveolata; p__Chrompodellids; c__Colpodellidea; o__Colpodellida; f__Alphamonaceae; g__Alphamonadea_ALPH1; s__Alphamonadea_ALPH1_sp.	0.9
+61a4fc6619346320a42117d9840ab2d36fec853f	k__Eukaryota; d__Opisthokonta; p__Fungi	1.0
+61e0c1825eadab1c7afaa954076fe5552442ad10	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Chytridiomycota; o__Chytridiomycotina; f__Chytridiomycetes	0.6
+62b6ac80ca0836f5b6e7b91f38cd8ef2984f0934	Unassigned	1.0
+62c6fc1f52640e1d023d57c3f55f347bd120e6e8	k__Eukaryota; d__Stramenopiles; p__Ochrophyta; c__Bacillariophyta; o__Bacillariophyta_X; f__Raphid-pennate	1.0
+62cff8a79c000886db616c9dedfd228a17e1f4cc	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Chytridiomycota; o__Chytridiomycotina; f__Chytridiomycetes	1.0
+62ec90478f1879ab5d28c72cb7c078595dff3fc7	k__Eukaryota; d__Opisthokonta; p__Metazoa; c__Annelida; o__Annelida_X; f__Annelida_XX	1.0
+6321b57c705277e59714a4a03e9303426f11a97b	k__Eukaryota; d__Opisthokonta; p__Fungi	0.9
+639c9426008500bb83948bc6e4f95ed51fbc2fcd	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Eurotiomycetes	1.0
+6412767a7db7b07d09a97a5f66ca50d4c96b1541	k__Eukaryota; d__Alveolata; p__Chrompodellids; c__Colpodellidea; o__Colpodellida; f__Alphamonaceae; g__Alphamonadea_ALPH1; s__Alphamonadea_ALPH1_sp.	0.8
+646838fa2bd24a77e895db75b8b06e2d711304df	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Basidiomycota; o__Pucciniomycotina	0.6
+6471e008c905a71bb4ffc50c84eafbd265abc658	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Basidiomycota; o__Agaricomycotina; f__Agaricomycetes	1.0
+6485c239d77a78bea620bf005f4a51dada263b83	k__Eukaryota; d__Alveolata; p__Ciliophora	1.0
+64c03f4e65948b2ae01a431a58971a25112bc21a	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Dothideomycetes	1.0
+64e1a3ae2efa3f1fb57b4c66600686b17855d997	k__Eukaryota; d__Archaeplastida; p__Chlorophyta; c__Chlorophyceae; o__Chlamydomonadales; f__Chlamydomonadales_X; g__Dunaliella; s__Dunaliella_sp.	0.6
+650b7a9f1a71d976d9873ca320b5d3e64b683eae	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Chytridiomycota; o__Chytridiomycotina; f__Chytridiomycetes	0.8
+65ce173eab3aef9b33c7cc23577888e347908cd9	k__Eukaryota; d__Alveolata; p__Ciliophora; c__Litostomatea; o__Trichostomatia	0.8
+65e0ca9cc004ba6789b15a0befbec4dc1902f223	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Leotiomycetes	1.0
+664ca5b8dddcad5ffe6dfe4bb9ab43b7ba20567b	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Pezizomycetes	0.6
+66ab7f549ddfdcc125b420bd666d51c1cce8e378	k__Eukaryota; d__Opisthokonta; p__Fungi	1.0
+66cf43f5bb2e6fde34b98ba5ec47690ff680f2f6	k__Eukaryota; d__Rhizaria; p__Cercozoa; c__Filosa-Sarcomonadea	0.7
+66eda656f69ad853b73e34c288cc19c418be7f2e	k__Eukaryota; d__Archaeplastida; p__Chlorophyta; c__Chlorophyceae; o__Chlamydomonadales; f__Chlamydomonadales_X; g__Chlamydomonadales_XX; s__Chlamydomonadales_XX_sp.	0.6
+6722bfda3e0f0139392ec0eaedca71b1707baff3	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Chytridiomycota; o__Chytridiomycotina; f__Chytridiomycetes	0.8
+674396a79f5ce651c5f92cdd74e2411647c148c6	k__Eukaryota; d__Stramenopiles; p__Pseudofungi; c__Oomycota; o__Oomycota_X; f__Peronosporales	1.0
+675ccf297a838995f551b39802ee42a686d786b2	k__Eukaryota; d__Opisthokonta; p__Fungi	1.0
+6797b2fd8a5d2fa73e6a87d5f91ab559c419ccfc	Unassigned	1.0
+67a656d768b431e520de5d32e902be06ddb8f5c8	k__Eukaryota; d__Rhizaria; p__Cercozoa; c__Endomyxa-Phytomyxea; o__Plasmodiophorida; f__Polymyxa-lineage; g__Polymyxa; s__Polymyxa_betae	1.0
+67f5c77b1436971e116639bf35a464b1ab19026c	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Sordariomycetes	1.0
 68023a256d2c6990e172b0daaee8505d6cb64008	k__Eukaryota; d__Alveolata; p__Ciliophora; c__Spirotrichea; o__Hypotrichia; f__Oxytrichidae	0.7
+680793e45815ffe5e07df3fe5928449c8bc327b8	k__Eukaryota; d__Archaeplastida; p__Streptophyta; c__Klebsormidiophyceae; o__Klebsormidiophyceae_X; f__Klebsormidiophyceae_XX; g__Klebsormidium; s__Klebsormidium_sp.	1.0
+682f0fe1d86a9d0132b93387e6e3e90db2c16d14	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Sordariomycetes	1.0
 68fea4b9ae8c1c2bf76b156e7617d3b7372ee777	k__Eukaryota; d__Archaeplastida; p__Chlorophyta; c__Chlorophyceae; o__Chlamydomonadales; f__Chlamydomonadales_X	0.8
+6912648d318d2b1c029cff70b8147c3dc619f3bc	k__Eukaryota; d__Opisthokonta; p__Metazoa; c__Nematoda; o__Enoplea; f__Enoplea_X	0.6
+6945ed9bc17c303f3ab5740bec11b0d3ecb613e7	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Sordariomycetes	1.0
+6964c09e5e11769ac6450ccb59b37914fbad9930	k__Eukaryota; d__Alveolata; p__Ciliophora	1.0
 69eb07ac3f4e57c0cb29d7d2530aab4fddc11197	k__Eukaryota; d__Rhizaria; p__Cercozoa	1.0
+69f9d84468fc6fd95454ec016e6acf17dae9e7c5	k__Eukaryota; d__Archaeplastida; p__Streptophyta; c__Embryophyceae; o__Embryophyceae_X; f__Embryophyceae_XX	1.0
+6a44ce76dc3401f3ae1bdc629ebc24a6cabb5a72	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Basidiomycota; o__Agaricomycotina; f__Agaricomycetes	1.0
+6a508415e4f717e41ccd051ec3686e50660c002c	k__Eukaryota; d__Rhizaria; p__Cercozoa; c__Filosa-Sarcomonadea; o__Glissomonadida; f__Sandonidae	0.6
+6ac150cf1245d8d9439ed13bcacf38cfad059064	k__Eukaryota; d__Rhizaria; p__Cercozoa	1.0
 6b0fb7dd38c2c03a3bf6d5f2dab120000582d77e	k__Eukaryota; d__Archaeplastida; p__Streptophyta; c__Embryophyceae; o__Embryophyceae_X; f__Embryophyceae_XX	1.0
+6c4aa83b96d839666a7791ae0254171406ed678c	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Leotiomycetes	0.9
+6c56b7b0edc96249a89b7bc815faaf46dbb7ee18	k__Eukaryota; d__Rhizaria; p__Cercozoa	0.9
+6cadbe327aceabbcc05ff0212aa0245a8b20cd62	k__Eukaryota; d__Opisthokonta; p__Metazoa; c__Nematoda; o__Chromadorea; f__Chromadorea_X	1.0
 6cd85ddc34c20b210936301b145dddda7ce5757d	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Chytridiomycota; o__Chytridiomycotina; f__Chytridiomycetes	0.6
+6cdb7c486e7bf2db1354e480134798efc4e05c79	k__Eukaryota; d__Alveolata; p__Chrompodellids; c__Colpodellidea; o__Colpodellida; f__Chromeraceae; g__Chromera; s__Chromera_velia	1.0
+6cdc7fba841dce9127450dc8c9c56b57855c59a5	k__Eukaryota; d__Opisthokonta; p__Fungi	1.0
+6d28d874ec3f3951ac6bae3af43b9152a6eb61c7	k__Eukaryota; d__Rhizaria; p__Cercozoa	1.0
+6d5a3e1fdd38c6c0be43fe32527a29a914da5fe5	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Sordariomycetes	1.0
+6d5c2fc34743c398028b64b82d246e29cc6e9d44	k__Eukaryota; d__Opisthokonta; p__Metazoa; c__Nematoda; o__Chromadorea; f__Chromadorea_X	0.8
 6ec5fa4aa8c851b51915720ac7af83232e4379d1	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Basidiomycota; o__Agaricomycotina; f__Agaricomycetes	1.0
 6f79689c95d5ddc7e9118406bd7819093323eaf4	k__Eukaryota; d__Alveolata; p__Ciliophora; c__Litostomatea; o__Trichostomatia	0.7
+6f979292b5330155a5214dac857139235ceaec8c	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Pezizomycetes	0.6
 6fb71df2ec3f4b148beb1d462d3d17dc2f61eef1	k__Eukaryota; d__Alveolata; p__Ciliophora; c__Litostomatea; o__Trichostomatia	0.7
+6fd8c10a4e3b698405a8fae85d6ef6cb509f6438	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Sordariomycetes	1.0
+6fea2013d9509f7a611a508dd63c2f843348cf77	k__Eukaryota; d__Stramenopiles; p__Ochrophyta; c__Chrysophyceae; o__Chrysophyceae_X; f__Chrysophyceae_Clade-C	0.7
+6ff7b7bd65048b7a5ca36d99fdf335193fb81dc6	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Sordariomycetes	1.0
+7092fed55f5e24e24d21bda131f659871645a827	k__Eukaryota; d__Opisthokonta; p__Metazoa; c__Annelida; o__Annelida_X; f__Annelida_XX	1.0
+70d229c7118a499d6368c709351066638cf955d0	k__Eukaryota; d__Rhizaria; p__Cercozoa	0.9
+70f1e6b5fa2aa0de246aaa2c854162d1ab34dc64	k__Eukaryota; d__Opisthokonta; p__Metazoa; c__Nematoda; o__Chromadorea; f__Chromadorea_X	0.7
+724f5da2949b46917623091c3e36a7de2026c4bf	k__Eukaryota; d__Opisthokonta; p__Fungi	1.0
+72d2a7ad35e39b57ea7a1fc1918dc80ad1bf4175	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Leotiomycetes	0.9
+72fbcd7fd3d1f89bcec60b5224f6b675133cb8c4	k__Eukaryota; d__Opisthokonta; p__Metazoa; c__Nematoda; o__Chromadorea; f__Chromadorea_X	1.0
+733691eac49474c7b225da1f52ec32e529ca681d	k__Eukaryota; d__Opisthokonta; p__Metazoa; c__Nematoda; o__Chromadorea; f__Chromadorea_X; g__Strongyloides; s__Strongyloides_fuelleborni	1.0
+735129fbd48ae181d8a1847464e81df607e55880	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Chytridiomycota; o__Chytridiomycotina; f__Chytridiomycetes	0.6
+735f8b3e0a133f9b1635c10175c21505dafcc41c	k__Eukaryota; d__Rhizaria; p__Cercozoa; c__Filosa-Thecofilosea; o__Cryomonadida	0.7
+73e9c6ea0a8180155cae6e864903de0d998aeb79	k__Eukaryota; d__Stramenopiles; p__Ochrophyta; c__Chrysophyceae; o__Chrysophyceae_X; f__Chrysophyceae_Clade-C	0.8
+74032101b239f96cb9254adb6d6f67afbf0e7dcb	k__Eukaryota	1.0
+755d2fcef659560129d2aaae543ed837258500ba	k__Eukaryota; d__Opisthokonta; p__Fungi	1.0
+75808fd953d7dda97ab842a632254b4f19c23da2	Unassigned	1.0
+7586452a33bac6ff499fa040fa5d11a537613269	k__Eukaryota; d__Alveolata; p__Ciliophora; c__Litostomatea; o__Trichostomatia	0.8
+75b87cc4a215fb0085c81713da06805321ba1ca6	k__Eukaryota; d__Alveolata; p__Ciliophora; c__Litostomatea; o__Trichostomatia	0.7
+75df9035d756bc83941319e9609d4fa283bf7513	k__Eukaryota; d__Rhizaria; p__Cercozoa; c__Filosa-Sarcomonadea; o__Glissomonadida; f__Sandonidae	0.6
+7670c5e9fdb7025cbf587d7b9ec40fc9a06dd17b	k__Eukaryota; d__Alveolata; p__Chrompodellids; c__Colpodellidea; o__Colpodellida; f__Alphamonaceae; g__Alphamonadea_ALPH1; s__Alphamonadea_ALPH1_sp.	1.0
+76b8f810ac02d289d333476d7e3e8e9e4d8a46a7	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Basidiomycota; o__Agaricomycotina; f__Tremellomycetes; g__Tremellomycetes_X; s__Tremellomycetes_X_sp.	0.7
 76e001f89852e1565a07b382f0625bf7fefd6b35	Unassigned	1.0
+771b0837416fa629249663632711b68e515d152f	k__Eukaryota; d__Alveolata; p__Ciliophora; c__Litostomatea; o__Trichostomatia; f__Isotrichidae_2; g__Isotrichidae_2_X; s__Isotrichidae_2_X_sp.	0.6
 774bec8e9df5f301f8c08c3f54360ea57e2cddac	k__Eukaryota; d__Rhizaria; p__Cercozoa	1.0
+77c73e32406af2709912efc59dae82f18c9f767e	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Eurotiomycetes	1.0
+77dbfdbf0caa6f1bd6c5c18f7cbc680b149af7b0	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Chytridiomycota; o__Chytridiomycotina; f__Chytridiomycetes	0.7
+782d89af3830e840c6fa2cc7a3d422e5fe11ec56	Unassigned	1.0
+78641d951cbd4ec0020c42f29fd47e7e68ce8c46	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Chytridiomycota; o__Chytridiomycotina; f__Chytridiomycetes	0.9
+7880ac86899d9d3395d7b136667f5a2ad84c9074	k__Eukaryota; d__Alveolata; p__Ciliophora; c__Litostomatea; o__Trichostomatia; f__Isotrichidae_2; g__Isotrichidae_2_X; s__Isotrichidae_2_X_sp.	0.6
+788c904247daf1f0cfee663af74c2baa0091cea5	k__Eukaryota; d__Alveolata; p__Ciliophora; c__Litostomatea; o__Trichostomatia; f__Isotrichidae_2; g__Isotrichidae_2_X; s__Isotrichidae_2_X_sp.	0.6
+78d630e263b1b4b9bdc699deee7cf8a573f963e6	k__Eukaryota; d__Alveolata; p__Chrompodellids; c__Colpodellidea; o__Colpodellida; f__Alphamonaceae; g__Alphamonadea_ALPH1; s__Alphamonadea_ALPH1_sp.	0.9
+791d99fa8c3a5e9fb17e73230d5745abf491acbd	k__Eukaryota; d__Alveolata; p__Apicomplexa; c__Gregarinomorphea; o__Cryptogregarinorida; f__Cryptosporidiidae	0.6
 791eb90d80d325144e07aae873a4b6e173de0acf	k__Eukaryota; d__Alveolata; p__Ciliophora; c__Spirotrichea; o__Hypotrichia; f__Oxytrichidae	0.7
+793383692fbc2011271a35fb5c855c5bdf753352	k__Eukaryota; d__Opisthokonta; p__Metazoa; c__Tardigrada; o__Tardigrada_X; f__Tardigrada_XX	1.0
 794f3aaeea2eef6bd4452f8bb1a9b5e433b626d0	k__Eukaryota; d__Alveolata; p__Ciliophora	0.9
+796b731eef839e85954291589691499bfc85aadd	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Sordariomycetes	1.0
 797dd29da14744637a03dd8d0c5fdfa697602fc9	k__Eukaryota; d__Opisthokonta; p__Fungi	1.0
+79844ee59bc836a52430cf8a09d410843061a338	k__Eukaryota; d__Opisthokonta	1.0
+79b89a50fdf1c7f618e3094ffe2307dae62057d9	Unassigned	1.0
+79d9d86aa652c02306ef48838552f17d2eb8eb83	k__Eukaryota; d__Opisthokonta; p__Fungi	1.0
+7affdaf18570bbecfef31f5b51013bc8a7e25fb2	k__Eukaryota; d__Rhizaria; p__Cercozoa; c__Filosa-Sarcomonadea; o__Glissomonadida; f__Sandonidae	0.6
+7b4520b00b6b3e7975affdb88255ba658c541798	k__Eukaryota; d__Stramenopiles; p__Pseudofungi; c__Oomycota; o__Oomycota_X; f__Peronosporales	0.8
+7b68ea6f5e5de4d0ae3a7b4e7588ad830d81707d	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Basidiomycota; o__Agaricomycotina; f__Tremellomycetes	1.0
+7bbf4b5ce3c65e8657e44f46ec4e9673c468553a	k__Eukaryota; d__Rhizaria; p__Cercozoa; c__Filosa-Thecofilosea; o__Cryomonadida	0.6
+7bc6b6b28461922d4b38957473ac5e5a95933116	k__Eukaryota; d__Alveolata; p__Chrompodellids; c__Colpodellidea; o__Colpodellida; f__Alphamonaceae; g__Alphamonadea_ALPH1; s__Alphamonadea_ALPH1_sp.	0.8
 7c4a6fa0b502ff3442b362eb82cc01b94f5b912e	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Basidiomycota; o__Agaricomycotina; f__Agaricomycetes; g__Antrodiella	0.667
+7c51a34e892a3756e481731f7275afabde74e807	k__Eukaryota; d__Rhizaria; p__Cercozoa	1.0
 7c6edd92e1db224d60a080308df2cdd01a27aa53	k__Eukaryota; d__Opisthokonta; p__Metazoa; c__Arthropoda; o__Hexapoda	0.6
+7c86c91f5c1907cb6641c37567cc881d0db2ea51	k__Eukaryota; d__Opisthokonta; p__Fungi	1.0
+7ce94a2ae568f64c5d315d0a22196f075e7aec95	k__Eukaryota; d__Rhizaria; p__Cercozoa	1.0
+7d1b0320071c26af04223299cc07f77b4c766d42	k__Eukaryota; d__Opisthokonta; p__Metazoa; c__Nematoda; o__Chromadorea; f__Chromadorea_X	1.0
+7d28de1882de6d5793f832ebdbc0f78014c1bc69	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Sordariomycetes	1.0
+7d62674f81692e22941df26cca848d28d9af1442	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Sordariomycetes	1.0
+7ded05869fbd767acd0bb111c85561089a0e276a	k__Eukaryota; d__Opisthokonta; p__Fungi	0.9
+7e020946ce60932bc28adfc0db601466e02dcd23	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Sordariomycetes	1.0
 7e85833e67d86901a6275d38697922ee7f91c021	k__Eukaryota; d__Archaeplastida; p__Streptophyta; c__Embryophyceae; o__Embryophyceae_X; f__Embryophyceae_XX	1.0
+7f27e1358e75f9faad2fcba7f31572be8b4623b5	k__Eukaryota; d__Alveolata; p__Chrompodellids; c__Colpodellidea; o__Colpodellida; f__Alphamonaceae; g__Alphamonadea_ALPH1; s__Alphamonadea_ALPH1_sp.	1.0
+7f864a8fe87b1fbd1a96a96bbc4f8e1334eb6dfb	k__Eukaryota; d__Archaeplastida; p__Chlorophyta; c__Chlorophyceae; o__Chlamydomonadales; f__Chlamydomonadales_X	1.0
+7fa26abe1d0775de918b86c3652eb7dbae46ebb8	k__Eukaryota; d__Opisthokonta; p__Fungi	1.0
+7faf6b00d3e1e869fc3bd4f56eb9cc44daba666e	k__Eukaryota; d__Alveolata; p__Ciliophora; c__Litostomatea; o__Trichostomatia; f__Isotrichidae_2; g__Isotrichidae_2_X; s__Isotrichidae_2_X_sp.	0.6
+7fc2831f020a7652ccb306b661a763452130f563	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Sordariomycetes	1.0
+805c704d58dad6ae63bb06e9f3eecf3d31be3974	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Leotiomycetes	0.9
+80734d3f73e62368f534af7033a7a3f8b8df70cf	k__Eukaryota; d__Stramenopiles; p__Ochrophyta; c__Chrysophyceae; o__Chrysophyceae_X; f__Chrysophyceae_Clade-C	0.6
+808e42e673f24dbb6aa19168d5e4d8434e667be1	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Basidiomycota; o__Agaricomycotina; f__Agaricomycetes	1.0
+81049b63db174ce1f0ec8ee20dd304214e56608d	k__Eukaryota; d__Alveolata; p__Chrompodellids; c__Colpodellidea; o__Colpodellida; f__Alphamonaceae; g__Alphamonadea_ALPH1; s__Alphamonadea_ALPH1_sp.	0.8
+8111aeaa488929f982c6550a652fc91278d7d070	k__Eukaryota; d__Alveolata; p__Chrompodellids; c__Colpodellidea; o__Colpodellida; f__Alphamonaceae; g__Alphamonadea_ALPH1; s__Alphamonadea_ALPH1_sp.	0.9
+820f2d950d0d38e898b853ffb9dc3c9cdfa9f255	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Leotiomycetes	1.0
+82d5a3fc43d138fcd7427b8ccdd703b7fd05eecf	k__Eukaryota; d__Alveolata; p__Ciliophora	1.0
+833b47b154069e4aebf671166eee71a1f4f4a036	k__Eukaryota; d__Alveolata; p__Ciliophora; c__Spirotrichea; o__Hypotrichia; f__Oxytrichidae	0.7
+834fd071bb5608f7a494d0360c2a3f16209e012c	k__Eukaryota; d__Alveolata; p__Chrompodellids; c__Colpodellidea; o__Colpodellida; f__Alphamonaceae; g__Alphamonadea_ALPH1; s__Alphamonadea_ALPH1_sp.	0.8
+83563c8e6e98f02b9c6465e12ea109969568c21a	k__Eukaryota; d__Archaeplastida; p__Chlorophyta; c__Trebouxiophyceae; o__Chlorellales; f__Chlorellales_X	0.7
+83eba80701509cc5e6a5dc8115973759f0a17f77	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Sordariomycetes	1.0
+84970aef02ed2137fe2fbe6af286ca163d1b2211	k__Eukaryota; d__Rhizaria; p__Cercozoa; c__Filosa-Thecofilosea; o__Cryomonadida	0.6
+849c4a3c12ba1a5fb13cbbab7373110572870ed5	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Leotiomycetes	0.8
+84ec9fd720890df443c9923266579b9d4e85c084	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Sordariomycetes	1.0
+85107eeb40e26d30c0892085c24166e4d61874fc	k__Eukaryota; d__Archaeplastida; p__Streptophyta; c__Embryophyceae; o__Embryophyceae_X; f__Embryophyceae_XX	1.0
 8584da695cc8308e5e5586d055a98c566bb93bbf	k__Eukaryota; d__Alveolata; p__Ciliophora; c__Spirotrichea; o__Hypotrichia; f__Oxytrichidae	0.7
 8584fe513a68c45850f6c555260dbe4d275b700b	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Chytridiomycota; o__Chytridiomycotina; f__Chytridiomycetes	0.7
 85c4db3e7cf7a3233b030b1028bb2be65f6fa45d	k__Eukaryota; d__Opisthokonta; p__Fungi	1.0
 85c4e0607ae9e8e18f32b4b35a14bbc6657a47bc	k__Eukaryota; d__Alveolata; p__Ciliophora	1.0
+8656975cac86949a29d4a6d4771e88002e906007	k__Eukaryota; d__Opisthokonta; p__Metazoa; c__Annelida; o__Annelida_X; f__Annelida_XX	1.0
+86b33a3936fe7ed636292bdf83bd8e1bb855f5cb	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Basidiomycota; o__Agaricomycotina; f__Agaricomycetes	1.0
+87651aaefa2c614756a6842663fc462988892c47	k__Eukaryota; d__Archaeplastida; p__Chlorophyta; c__Chlorophyceae; o__Chlamydomonadales; f__Chlamydomonadales_X; g__Chlamydomonadales_XX; s__Chlamydomonadales_XX_sp.	0.6
+877eb5930fbcedc044f693c9a946a21ac4751c11	k__Eukaryota	1.0
+8783c12af6a200966c62b9746fde4218210d292b	k__Eukaryota; d__Archaeplastida; p__Streptophyta; c__Embryophyceae; o__Embryophyceae_X; f__Embryophyceae_XX	1.0
+878762c3eaf3a4cfefad2446dd577ff2be3bbcaf	k__Eukaryota; d__Stramenopiles; p__Ochrophyta; c__Chrysophyceae; o__Chrysophyceae_X	1.0
+87c3f86733c3fcd507ec4475aaa04dc6870c569c	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Chytridiomycota; o__Chytridiomycotina; f__Chytridiomycetes	0.8
+87f51e7000283a3d2834f9807b9191a6a981e62f	Unassigned	1.0
 88208c4569ba4712cc3ca2dbc9a20076ee1f023a	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Chytridiomycota; o__Chytridiomycotina	0.6
 8897b2305f2c5c03be4d2a6ed5163036610b6d03	k__Eukaryota	1.0
+895286949d29b8515c2f47e86c75a7ef3db7cf9c	Unassigned	1.0
+89654f41c3252c3db63a793cf0a532cf7ff57858	Unassigned	1.0
+8968290ba25e05467c96cc20098f67403e3cadc5	k__Eukaryota; d__Stramenopiles	1.0
+8999b2cc8908e64e72f1f6afda5146df403e36ae	k__Eukaryota; d__Rhizaria; p__Cercozoa; c__Filosa-Thecofilosea; o__Cryomonadida	0.7
+89f624a6b9661b95a38dcee267241e019a54e9cb	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Pezizomycetes	0.6
+8a08951d760f305a77c1636407a1f914c1265868	Unassigned	1.0
+8a0ca976be8497a00fc56c155816f9db19f68ee0	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Leotiomycetes	0.9
+8a55fe11cccd15b0defcb2acfd2e7b8f64467c3a	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Basidiomycota; o__Agaricomycotina; f__Agaricomycetes	1.0
+8a5a608378a47e4dd688f49a3bafe06e85ed269b	k__Eukaryota; d__Alveolata; p__Ciliophora; c__Litostomatea; o__Trichostomatia	0.7
+8ab7c176175ad082ff1000fdf3e08feadb7dd6bf	k__Eukaryota; d__Rhizaria; p__Cercozoa; c__Filosa-Sarcomonadea	0.6
+8b08d2c3f479cc30e6813566d31f5f8a153f2ce1	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Chytridiomycota; o__Chytridiomycotina; f__Chytridiomycetes	0.6
+8bbdadd5cef89ef706dc4fc034e9d80c29a46e11	k__Eukaryota; d__Stramenopiles; p__Pseudofungi; c__Oomycota; o__Oomycota_X	0.6
+8be2a8c4dde85509959f7256e8e137f501d3b51b	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Pezizomycetes	0.6
+8c65e2a0c87314e2f3a38627ec6cf8f1e71fafc8	k__Eukaryota; d__Rhizaria; p__Cercozoa	1.0
+8d100f3c14d616d56db0da59864cb1ad374b4e55	k__Eukaryota; d__Archaeplastida; p__Chlorophyta; c__Trebouxiophyceae	1.0
+8d300871f285ac29fb15db8e8b90cb0a6c0d04b2	k__Eukaryota; d__Rhizaria; p__Cercozoa; c__Filosa-Sarcomonadea; o__Glissomonadida; f__Sandonidae	0.7
+8d3b6b231f170fac0de74f0a7e20ea162c183f08	k__Eukaryota; d__Archaeplastida; p__Chlorophyta; c__Trebouxiophyceae; o__Prasiolales; f__Prasiolales_X	0.7
+8d7243a6f9b693ff99db4cc8dade3f8f34a5629d	k__Eukaryota; d__Rhizaria; p__Cercozoa	1.0
+8e0cf21ccaeffb3538483a5b1296e1828c2e6f6a	k__Eukaryota	1.0
+8e126582e9fa2dd2e046a22045d9cb845b9661c4	k__Eukaryota; d__Stramenopiles; p__Pseudofungi	0.7
+8e3bffeafd2fd785b6ef5b6894bbb720c798e989	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Sordariomycetes	1.0
+8e498e80315ede0d236dac69d530966cdf9a2da1	k__Eukaryota; d__Opisthokonta; p__Metazoa; c__Arthropoda; o__Hexapoda	0.6
 8e5dac40ca7457a16d6d154681c5f53e7a9ece83	Unassigned	1.0
+8ebcb08a39be4591cc0b0b339f20fbc1f453d206	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Chytridiomycota; o__Chytridiomycotina; f__Chytridiomycetes	0.7
+8fa01916b6a1dec38628a2483e8d6daca7f7cd86	k__Eukaryota; d__Opisthokonta; p__Metazoa; c__Nematoda; o__Chromadorea; f__Chromadorea_X	1.0
 902193e8d941204bcf642832f20ddff313c0665c	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Basidiomycota; o__Agaricomycotina; f__Tremellomycetes	1.0
+90281e4fe311a07c9658db09c2ba2962ad702272	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Chytridiomycota; o__Chytridiomycotina	0.6
+90e0b8b588f21206e955cff70148abd5e493bd0e	k__Eukaryota; d__Stramenopiles; p__Ochrophyta; c__Chrysophyceae; o__Chrysophyceae_X; f__Chrysophyceae_Clade-C	0.7
 91c8c5cf5f8125d658a0bdb1578bd4288c546cee	k__Eukaryota; d__Alveolata; p__Apicomplexa; c__Gregarinomorphea; o__Cryptogregarinorida; f__Cryptosporidiidae	0.75
 925746787980c910f8eb282cafd44c37026bade2	k__Eukaryota	1.0
+92a6bc0997009561d95bc7d5cf42d3c3bd37b6a1	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Basidiomycota; o__Agaricomycotina; f__Agaricomycetes	1.0
+936f68a8781c6acd406bb9cc1e08c769974958b6	k__Eukaryota; d__Archaeplastida; p__Streptophyta; c__Embryophyceae; o__Embryophyceae_X; f__Embryophyceae_XX	1.0
+941a395ec37fa3eced343149e9a5d9aa5e5e7162	Unassigned	1.0
+9432dcbe87cdf3d5b6dca0d05d5e8144878591bd	k__Eukaryota; d__Rhizaria; p__Cercozoa	1.0
 9447091286371f0b6e932a68f7bcab40033c8f36	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Leotiomycetes	1.0
+95073259ddb7b28e4e6e93a916f2b672c5eb3ad0	Unassigned	1.0
+95431d409edf411cbd1b5ddd0260cef0c4c12a50	Unassigned	1.0
+957eb17d4448bc17c645f6c8ad56f0b1796f768e	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Leotiomycetes	1.0
 95bf9488636b5bf8deea8232193a5bd54d143151	k__Eukaryota; d__Rhizaria; p__Cercozoa; c__Filosa-Sarcomonadea	0.6
+95dbe5ec1b17da283fb189de436458b5d083ac28	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Basidiomycota; o__Agaricomycotina; f__Agaricomycetes	1.0
+96039bf0f9aea49d4bb48e39aadc7ae3fb66c183	k__Eukaryota; d__Opisthokonta; p__Fungi	1.0
+961984316cd8172c7ef50c4948aa5408cd1401e1	k__Eukaryota; d__Rhizaria; p__Cercozoa	0.889
+9673bb29af52159d68f4b86ea623cc7eb32a36e9	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Basidiomycota; o__Agaricomycotina; f__Agaricomycetes	1.0
+967826a0adc41850af7881de203963825b91dd86	k__Eukaryota; d__Rhizaria; p__Cercozoa	0.7
 96809109ffc86ae56965d7a2d2daf56d996d84a3	k__Eukaryota; d__Alveolata; p__Chrompodellids; c__Colpodellidea; o__Colpodellida; f__Alphamonaceae; g__Alphamonadea_ALPH1; s__Alphamonadea_ALPH1_sp.	0.9
 96a84b484bd10ad13c879d14428cdbcd8ae89468	k__Eukaryota; d__Archaeplastida; p__Chlorophyta; c__Chlorophyceae; o__Sphaeropleales; f__Sphaeropleales_X	0.6
-9992ea6e0e217431490a9e2f7408f762a1b444cc	k__Eukaryota; d__Alveolata; p__Ciliophora; c__Oligohymenophorea; o__Scuticociliatia_1	0.6
+9742008e21966a7dad0d11685a8e0a4b0550823c	k__Eukaryota; d__Opisthokonta; p__Metazoa; c__Tardigrada; o__Tardigrada_X; f__Tardigrada_XX	1.0
+97f6fb4a94bb01b0df19d2808272b95e7e23eb51	Unassigned	1.0
+9818b87d4da2f43c21879062a83f7f0be6d818c6	Unassigned	1.0
+9852a3a9c44b9e125efb60308483088c154cde72	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Sordariomycetes; g__Muscodor; s__Muscodor_sp.	1.0
+98633dd0cf43ce7525f0c8777083ca84ba89712e	k__Eukaryota; d__Alveolata; p__Ciliophora; c__Litostomatea; o__Trichostomatia; f__Isotrichidae_2; g__Isotrichidae_2_X; s__Isotrichidae_2_X_sp.	0.6
+98c33f3f623251ecb8e594cdcaf3fecaa39919fb	Unassigned	1.0
+992fe1b6f2ae5d26416835c00c7a7e5cd91983b0	k__Eukaryota; d__Alveolata; p__Chrompodellids; c__Colpodellidea; o__Colpodellida; f__Alphamonaceae; g__Alphamonadea_ALPH1; s__Alphamonadea_ALPH1_sp.	1.0
+99382ff53daf2daea87a5eb2535a3eeb317231a7	k__Eukaryota; d__Opisthokonta; p__Metazoa; c__Porifera; o__Porifera_X; f__Demospongiae	0.6
+996874a56c07634f25546a01c60db21523bc11d6	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Sordariomycetes	0.667
+9986e972e75e4d0054b0e0b64374c05bd3c6b592	Unassigned	1.0
+9992ea6e0e217431490a9e2f7408f762a1b444cc	Unassigned	1.0
+99c469f3039938f0098b3733204b7c614a6b61a3	Unassigned	1.0
+99c57fd180ceb47722e8e34e5b98b8b6c721c034	Unassigned	1.0
+99d2f260c766f67349494bbcaff03ae4b276527f	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Sordariomycetes	1.0
 99df481f8934722a55fd0b71b93b5e93359771f9	k__Eukaryota; d__Alveolata; p__Chrompodellids; c__Colpodellidea; o__Colpodellida; f__Alphamonaceae; g__Alphamonadea_ALPH1; s__Alphamonadea_ALPH1_sp.	0.8
+9a8458e409f9bfd66013738dc4de2b56fc4ce6d4	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Sordariomycetes	1.0
+9ac707d54c541872450207a8083a0d621a88c4bd	k__Eukaryota; d__Alveolata; p__Ciliophora	0.9
+9b15c7974472b5b44ac9cac94d121f92d9e27757	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Leotiomycetes	1.0
+9b436738837db726971cbbed8fa245d669fadd72	k__Eukaryota	1.0
 9b4aadad3dc80345aec29eb48fc05f2e2b31e60c	k__Eukaryota; d__Archaeplastida; p__Streptophyta; c__Embryophyceae; o__Embryophyceae_X; f__Embryophyceae_XX	0.625
+9b5218d554cd02805100722b627c3bfd98535e6f	Unassigned	1.0
 9b87c4f2f524a37016014babd487f95753d8249a	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Dothideomycetes	1.0
+9cd1594b34f6afed13f76ddbf5a68f4ac3696d0e	k__Eukaryota; d__Opisthokonta; p__Metazoa; c__Tardigrada; o__Tardigrada_X; f__Tardigrada_XX	1.0
 9cd58cb2a14a129e1245c80e8655d1473a92e7ed	k__Eukaryota; d__Stramenopiles; p__Ochrophyta; c__Bacillariophyta; o__Bacillariophyta_X; f__Raphid-pennate	1.0
+9d2db315b5439752a9f0b9b6c0d16217c864187d	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Chytridiomycota; o__Chytridiomycotina; f__Chytridiomycetes	0.7
 9da4e48ddb890412aeb97ea2e2d6c2f8ef913f97	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Basidiomycota; o__Pucciniomycotina	1.0
+9dbeddee73f4e64aab8c545906c7e3cbea4ef945	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Basidiomycota; o__Agaricomycotina; f__Tremellomycetes	1.0
+9ef54e5da76c8f6a5a9c434f2b40e5f07a98db72	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Basidiomycota; o__Agaricomycotina; f__Agaricomycetes	1.0
+9f96984324d55d4ea37685eeb0e66a7fa42d0df2	k__Eukaryota; d__Opisthokonta; p__Metazoa; c__Nematoda; o__Chromadorea; f__Chromadorea_X	1.0
+9ff06c98dcfde9c92aa2ebc4c0c73f4e46ee1164	k__Eukaryota; d__Stramenopiles; p__Ochrophyta; c__Chrysophyceae; o__Chrysophyceae_X; f__Chrysophyceae_Clade-C	0.6
+a087349de25d1bfc0c0ec53520b7dfc0acff6919	k__Eukaryota; d__Stramenopiles; p__Ochrophyta; c__Chrysophyceae; o__Chrysophyceae_X; f__Chrysophyceae_Clade-C	0.6
+a0a39f86b53dcc0e4ff7c833577450c472f37a57	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Sordariomycetes	1.0
+a0f1fb94a860afcc041e7a982c6c0b5c0f54c7ad	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina	1.0
+a143f809404941ef8fd7a3afa697fd2e6f8b0524	k__Eukaryota; d__Archaeplastida; p__Chlorophyta; c__Chlorophyceae; o__Chlamydomonadales; f__Chlamydomonadales_X	1.0
+a15896004aa7cbeb450d0410aa0bd1994e8d6fb6	k__Eukaryota; d__Stramenopiles; p__Ochrophyta; c__Bacillariophyta; o__Bacillariophyta_X; f__Raphid-pennate	1.0
 a1b1d8a632be1568bfda60a80a3374b7934612ad	k__Eukaryota; d__Alveolata; p__Ciliophora	1.0
+a1c061068bf97dca3c0c69b02cd3dfd02a5cfd82	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Dothideomycetes	0.9
+a2082a1460c7b332d6bae32a62f244c58eba25a4	k__Eukaryota; d__Opisthokonta; p__Metazoa; c__Tardigrada; o__Tardigrada_X; f__Tardigrada_XX	1.0
 a2ade78586bec243e1bee995eeb07ecd24486f79	k__Eukaryota; d__Stramenopiles; p__Ochrophyta; c__Chrysophyceae; o__Chrysophyceae_X; f__Chrysophyceae_Clade-C	0.8
+a2d257d2356f5f18e9aa6eeb4fe2c5136cc41338	k__Eukaryota; d__Alveolata; p__Ciliophora; c__Nassophorea; o__Nassophorea_X; f__Discotrichidae; g__NASSO_1; s__NASSO_1_sp.	0.6
+a2ea6c59aab74c5e53bcfb587b99b47367372009	k__Eukaryota; d__Rhizaria; p__Cercozoa; c__Filosa-Thecofilosea	0.6
+a4b51b9de8276fd631f11887a89737963a057072	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina	1.0
 a4ce405e47aa1878cb8d0f87b9fc4667d33b2d26	k__Eukaryota; d__Alveolata; p__Chrompodellids; c__Colpodellidea; o__Colpodellida; f__Alphamonaceae; g__Alphamonadea_ALPH1; s__Alphamonadea_ALPH1_sp.	0.9
+a4fe30ec36851ba9efc6e0a61c1c4f9266cc3672	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Basidiomycota; o__Agaricomycotina; f__Agaricomycetes	1.0
 a5027f511d3033c0314900adb43dd45a81061b63	k__Eukaryota; d__Rhizaria; p__Cercozoa; c__Filosa-Sarcomonadea; o__Glissomonadida; f__Sandonidae	0.7
+a6fa24946025359d970afffd1a02d539cd08299c	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Sordariomycetes	1.0
+a727743be43f9a10f760771a4d31dc7dba3078a6	k__Eukaryota; d__Opisthokonta	1.0
+a7568212b8a089711a455ed419ed36646d66f65c	Unassigned	1.0
+a7afcb763176a51bab6a9c581c46f265a4e02912	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Chytridiomycota; o__Chytridiomycotina; f__Chytridiomycetes	0.8
 a8038ed27b6ddbee01be33c66cc3e39afed8158a	k__Eukaryota; d__Alveolata; p__Chrompodellids; c__Colpodellidea; o__Colpodellida; f__Alphamonaceae; g__Alphamonadea_ALPH1; s__Alphamonadea_ALPH1_sp.	0.9
+a806cb52f09e31ecc97c6c1651479838af4a068e	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Basidiomycota; o__Agaricomycotina; f__Agaricomycetes	1.0
+a8d68c727162baad0d2ba879c3b83dd5183d8646	Unassigned	1.0
 a913e65d1fed9b40157bbd9493fb8fe033f47242	k__Eukaryota; d__Opisthokonta; p__Metazoa; c__Nematoda; o__Chromadorea; f__Chromadorea_X	1.0
+a96c2d35c3bbb423890187af02b84540a959e5fa	k__Eukaryota; d__Archaeplastida; p__Chlorophyta; c__Trebouxiophyceae; o__Chlorellales; f__Chlorellales_X	0.8
+a9c9cb33f0da9be3152c5290260cde53bde4fb29	k__Eukaryota; d__Rhizaria; p__Cercozoa; c__Filosa-Sarcomonadea; o__Glissomonadida	0.7
+aa07302a149bbe08580cf0378f114b3168b42b57	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Chytridiomycota; o__Chytridiomycotina; f__Chytridiomycetes	0.6
+aa4c15d2dd8e0f4b45e6a6e5d59cc205be717935	k__Eukaryota; d__Rhizaria; p__Cercozoa; c__Filosa-Thecofilosea	0.6
+aa8fd6722eaaa6f38e549a6f5209d7ec70ddff98	k__Eukaryota; d__Opisthokonta; p__Metazoa; c__Nematoda; o__Chromadorea; f__Chromadorea_X	1.0
+aadae1ad5ec5c1db93485ceca599ab9c8def7229	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Basidiomycota; o__Agaricomycotina; f__Tremellomycetes	1.0
+aafce3b0ff8aefd59b419eeb3d1015616b35409a	k__Eukaryota; d__Rhizaria; p__Cercozoa; c__Filosa-Sarcomonadea; o__Glissomonadida; f__Sandonidae	0.7
+ab05451244279f44d15221d0d828ee2f6fbb6ae4	k__Eukaryota; d__Stramenopiles; p__Ochrophyta; c__Chrysophyceae; o__Chrysophyceae_X	0.6
+ab3c0235b23d731791f593063faa330d96ee6447	k__Eukaryota; d__Alveolata; p__Ciliophora; c__Litostomatea; o__Trichostomatia	0.7
 ab81b30d027f6316829ec4fe4f9d8530aee4b7db	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Basidiomycota; o__Agaricomycotina; f__Agaricomycetes	1.0
+abbc75d1d0c2b5fa1c4de4f1a968704c709dae22	Unassigned	1.0
 ac6fe43063842b31d9867e3644777406dce74782	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Leotiomycetes	0.8
+ac7eeb5689e52db128aae705476456e27854fd34	k__Eukaryota; d__Opisthokonta; p__Metazoa; c__Arthropoda; o__Hexapoda	0.6
+accf9c810583e83dc910fb9db1b12630644d1d98	k__Eukaryota; d__Amoebozoa; p__Lobosa; c__Tubulinea; o__Leptomyxida; f__Leptomyxidae; g__Ripidomyxa; s__Ripidomyxa_sp.	1.0
+acd166a61c2c039b671bde91c9973288691ac4fe	Unassigned	1.0
+acee569dc56156b9ed930bc9ad112d77bd6329a8	k__Eukaryota; d__Opisthokonta; p__Metazoa; c__Nematoda; o__Chromadorea; f__Chromadorea_X	1.0
+adfd08327ee635e742b97cf78c02b12dd2b31d64	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina	1.0
+aee497efb89fd454876667dc8b06a370f126d6b0	k__Eukaryota; d__Stramenopiles; p__Ochrophyta; c__Bacillariophyta; o__Bacillariophyta_X; f__Raphid-pennate	1.0
+af114f91600c31c4ae30aaf25154bcccb3b67909	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Leotiomycetes	0.8
+af58eba2d2877bfa5b247e853d2800e8a162f111	k__Eukaryota; d__Rhizaria; p__Cercozoa	1.0
+af932ccb8241ef5d447ab4750834fdecdc9cb8b4	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Basidiomycota; o__Agaricomycotina; f__Agaricomycetes	1.0
+afa1398bc370a87dc93dfc80ccc45033bd2c1855	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Basidiomycota; o__Agaricomycotina; f__Agaricomycetes	1.0
+b02ec9c98cdd1c26546796c336a753044d036106	Unassigned	1.0
+b06540f030f863d0b3bb6b953bb4d7a58ce86334	k__Eukaryota; d__Opisthokonta; p__Metazoa; c__Nematoda	0.6
+b0cebb9c9fae3ca198315891f464a38cc5d70096	k__Eukaryota; d__Alveolata; p__Ciliophora; c__Spirotrichea; o__Hypotrichia; f__Oxytrichidae	0.7
+b0e502fbbdae438ccecf9c04fe12cc517292420d	k__Eukaryota; d__Archaeplastida; p__Chlorophyta; c__Chlorophyceae	0.6
+b1859a90556408d2ac74f4e9e4944a83ba02a761	k__Eukaryota; d__Alveolata; p__Ciliophora; c__Spirotrichea; o__Hypotrichia; f__Oxytrichidae	0.7
+b251956e2798a23214d9df18c27aee727d478300	k__Eukaryota; d__Archaeplastida; p__Streptophyta; c__Embryophyceae; o__Embryophyceae_X; f__Embryophyceae_XX	1.0
+b27af0b6671ec91ea563dcd7898a8468e4043cf7	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Dothideomycetes	1.0
 b2dcb7b520b5219b0231adf5bef3036bbbb3431d	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Sordariomycetes	0.9
+b4040c1647e4a4126ef1019b8c8ee868ac9251ef	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Chytridiomycota; o__Chytridiomycotina	0.6
+b432c9f2eba802926fc4e11f65d1e8de32dff700	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Sordariomycetes	1.0
+b467e2324e4ab19a389ce3c67cd2f3deb0d84b94	Unassigned	1.0
+b4b03cc1f160c405ebd7d97579aa9d3d25278a24	k__Eukaryota; d__Stramenopiles; p__Ochrophyta; c__Chrysophyceae; o__Chrysophyceae_X; f__Chrysophyceae_Clade-C	0.7
+b4f552cf23ccd5292bc6496c66530ae71f5a21c1	k__Eukaryota; d__Rhizaria; p__Cercozoa; c__Filosa-Imbricatea	0.6
+b590b5a82b01cb796c74290a335f27520cdcd68f	k__Eukaryota; d__Rhizaria; p__Cercozoa; c__Filosa-Thecofilosea; o__Cryomonadida	0.7
+b5dcd18f6ebaac868d46e45439c10f0ae6600da0	k__Eukaryota; d__Rhizaria; p__Cercozoa; c__Filosa-Sarcomonadea; o__Glissomonadida	0.7
+b666aa03b3714fb6074856b472cce251b60bdf4d	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Chytridiomycota; o__Chytridiomycotina	0.6
 b6e2bf0f376e7dbd424cecde169819f590eafb4a	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Dothideomycetes	1.0
 b7e2495b048143c3eb277ec0422349626b3f321d	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Chytridiomycota; o__Chytridiomycotina; f__Chytridiomycetes	0.6
 b7f89b4aabdb04348cc5d0976b052fef4a43f7a5	Unassigned	1.0
+b82315d810482e675ef688d26015ca9bcd50a4f2	k__Eukaryota; d__Rhizaria; p__Cercozoa	1.0
+b82345d6f513a7db039e2199d0839928da7a7766	k__Eukaryota; d__Opisthokonta; p__Fungi	1.0
+b88ead2857063d4328521f13e6d0f0ff534ba867	k__Eukaryota; d__Opisthokonta; p__Metazoa; c__Porifera; o__Porifera_X; f__Demospongiae	0.7
+b8cd70c9c41aa6c248c568cacb0d9f2af8429a2e	k__Eukaryota; d__Opisthokonta; p__Metazoa; c__Nematoda; o__Chromadorea; f__Chromadorea_X	0.7
+b9386b1340b992cc1a85f551adb628861a0e519f	k__Eukaryota; d__Opisthokonta; p__Fungi	1.0
 b94459ddf6bece24e9b734262a180b173d60bb87	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Sordariomycetes	1.0
 b95e6cda7831240b74d3746078583ce697d7994d	k__Eukaryota; d__Alveolata; p__Chrompodellids; c__Colpodellidea; o__Colpodellida; f__Alphamonaceae; g__Alphamonadea_ALPH1; s__Alphamonadea_ALPH1_sp.	0.8
+b9c41f1e4b27c97ee4d5e8718ae6caad1e250456	k__Eukaryota; d__Rhizaria; p__Cercozoa	1.0
 b9eb234ffd555d7ba457b4fd9753eaa668c91161	k__Eukaryota; d__Stramenopiles; p__Ochrophyta; c__Chrysophyceae; o__Chrysophyceae_X; f__Chrysophyceae_Clade-C	0.6
+ba8c6dc45b9c341d8a78841ecb4d8a038a3569a5	k__Eukaryota; d__Stramenopiles; p__Pseudofungi; c__Oomycota; o__Oomycota_X; f__Peronosporales	0.8
 bb250dfe2f32be9b8ded510f49fffde29afb830b	k__Eukaryota; d__Archaeplastida; p__Chlorophyta; c__Chlorophyceae; o__Sphaeropleales; f__Sphaeropleales_X	0.8
+bb2ed35db6a05a4c616ec043942e73191064ea5e	k__Eukaryota; d__Rhizaria; p__Cercozoa	0.9
+bb6fdf447291e99c89280e27c837c638e0520fad	k__Eukaryota; d__Alveolata; p__Ciliophora; c__Spirotrichea; o__Hypotrichia; f__Oxytrichidae	0.6
+bc14ca3c5d25296c3c18fbf6bc74c0c6e94d972c	k__Eukaryota; d__Opisthokonta; p__Fungi	1.0
+bcc5715491535f12230bb4ff20c7c7ea8f53ae17	Unassigned	1.0
 bce3bf547a7591470861b95715298da2b7321fa6	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Basidiomycota; o__Agaricomycotina; f__Tremellomycetes	1.0
+bd56bfd9bdc3bc98c339c6d3915019d2cdc6cb23	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Sordariomycetes	1.0
+be9658391f6f2ae03f31887e9030853e0087230e	k__Eukaryota; d__Opisthokonta; p__Metazoa; c__Nematoda; o__Chromadorea; f__Chromadorea_X	1.0
+bf0059bf0ffbbbd6075609e6fc173648f3ac644d	k__Eukaryota; d__Alveolata; p__Ciliophora; c__Litostomatea; o__Trichostomatia; f__Isotrichidae_2; g__Isotrichidae_2_X; s__Isotrichidae_2_X_sp.	0.6
+bf2acd0655601d1054317fd2d459cfa3415f6237	k__Eukaryota; d__Opisthokonta; p__Metazoa; c__Nematoda; o__Enoplea; f__Enoplea_X	0.9
+c012aae363f5a7cdbcc1c597f19143dac21fc4b2	k__Eukaryota; d__Alveolata; p__Ciliophora; c__Spirotrichea; o__Hypotrichia; f__Oxytrichidae	0.7
+c04257ff7a7334cdc0410c4353bb6d4dc76e62f6	Unassigned	1.0
+c10a462b8095cdd9f5b08c80e1779004dee5aa5b	k__Eukaryota; d__Rhizaria; p__Cercozoa	1.0
+c18cd79e14e1a6e48c8f5b839d42ebb3c57ecf9b	k__Eukaryota; d__Archaeplastida; p__Chlorophyta; c__Chlorophyceae; o__Chlamydomonadales; f__Chlamydomonadales_X; g__Dunaliella; s__Dunaliella_sp.	0.6
 c1e4c97dea3df75f1f7277badd3bf2d07ef473a5	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Leotiomycetes	0.9
+c2f1c0f98814618b645707debd98aa14282352da	k__Eukaryota; d__Stramenopiles; p__Pseudofungi; c__Oomycota; o__Oomycota_X; f__Peronosporales	1.0
+c2ff257537e0e747efca3bcb6c516d6e2cc48b72	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Pezizomycetes	0.6
+c35ca13574d9e208e98e45408f332b1c41b1a9b2	k__Eukaryota; d__Rhizaria; p__Cercozoa	1.0
+c37454b4061904151c301314c9d6741641fa09ce	k__Eukaryota; d__Stramenopiles; p__Pseudofungi; c__Oomycota; o__Oomycota_X; f__Peronosporales	1.0
+c3bf83e144a270c1594c15a971bbcbfbf30cc6f4	k__Eukaryota; d__Alveolata; p__Apicomplexa; c__Gregarinomorphea; o__Cryptogregarinorida; f__Cryptosporidiidae	0.667
+c3c191d96fddc53bce3281108bd5f36f45017cb2	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Eurotiomycetes	1.0
+c3ffab38f9f0ec5b3be9085f2bd5c455f3d9746c	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Basidiomycota; o__Agaricomycotina; f__Tremellomycetes	1.0
+c437083ad1479fb9753b16903d05c6c452ceee3e	Unassigned	1.0
+c46ad8f76ae27288c25e0272dbffe10d89df66e8	k__Eukaryota; d__Opisthokonta; p__Metazoa	1.0
 c4dfe43a7889ce7754ae4132ad724b585e06f6cc	Unassigned	1.0
+c505b0507a6190ab79e2dc84e616f978c1355a3c	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Chytridiomycota; o__Chytridiomycotina	0.8
+c55416800117f911c34a5c56013b2958f8a38e61	k__Eukaryota; d__Archaeplastida; p__Chlorophyta; c__Chlorophyceae; o__Chlamydomonadales; f__Chlamydomonadales_X	0.9
+c63f8b1a14ea616a448c850d08ad6590d1e7e8f3	k__Eukaryota; d__Archaeplastida; p__Chlorophyta; c__Chlorophyceae; o__Chlamydomonadales; f__Chlamydomonadales_X	0.7
+c6aa4ed11c027be1c839ef888e70995b5f50cf2d	k__Eukaryota; d__Opisthokonta; p__Metazoa; c__Nematoda; o__Chromadorea; f__Chromadorea_X	1.0
+c6d36f162f16c51f21afccbb0fdb2ae9479732be	k__Eukaryota; d__Alveolata; p__Ciliophora	1.0
 c6f175444aa9cf3fdc7c7d6eca6196119669958a	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Chytridiomycota; o__Chytridiomycotina; f__Chytridiomycetes	0.8
+c7ed1c7ae9dea33b1241cb7e98867e230b94be8b	k__Eukaryota; d__Stramenopiles	1.0
+c8427244f6dcfa025bf59b8b9dc599ff75e87ad8	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Chytridiomycota; o__Chytridiomycotina; f__Chytridiomycetes	0.7
 c8f246915d8c91b9b7c27698fd2ea996beabe226	k__Eukaryota; d__Opisthokonta; p__Metazoa; c__Nematoda; o__Chromadorea; f__Chromadorea_X	0.8
+c92ba1293318804f550ceb9dda06643ba2891e79	k__Eukaryota; d__Opisthokonta; p__Metazoa; c__Nematoda; o__Chromadorea; f__Chromadorea_X	1.0
+c97977e2995d7fa249253e69b2feffd9a253bcbe	k__Eukaryota; d__Archaeplastida; p__Streptophyta; c__Embryophyceae; o__Embryophyceae_X; f__Embryophyceae_XX	1.0
+c9c702a8ea46668ad930e0d46773cd2ef30a6522	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Dothideomycetes	1.0
+c9edf4cc470955cc94f7bb467719a5e5cb133d42	k__Eukaryota; d__Alveolata; p__Ciliophora; c__Spirotrichea; o__Hypotrichia; f__Oxytrichidae	0.7
+c9fac35c2e6d7360cb276b557f4ada2ac9d37da3	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Chytridiomycota; o__Chytridiomycotina; f__Chytridiomycetes	0.7
 ca484d7287e52fb6c34093d806861e2cafaec3d9	Unassigned	1.0
 ca966105739dc7df496ce7fcdc4dbda6a286b3f7	k__Eukaryota	1.0
+cb33a47077f31572559d3f27dd40dda6a426eb9f	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Chytridiomycota; o__Chytridiomycotina; f__Chytridiomycetes	0.6
 cb698aa0e8308b674c6d1d719856e0066574f928	k__Eukaryota; d__Alveolata; p__Ciliophora	1.0
+cc0ffb8dcb24e4daaad7105b926c78afd2f335fd	k__Eukaryota; d__Alveolata; p__Ciliophora	0.8
+cc4e6c870d2545dc805ca84e85fb6f9595144b5d	k__Eukaryota; d__Alveolata; p__Chrompodellids; c__Colpodellidea; o__Colpodellida; f__Alphamonaceae; g__Alphamonadea_ALPH1; s__Alphamonadea_ALPH1_sp.	0.8
+ccc6afca8600a1852f7dfa2593ec3ed1c66c1bec	k__Eukaryota; d__Opisthokonta; p__Fungi	0.9
+ccd73bcf52cdbebd2fd81aaa4a482c1d4befd747	k__Eukaryota; d__Opisthokonta; p__Metazoa; c__Nematoda; o__Chromadorea; f__Chromadorea_X	1.0
+cce3250833cedaf0000746737de79fa55c4edd4a	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Sordariomycetes	1.0
+cd0f87365568d93e02528a717282d4124c6cc7d2	k__Eukaryota; d__Opisthokonta; p__Metazoa; c__Arthropoda; o__Chelicerata; f__Arachnida	1.0
+cd4985079352dac073a41a03add17296390ef15a	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Chytridiomycota; o__Chytridiomycotina; f__Chytridiomycetes	0.9
+cd97605de043c16980e4e47f34ebc0ea31189d7d	k__Eukaryota; d__Rhizaria; p__Cercozoa; c__Filosa-Thecofilosea; o__Cryomonadida	0.7
 cdc089a0b753846653543f6489ad95f509fe26fb	k__Eukaryota; d__Opisthokonta	0.6
+ce0d5df32171888d47fd4ccac47ae885328cc01f	k__Eukaryota; d__Rhizaria; p__Cercozoa	1.0
+ce12d61e70b0b6bb5407b5fc85e9b0bad91d9900	k__Eukaryota; d__Rhizaria; p__Cercozoa	1.0
+ce4232ccb1f251b7f2aef082a1b147d9bc965c19	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Chytridiomycota; o__Chytridiomycotina; f__Chytridiomycetes	0.9
+ce59c63c729cdc27ae186163a8fea12a1324274a	k__Eukaryota; d__Alveolata; p__Dinoflagellata; c__Dinophyceae	0.8
+ceb1b3d159f629f192a6f7cbd0b429240b0e37d2	k__Eukaryota; d__Alveolata; p__Ciliophora; c__Spirotrichea; o__Hypotrichia; f__Oxytrichidae	0.7
+d085b6325acda60687498833a9b5e0c305883cd5	Unassigned	1.0
+d0b5765c47413cff6a5d0b9994036ebc1e47fbfa	k__Eukaryota; d__Alveolata; p__Ciliophora	1.0
+d0c008f0fa52cda9d3f56e48dff37334dfdc42b4	k__Eukaryota; d__Alveolata; p__Ciliophora; c__Litostomatea; o__Trichostomatia; f__Isotrichidae_2; g__Isotrichidae_2_X; s__Isotrichidae_2_X_sp.	0.6
+d0c98b1e37b824b60cab6f36685a9f564bd7a4c8	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Leotiomycetes	0.9
+d109deaa44e9338857939ffe08d1487dd9abfea4	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Basidiomycota	1.0
+d12f913afc53965ae578348258beb8c5510f4260	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Chytridiomycota; o__Chytridiomycotina	0.6
+d160410e3978df7ac44a09142d288f765e846656	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Basidiomycota; o__Agaricomycotina; f__Agaricomycetes; g__Agaricomycetes_X; s__Agaricomycetes_X_sp.	1.0
+d1bbfd9cbcf210d7a2641d2113f472f5fca15f0d	k__Eukaryota; d__Rhizaria; p__Cercozoa	1.0
+d1ec1a45c5d28cda3b5c9454cd0e67648cf59126	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Basidiomycota; o__Agaricomycotina; f__Agaricomycetes	1.0
 d2b7090d2ccc18828c86bbab32c050b8c2e77a39	k__Eukaryota; d__Alveolata; p__Dinoflagellata; c__Dinophyceae	0.6
+d3093c2c72c28dcc228e9589d6798367ad78dcc5	k__Eukaryota; d__Opisthokonta; p__Metazoa; c__Nematoda; o__Chromadorea; f__Chromadorea_X	1.0
+d32e376d35b88b69b9e7d483ccf2b85c60151c94	k__Eukaryota; d__Opisthokonta; p__Fungi	0.7
+d3d9489e4262e3cb2dd34f7d92f69bf4fa33b1a3	k__Eukaryota; d__Opisthokonta; p__Metazoa; c__Arthropoda; o__Chelicerata; f__Arachnida	0.8
+d3e5b2262824d595a83c90422a7befdfa350dcb9	k__Eukaryota; d__Opisthokonta; p__Fungi	0.9
+d4ea01fa5443ebbe8bdfc0ac5dff36d1c735677d	k__Eukaryota; d__Alveolata; p__Ciliophora; c__Litostomatea; o__Trichostomatia; f__Isotrichidae_2; g__Isotrichidae_2_X; s__Isotrichidae_2_X_sp.	0.6
+d513634942fd51d106164f6526653880ec612a95	k__Eukaryota; d__Archaeplastida; p__Streptophyta; c__Embryophyceae; o__Embryophyceae_X; f__Embryophyceae_XX	1.0
 d54c82539319c0b107bc7d3ce7f8678097a9deaf	k__Eukaryota; d__Rhizaria; p__Cercozoa; c__Endomyxa-Phytomyxea	0.667
+d5a321a192b16e00930a7e42ea18c614e00cba59	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Dothideomycetes	1.0
+d5d550a58af469316463dfe15219f8dc650c6237	k__Eukaryota; d__Opisthokonta; p__Metazoa	1.0
 d60fdb3aac1ded19505ab3d27acf509a1bc5dbfc	Unassigned	1.0
+d6410ef6c1973da2ac60dd2ce0d58427e9089e05	k__Eukaryota; d__Alveolata; p__Ciliophora	1.0
+d665a5253f79cef3cd2e6e204d937086030516d7	k__Eukaryota; d__Rhizaria; p__Cercozoa; c__Filosa-Imbricatea	0.6
+d78b0ce747ba888195610946c83afa872a854eba	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Basidiomycota; o__Agaricomycotina; f__Agaricomycetes; g__Agaricomycetes_X; s__Agaricomycetes_X_sp.	0.6
 d85ae221e5df000fd381772cbc3512993aa166ec	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Chytridiomycota; o__Chytridiomycotina; f__Chytridiomycetes	0.6
+da8c0126243bd44c7f72b728606cea47ccee9b6c	k__Eukaryota; d__Alveolata; p__Ciliophora; c__Spirotrichea; o__Hypotrichia; f__Oxytrichidae	0.7
 dab97e4f5731d31479cded073b649e4e4b7c3eb0	k__Eukaryota; d__Alveolata; p__Chrompodellids; c__Colpodellidea; o__Colpodellida; f__Alphamonaceae; g__Alphamonadea_ALPH1; s__Alphamonadea_ALPH1_sp.	0.8
+dafa6e595ff48f4e36634d5cb845a2745f5d1458	k__Eukaryota; d__Alveolata; p__Ciliophora; c__Spirotrichea; o__Hypotrichia; f__Oxytrichidae	0.7
 db61cc08f2cb0aafbdd8d2bd6cb7cb1ad568aa3d	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Chytridiomycota; o__Chytridiomycotina; f__Chytridiomycetes	0.6
+db6ec2c3e34b67aeb1a9d9b73ba73a5686a4c0de	k__Eukaryota; d__Opisthokonta; p__Metazoa; c__Arthropoda; o__Chelicerata; f__Arachnida; g__Euseius; s__Euseius_sojaensis	1.0
 db6f030e1803236699214841191f764c6d9c64fd	k__Eukaryota; d__Alveolata; p__Ciliophora	1.0
 dbce0ba0ee5d56eebc8736cb39b1d37cff587e51	Unassigned	1.0
 dc7437ccf90f030ac78fc0dac6bbca3ca521562f	k__Eukaryota; d__Stramenopiles; p__Ochrophyta; c__Bacillariophyta; o__Bacillariophyta_X; f__Raphid-pennate	1.0
 dd4bf75aacadf19a39b1eda87307b4c5a2135cec	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Chytridiomycota; o__Chytridiomycotina; f__Chytridiomycetes	0.6
+dda6d9887e03b84030bc81c015bb4b6df90ca835	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Dothideomycetes	0.8
+ddee630d81f43d8d06b568145a9cfaf8e6e33332	k__Eukaryota; d__Rhizaria; p__Cercozoa; c__Filosa-Sarcomonadea	0.6
+de8c34ef701893bf1b4661903a0d86e1e24a2949	k__Eukaryota; d__Stramenopiles; p__Ochrophyta; c__Bacillariophyta; o__Bacillariophyta_X; f__Raphid-pennate	1.0
+df986ece3fed192e302cbd103f25dd4ec87118ea	k__Eukaryota; d__Opisthokonta; p__Metazoa; c__Arthropoda; o__Chelicerata; f__Arachnida; g__Euseius; s__Euseius_sojaensis	1.0
+dfcd4ed4573cc340c889ecdd958e16e6372e1025	k__Eukaryota; d__Archaeplastida; p__Streptophyta; c__Klebsormidiophyceae; o__Klebsormidiophyceae_X; f__Klebsormidiophyceae_XX; g__Klebsormidium; s__Klebsormidium_sp.	1.0
 e07ceb3dd9b55dabd640ecd46243ce65c1a9fab1	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Basidiomycota; o__Agaricomycotina; f__Agaricomycetes	1.0
+e0b2252c49c823d6333c87eabb3daae35ea0977e	k__Eukaryota; d__Rhizaria; p__Cercozoa; c__Filosa-Sarcomonadea; o__Glissomonadida; f__Sandonidae	0.7
+e0c2680cc25a09692e21126fd149df14002125cd	k__Eukaryota; d__Rhizaria; p__Cercozoa	1.0
+e0e1009957da621380861eace81265c50a3db439	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Basidiomycota; o__Agaricomycotina; f__Agaricomycetes; g__Agaricomycetes_X; s__Agaricomycetes_X_sp.	0.6
+e0f79a19794998690a263924f9215875735d9159	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Dothideomycetes	1.0
 e1ae3388a09414e3882da10f5794e8df6ad91265	k__Eukaryota; d__Stramenopiles; p__Pseudofungi	0.6
+e26ba15531bf2d48ee2f16da5ff0310a089a2d19	Unassigned	1.0
 e293978080d86d12c63d0adce602005e3193969b	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Basidiomycota; o__Agaricomycotina; f__Agaricomycetes	1.0
+e2d65ce5b8e755720e8eb0082877f8524e41f556	k__Eukaryota; d__Archaeplastida; p__Streptophyta; c__Embryophyceae; o__Embryophyceae_X; f__Embryophyceae_XX	1.0
+e36b8b0e427e9cadc352aa42b3872ef22ae9ed47	k__Eukaryota; d__Opisthokonta; p__Metazoa; c__Nematoda; o__Enoplea; f__Enoplea_X	0.6
+e3716d10a89ae04a61d245e5e334396c7473eeba	k__Eukaryota; d__Rhizaria; p__Cercozoa; c__Filosa-Sarcomonadea; o__Glissomonadida; f__Sandonidae	0.7
 e41863f53154d25a55c2391ef6bf3d384a131f1c	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Leotiomycetes	0.7
+e4f5f11fe6b6de4230e17ab1a31f24b5d9cd6037	k__Eukaryota; d__Rhizaria; p__Cercozoa; c__Filosa-Sarcomonadea	0.6
 e55458e32efd1237471bbb4a12766917b15412fc	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Basidiomycota; o__Agaricomycotina; f__Tremellomycetes	1.0
 e5adaa1c48c681e2e6f41501bb9938e012e7a7a0	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Basidiomycota; o__Agaricomycotina; f__Agaricomycetes	1.0
+e6574e2904820ba5d09edb4a3e83352aae983dcd	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Basidiomycota; o__Pucciniomycotina	0.9
+e6956b84426a104abdfee8e7b10550b3296ac57f	k__Eukaryota; d__Rhizaria; p__Cercozoa	1.0
+e6dce471a82c987c2ca5a83d942002133e163d94	k__Eukaryota; d__Rhizaria; p__Cercozoa; c__Endomyxa-Phytomyxea	0.667
+e762215aa9139e6e50cb0ad08aa69b7aeff12889	k__Eukaryota; d__Alveolata; p__Ciliophora; c__Litostomatea; o__Trichostomatia; f__Isotrichidae_2; g__Isotrichidae_2_X; s__Isotrichidae_2_X_sp.	0.6
+e825c4cf662b995255a2b86e47f29dae0717887e	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Leotiomycetes	0.9
+e83c13820f56c541734fd1993c8fe22117549ff2	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Chytridiomycota; o__Chytridiomycotina; f__Chytridiomycetes	0.7
+e949ced1cebc279d583639414299201b7646cece	k__Eukaryota; d__Alveolata; p__Ciliophora; c__Spirotrichea; o__Hypotrichia; f__Oxytrichidae	0.6
+e99b10f53fc0310f37628ff9d85f78b221e1a7c5	k__Eukaryota; d__Archaeplastida; p__Chlorophyta; c__Chlorophyceae; o__Chlamydomonadales; f__Chlamydomonadales_X; g__Chlamydomonas	0.6
+ea2f73004e7a2c3e4b461a8fa63786524b6a5914	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Basidiomycota; o__Agaricomycotina; f__Agaricomycetes	1.0
+ea8264e49ebf18e74c4db45d3c9c4baaad99b321	k__Eukaryota; d__Rhizaria; p__Cercozoa; c__Filosa-Sarcomonadea; o__Glissomonadida; f__Sandonidae	0.7
+eb7d90e8de357aa4eb433d5b03aed600b288fdbf	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Leotiomycetes	0.8
 ec1755ef64d526f9da77fe5d8e957181c61b9bd8	k__Eukaryota; d__Alveolata; p__Ciliophora	1.0
+ed5ee0bdd498b7c0ff681f0464c0783321ce5e6c	k__Eukaryota; d__Alveolata; p__Ciliophora; c__Litostomatea; o__Trichostomatia; f__Isotrichidae_2; g__Isotrichidae_2_X; s__Isotrichidae_2_X_sp.	0.6
 ee82ba96f3a2102c29df49cc3df8a522a33f5451	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Leotiomycetes	0.9
+eeadc966c59d23ac2522be8015ca3ad72050c38d	k__Eukaryota; d__Opisthokonta; p__Fungi	1.0
+ef124ef7ffbc2b0e18c4fb3b548ce744e2b7630c	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Chytridiomycota; o__Chytridiomycotina; f__Chytridiomycetes	0.7
 ef74264e18ac7a07e3032ee42eb1d8cfd165855b	k__Eukaryota; d__Alveolata	1.0
+ef93129d9cf4fb053de069ff0e16d8962ed7894b	k__Eukaryota; d__Alveolata; p__Chrompodellids; c__Colpodellidea; o__Colpodellida; f__Alphamonaceae; g__Alphamonadea_ALPH1; s__Alphamonadea_ALPH1_sp.	0.9
+efbbd3195088d94e06bc3429921aad89e6a03c32	Unassigned	1.0
+efc57e582c706c8b9ed4a1ab983774e27d437d65	k__Eukaryota; d__Rhizaria; p__Cercozoa	1.0
+efe2a77c5d547c8fbc78d521e6d202a6753ab4e7	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Leotiomycetes	0.7
+efe5615e33e8dcbed2d40993452d340e65e54fbd	k__Eukaryota; d__Alveolata; p__Chrompodellids; c__Colpodellidea; o__Colpodellida; f__Chromeraceae; g__Chromera; s__Chromera_velia	1.0
+f0eb70abba95900fce97dd2750d0803eb10de91f	k__Eukaryota	1.0
+f0f1458115a110cdeef35763f03ebd20a2cef360	k__Eukaryota; d__Archaeplastida; p__Streptophyta; c__Embryophyceae; o__Embryophyceae_X; f__Embryophyceae_XX	1.0
+f0f3e76d4e3dbe792ea0f6369196e592edeaf7b3	k__Eukaryota; d__Opisthokonta; p__Metazoa; c__Nematoda; o__Enoplea; f__Enoplea_X	0.6
+f0f4b7a67cd2191721285053a38cb6ff39e94cf8	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Sordariomycetes	1.0
+f1576c2b8a8bca0bb31b009a6b4318a7e9e37ce5	k__Eukaryota; d__Alveolata; p__Ciliophora; c__Spirotrichea; o__Hypotrichia; f__Oxytrichidae	0.7
+f19430832ba7a1cc5a86ee3adef4531b3c358afd	k__Eukaryota; d__Alveolata; p__Chrompodellids; c__Colpodellidea; o__Colpodellida; f__Alphamonaceae; g__Alphamonadea_ALPH1; s__Alphamonadea_ALPH1_sp.	0.9
+f1b63c72c1bdbbd889bdc3dd732dadb9f4fb8657	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Basidiomycota; o__Pucciniomycotina; f__Microbotryomycetes	0.7
+f222882fd1017ea02a53056f7de38c5d84868faf	k__Eukaryota; d__Alveolata; p__Ciliophora; c__Litostomatea; o__Trichostomatia; f__Isotrichidae_2; g__Isotrichidae_2_X; s__Isotrichidae_2_X_sp.	0.6
+f379b64a0a56aee5c66b7925023d53071cebf661	k__Eukaryota; d__Opisthokonta; p__Metazoa; c__Nematoda; o__Chromadorea; f__Chromadorea_X	0.8
+f386e4440c031aed1b76c4ac2586cd0ad72450ae	k__Eukaryota; d__Opisthokonta; p__Metazoa; c__Arthropoda	0.7
+f398db5c06cdaf8c36fc3f096e7a3620c7bce911	Unassigned	1.0
 f3db47d3c364164483640ca41fbc39814a1cad2c	k__Eukaryota; d__Alveolata; p__Chrompodellids; c__Colpodellidea; o__Colpodellida; f__Alphamonaceae; g__Alphamonadea_ALPH1; s__Alphamonadea_ALPH1_sp.	0.8
+f46ab01f51e16f630d5aae2bbb729e07d24297f9	k__Eukaryota; d__Alveolata; p__Ciliophora; c__Spirotrichea; o__Hypotrichia; f__Oxytrichidae	0.7
+f4c2124332d4a69c8014add438f1ff7d9da6112b	k__Eukaryota; d__Opisthokonta; p__Metazoa; c__Porifera; o__Porifera_X; f__Demospongiae	0.9
+f558fe98aca8e3e14f121e734fcd7a1ab729973f	Unassigned	1.0
+f6e2dbf54691c6054d76a9f7e6471d8677b39bbc	k__Eukaryota; d__Stramenopiles; p__Pseudofungi; c__Oomycota; o__Oomycota_X; f__Peronosporales	1.0
+f714a3610bea8a69fb53e7f1256d09e0908f63b0	k__Eukaryota; d__Rhizaria; p__Cercozoa	1.0
+f7162e19d297cf228816611dddf864fcf6797870	k__Eukaryota	1.0
+f7298386c7c610b06753ee6c6a703dc12d560dcc	k__Eukaryota; d__Stramenopiles; p__Ochrophyta; c__Eustigmatophyceae; o__Eustigmatophyceae_X; f__Eustigmatophyceae_XX; g__Nannochloropsis	0.6
+f7d44c5636ad97968f781fc224111c211d8c4dad	k__Eukaryota; d__Alveolata; p__Ciliophora; c__Spirotrichea; o__Hypotrichia; f__Oxytrichidae	0.6
 f80ed506b98f193a9cd8bb1595b2d399942358dc	k__Eukaryota; d__Alveolata; p__Ciliophora; c__Oligohymenophorea	0.8
+f8437711eccbed50d232990584775ff1f60a5f0e	k__Eukaryota; d__Opisthokonta; p__Metazoa; c__Nematoda; o__Chromadorea; f__Chromadorea_X	1.0
 f8490b5bb72bf2faccb40bdf87c0d1dc595aea7d	Unassigned	1.0
+f8bdb9f6139928c0318faa8961465e0245811f58	k__Eukaryota; d__Rhizaria; p__Cercozoa; c__Filosa-Sarcomonadea	0.6
+f9983ca0ae0b30a0609ed84149a5e0867d90a633	k__Eukaryota; d__Rhizaria; p__Cercozoa	1.0
+f9aabd2ac7ed9e70a9232bcbb5a23a4b693be68c	k__Eukaryota; d__Rhizaria; p__Cercozoa	1.0
+f9cb04a811e4112cffeafcfcd206e750267bf96c	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Leotiomycetes	0.9
+f9f7cc80f9e7750a56deac302fc30e14f3993a20	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Sordariomycetes	1.0
 fa40cd3876d9030fa0ff5e6d42458939c2b4ce6c	k__Eukaryota; d__Rhizaria; p__Cercozoa	1.0
 fad0e6520ddf97aa09c69987d8f3e7ebb35da22a	k__Eukaryota; d__Rhizaria; p__Cercozoa	1.0
+fbf7ef936b65b562f24528107101a24984ba440f	k__Eukaryota; d__Opisthokonta; p__Metazoa; c__Nematoda; o__Enoplea; f__Enoplea_X	0.9
+fbfc88aa02b47161d0804eba64c710bbb7385d95	k__Eukaryota; d__Opisthokonta	0.8
+fc1108996baa874e35d51547a23fff6076e464c9	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Chytridiomycota; o__Chytridiomycotina; f__Chytridiomycetes	0.9
 fccdb1b989d2e46b58df5b3630e7ac93f0efeb93	k__Eukaryota; d__Opisthokonta; p__Fungi	1.0
+fd19706e3bc7b252633cef2c212694e4f4bd207f	k__Eukaryota; d__Opisthokonta; p__Fungi	0.9
+fd4130a83fef08a30c191429aae25ff4639f1a19	k__Eukaryota; d__Rhizaria; p__Cercozoa; c__Filosa-Sarcomonadea; o__Glissomonadida; f__Sandonidae	0.7
+fe23775334e869ea502c1810cfa245bbff7e49da	k__Eukaryota; d__Rhizaria; p__Cercozoa	1.0
+fe83ce0f5fd9e2409836dd3df619d818229abdef	k__Eukaryota; d__Rhizaria; p__Cercozoa; c__Filosa-Thecofilosea; o__Cryomonadida	0.7
 ffa0b29a4d3f280cc6a6cad6f9d1fd1dab887726	k__Eukaryota; d__Opisthokonta; p__Metazoa; c__Nematoda; o__Enoplea; f__Enoplea_X	0.6
+ffa4f75cc0aecd59776dbcc980501472e86caf45	k__Eukaryota; d__Opisthokonta; p__Fungi; c__Ascomycota; o__Pezizomycotina; f__Leotiomycetes	0.8

@@ -79,7 +79,6 @@ echo "reverse complement of ${R_PRIMER} is ${R_PRIMER_RC}"
 cutadapt -a ${R_PRIMER_RC} \
          -g ${F_PRIMER} \
          -n 3 \
-         --trimmed-only \
          -o ${EXTRACTED_18S}/extracted_18S_seqs_trimmed.fasta \
             ${OTU_CHIM_FILT}/otu_seqs_nonchimeric.fasta \
           > ${EXTRACTED_18S}/trimming.log
@@ -87,6 +86,7 @@ cutadapt -a ${R_PRIMER_RC} \
         #  --minimum-length 1 \
         #  --trim-n \
         #  --discard-untrimmed \
+        # --trimmed-only \
 
 
 qiime tools import \

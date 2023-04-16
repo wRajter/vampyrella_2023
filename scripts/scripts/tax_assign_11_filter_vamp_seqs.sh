@@ -7,10 +7,10 @@
 
 
 # variables
-PROJECT="Suthaus_2022"
+PROJECT="Jamy_2019"
 TAXON="Vampyrellida"
-MARKER="Full18S"
-CELL="cellCombined"
+MARKER="rDNA"
+CELL="cell"
 SIM="sim99"
 RAW_DATA="../../raw_data"
 SUMMARY_TABLE="${RAW_DATA}/OTU_results/${PROJECT}/otu_summary_table_${MARKER}_${CELL}_${SIM}.tsv"
