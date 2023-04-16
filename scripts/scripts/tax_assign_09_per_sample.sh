@@ -4,9 +4,9 @@
 # Note: Activate conda qiime2-2022.11 environment before running the script.
 
 # Variables:
-PROJECT="Suthaus_2022"
-CELL="cellCombined"
-MARKER="Full18S"
+PROJECT="Jamy_2019"
+CELL="cell"
+MARKER="rDNA"
 SIM="sim99"
 RAW_DATA="../../raw_data"
 PER_SAMPLE_DIR="${RAW_DATA}/per_sample_results/${PROJECT}/${MARKER}/${CELL}/${SIM}"
@@ -54,8 +54,10 @@ do
   qiime feature-table filter-seqs \
     --i-data ${FILT_OTU_DIR}/otu_seqs_filtered.qza \
     --m-metadata-file ${PER_SAMPLE_DIR}/transposed_table.qza \
-    --p-where ${SAMPLE}_${MARKER}_${CELL} \
+    --p-where ${SAMPLE} \
     --o-filtered-data ${PER_SAMPLE_DIR}/otu_seqs_filtered_${SAMPLE}.qza
+  # --p-where ${SAMPLE}_${MARKER}_${CELL}
+
 
   qiime feature-table tabulate-seqs \
     --i-data ${PER_SAMPLE_DIR}/otu_seqs_filtered_${SAMPLE}.qza \

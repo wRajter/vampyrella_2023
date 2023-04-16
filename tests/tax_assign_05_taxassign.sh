@@ -12,7 +12,7 @@ QUERY_SEQS="../raw_data/extracted_18S/Jamy_2019/rDNA/cell/sim99/extracted_18S_se
 
 # Taxonomic assignment analysis
 qiime feature-classifier classify-consensus-vsearch \
-  --i-query sub_seqs.qza \
+  --i-query ${QUERY_SEQS} \
   --i-reference-reads sub_ref_alignment.qza \
   --i-reference-taxonomy sub_ref_taxonomy.qza \
   --o-classification vsearch_taxonomy.qza \

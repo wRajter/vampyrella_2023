@@ -4,9 +4,9 @@
 # Note: Activate conda qiime2-2022.11 environment before running the script
 
 # Variables:
-PROJECT="Suthaus_2022"
-CELL="cellCombined"
-MARKER="Full18S"
+PROJECT="Jamy_2019"
+CELL="cell"
+MARKER="rDNA"
 SIM="sim99"
 RAW_DATA="../../raw_data"
 OTU_CLUST_DIR="${RAW_DATA}/OTU_nonchimeric/${PROJECT}/${MARKER}/${CELL}/${SIM}"
@@ -75,7 +75,7 @@ rm -f ${FILT_OTU_DIR}/table_filt_contam.qza
 
 qiime taxa filter-table \
    --i-table ${OTU_CLUST_DIR}/otu_table_nonchimeric.qza \
-   --i-taxonomy ${TAX_ASSIGN_DIR}/vsearch_taxonomy.qza \
+   --i-taxonomy ${TAX_ASSIGN_DIR}/vsearch_taxonomy_test.qza \
    --p-include p__ \
    --p-exclude mitochondria,chloroplast \
    --o-filtered-table ${FILT_OTU_DIR}/table_filt_contam.qza
