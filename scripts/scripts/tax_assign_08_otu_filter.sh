@@ -75,7 +75,7 @@ rm -f ${FILT_OTU_DIR}/table_filt_contam.qza
 
 qiime taxa filter-table \
    --i-table ${OTU_CLUST_DIR}/otu_table_nonchimeric.qza \
-   --i-taxonomy ${TAX_ASSIGN_DIR}/vsearch_taxonomy_test.qza \
+   --i-taxonomy ${TAX_ASSIGN_DIR}/vsearch_taxonomy.qza \
    --p-include p__ \
    --p-exclude mitochondria,chloroplast \
    --o-filtered-table ${FILT_OTU_DIR}/table_filt_contam.qza

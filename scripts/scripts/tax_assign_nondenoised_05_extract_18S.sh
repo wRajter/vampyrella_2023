@@ -5,7 +5,7 @@
 # Note: Activate conda qiime2-2022.11 environment before running the script.
 
 # Variables
-PROJECT="Jamy_2019"
+PROJECT="Suthaus_2022"
 MARKER="rDNA"
 CELL="cell"
 SIM="sim99"
@@ -15,6 +15,7 @@ IDENT_THRESHOLD=0.8 # minimum combined primer match identity threshold
 RAW_DATA="../../raw_data"
 OTU_CHIM_FILT="${RAW_DATA}/OTU_nonchimeric/${PROJECT}/${MARKER}/${CELL}/${SIM}"
 EXTRACTED_18S="${RAW_DATA}/extracted_18S/${PROJECT}/${MARKER}/${CELL}/${SIM}"
+RAW_READS_DIR="${RAW_DATA}/PacBio/${PROJECT}_${MARKER}/${CELL}/filtered"
 
 #############################
 ## primers to test (5'-3') ##
@@ -52,7 +53,35 @@ EXTRACTED_18S="${RAW_DATA}/extracted_18S/${PROJECT}/${MARKER}/${CELL}/${SIM}"
 # Sequence: ATTACGTCCCTGCCCTTTGTA; Type: regular 3'; Length: 21; Trimmed: 919 times
 # Sequence: TTAGCATGGAATAATRRAATAGGA; Type: regular 5'; Length: 24; Trimmed: 613 times
 
+# ##############################
+# ## USING INDIVIDUAL SAMPLES ##
+# ##############################
 
+# SAMPLES=$(ls ${RAW_READS_DIR}/*.fastq.gz | \
+#           awk -F '/' '{ print $NF }' | \
+#           awk -F '_' '{ print $1 }' |
+#           awk -F '.' '{ print $1 }')
+
+# ## Reverse complement the reverse primer
+# # R_PRIMER_RC=$(echo $R_PRIMER | rev | tr 'ATCGatcg' 'TAGCtagc')
+# # echo "reverse complement of ${R_PRIMER} is ${R_PRIMER_RC}"
+
+# # mkdir -p ${EXTRACTED_18S}/
+
+# for SAMPLE in ${SAMPLES}
+# do
+#   # cutadapt -a ${R_PRIMER_RC} \
+#   #          -g ${F_PRIMER} \
+#   #          -n 3 \
+#   #          -o ${EXTRACTED_18S}/extracted_18S_seqs_trimmed_${SAMPLE}.fasta \
+#   #             ${RAW_DATA}/denoise/${PROJECT}/${MARKER}/${CELL}/asv_seqs_${SAMPLE}.fasta \
+#   #           > ${EXTRACTED_18S}/trimming_${SAMPLE}.log
+#   echo "converiting the ${SAMPLE} sample: fasta to qza"
+#   qiime tools import \
+#     --type 'FeatureData[Sequence]' \
+#     --input-path ${EXTRACTED_18S}/extracted_18S_seqs_trimmed_${SAMPLE}.fasta \
+#     --output-path ${EXTRACTED_18S}/extracted_18S_seqs_trimmed_${SAMPLE}.qza
+# done
 
 ############################
 ## FILTERING AND TRIMMING ##

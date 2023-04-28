@@ -3,17 +3,9 @@
 # Setup
 library(dada2)
 
-print(paste("your working directory is: ", getwd()))
-
-
-# Variables
-cell <- "cell"
-marker <- "rDNA"
-project <- "Suthaus_2022_rDNA"
-raw_data <- "../../raw_data"
 
 # Specify paths and primers
-path <- sprintf("%s/PacBio/%s/%s", raw_data, project, cell)
+path <- "PacBio"
 
 # Getting the path to the raw PacBio reads
 raw_seqs <- list.files(path = path)
@@ -24,9 +16,6 @@ fn <- c()
 for (i in raw_seqs) {
   fn <- append(fn, sprintf("%s/%s", path, i))
 }
-print(paste("paths to the files are: ", fn))
-
-
 
 # Output path for fastq with trimmed primers
 dir.create(sprintf("%s/noprimers", path))
