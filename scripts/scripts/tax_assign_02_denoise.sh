@@ -4,10 +4,10 @@
 
 # Variables
 NCORES=12
-F_PRIMER="GGCAAGTCTGGTGCCAG"
+F_PRIMER="CTGGTTGATYCTGCCAGT"
 R_PRIMER="GACGAGGCATTTGGCTACCTT"
 LEARN=100000 # The number of reads to use when training the error model - recommended: 1000000
-PROJECT="Jamy_2019"
+PROJECT="Suthaus_2022"
 MARKER="rDNA"
 CELL="cell"
 MIN_LENGTH=3000 # minimal length of the sequence, shorter sequences will be filtered out
@@ -20,64 +20,64 @@ DENOISE_DIR="${RAW_DATA}/denoise/${PROJECT}/${MARKER}/${CELL}"
 
 
 
-#######################################
-## PREPARING RAW READS FOR DENOISING ##
-#######################################
+# #######################################
+# ## PREPARING RAW READS FOR DENOISING ##
+# #######################################
 
-echo "Working on ${MARKER} marker and ${CELL} cell."
+# echo "Working on ${MARKER} marker and ${CELL} cell."
 
-# Cleaning
-mkdir -p ${READS_GZA_DIR}/
-rm -f ${READS_GZA_DIR}/raw_reads.qza \
-      ${READS_GZA_DIR}/raw_reads_summary.qzv
-
-
-# Converting FASTQs into Qiime2 (qza) artifact format
-echo "Converting FASTQs into Qiime2 format and creating reads summary table..."
-
-qiime tools import \
-    --type SampleData[SequencesWithQuality] \
-    --input-path ${MANIFEST_FILE} \
-    --output-path ${READS_GZA_DIR}/raw_reads.qza \
-    --input-format SingleEndFastqManifestPhred33V2
-
-# Creating reads summary file
-qiime demux summarize \
-   --i-data ${READS_GZA_DIR}/raw_reads.qza \
-   --o-visualization ${READS_GZA_DIR}/raw_reads_summary.qzv
+# # Cleaning
+# mkdir -p ${READS_GZA_DIR}/
+# rm -f ${READS_GZA_DIR}/raw_reads.qza \
+#       ${READS_GZA_DIR}/raw_reads_summary.qzv
 
 
+# # Converting FASTQs into Qiime2 (qza) artifact format
+# echo "Converting FASTQs into Qiime2 format and creating reads summary table..."
+
+# qiime tools import \
+#     --type SampleData[SequencesWithQuality] \
+#     --input-path ${MANIFEST_FILE} \
+#     --output-path ${READS_GZA_DIR}/raw_reads.qza \
+#     --input-format SingleEndFastqManifestPhred33V2
+
+# # Creating reads summary file
+# qiime demux summarize \
+#    --i-data ${READS_GZA_DIR}/raw_reads.qza \
+#    --o-visualization ${READS_GZA_DIR}/raw_reads_summary.qzv
 
 
-########################################################
-## DENOISING THE READS INTO AMPLICON SEQUENCE VARIANT ##
-########################################################
-
-# Cleaning
-mkdir -p ${DENOISE_DIR}/
-rm -f ${DENOISE_DIR}/asv_table.qza \
-      ${DENOISE_DIR}/asv_seqs.qza \
-      ${DENOISE_DIR}/asv_stats.qza
-
-# Running DADA2
-echo "Denoising raw reads and creating ASVs using DADA2..."
-qiime dada2 denoise-ccs \
- --i-demultiplexed-seqs ${READS_GZA_DIR}/raw_reads.qza \
- --p-n-reads-learn ${LEARN} \
- --p-indels True \
- --p-max-ee 2 \
- --p-max-mismatch 2 \
- --p-min-len ${MIN_LENGTH} \
- --p-max-len ${MAX_LENGTH} \
- --p-n-threads ${NCORES} \
- --p-front ${F_PRIMER} \
- --p-adapter ${R_PRIMER} \
- --o-table ${DENOISE_DIR}/asv_table.qza \
- --o-representative-sequences ${DENOISE_DIR}/asv_seqs.qza \
- --o-denoising-stats ${DENOISE_DIR}/asv_stats.qza \
- --verbose
 
 
+# ########################################################
+# ## DENOISING THE READS INTO AMPLICON SEQUENCE VARIANT ##
+# ########################################################
+
+# # Cleaning
+# mkdir -p ${DENOISE_DIR}/
+# rm -f ${DENOISE_DIR}/asv_table.qza \
+#       ${DENOISE_DIR}/asv_seqs.qza \
+#       ${DENOISE_DIR}/asv_stats.qza
+
+# # Running DADA2
+# echo "Denoising raw reads and creating ASVs using DADA2..."
+# qiime dada2 denoise-ccs \
+#  --i-demultiplexed-seqs ${READS_GZA_DIR}/raw_reads.qza \
+#  --p-n-reads-learn ${LEARN} \
+#  --p-min-len ${MIN_LENGTH} \
+#  --p-max-len ${MAX_LENGTH} \
+#  --p-n-threads ${NCORES} \
+#  --p-front ${F_PRIMER} \
+#  --p-adapter ${R_PRIMER} \
+#  --o-table ${DENOISE_DIR}/asv_table.qza \
+#  --o-representative-sequences ${DENOISE_DIR}/asv_seqs.qza \
+#  --o-denoising-stats ${DENOISE_DIR}/asv_stats.qza \
+#  --verbose
+
+# Adding optional steps:
+#  --p-indels True \
+#  --p-max-ee 2 \
+#  --p-max-mismatch 2 \
 
 ###################
 ## POST DENOISE  ##

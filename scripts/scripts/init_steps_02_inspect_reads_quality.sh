@@ -6,8 +6,8 @@
 # Variables
 NCORES=12
 PROJECT="Suthaus_2022"
-CELL="cellCombined"
-MARKER="Full18S"
+CELL="cell"
+MARKER="rDNA"
 RAW_DATA="../../raw_data"
 RAW_READS="${RAW_DATA}/PacBio/${PROJECT}_${MARKER}/${CELL}"
 OUTPUT_DIR="${RAW_DATA}/fastqc_out/${PROJECT}/${MARKER}/${CELL}"

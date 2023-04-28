@@ -3,7 +3,7 @@
 # Note: Activate conda qiime2-2022.11 environment before running the script.
 
 # Variables
-PROJECT="Jamy_2019"
+PROJECT="Jamy_2022"
 MARKER="rDNA"
 CELL="cell"
 SIM="sim99"

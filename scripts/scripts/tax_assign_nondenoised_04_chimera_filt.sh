@@ -4,13 +4,39 @@
 # Note: Activate conda qiime2-2022.11 environment before running the script.
 
 # Variables
-PROJECT="Jamy_2019"
+PROJECT="Suthaus_2022"
 MARKER="rDNA"
 CELL="cell"
 SIM="sim99"
 RAW_DATA="../../raw_data"
 OTU_DIR="${RAW_DATA}/OTU_clust/${PROJECT}/${MARKER}/${CELL}/${SIM}"
 OTU_CHIM_FILT="${RAW_DATA}/OTU_nonchimeric/${PROJECT}/${MARKER}/${CELL}/${SIM}"
+RAW_READS_DIR="${RAW_DATA}/PacBio/${PROJECT}_${MARKER}/${CELL}/filtered"
+
+
+# ##############################
+# ## USING INDIVIDUAL SAMPLES ##
+# ##############################
+
+# SAMPLES=$(ls ${RAW_READS_DIR}/*.fastq.gz | \
+#           awk -F '/' '{ print $NF }' | \
+#           awk -F '_' '{ print $1 }' |
+#           awk -F '.' '{ print $1 }')
+
+# mkdir -p ${OTU_CHIM_FILT}/
+
+# for SAMPLE in ${SAMPLES}
+# do
+#   rm -f ${OTU_CHIM_FILT}/nonchimeras_${SAMPLE}.qza \
+#   # Chimera removal
+#   echo "De novo chimera filtering - sample ${SAMPLE}"
+#   qiime vsearch uchime-denovo \
+#   --i-table ${RAW_DATA}/denoise/${PROJECT}/${MARKER}/${CELL}/asv_table_${SAMPLE}.qza \
+#   --i-sequences ${RAW_DATA}/denoise/${PROJECT}/${MARKER}/${CELL}/asv_seqs_${SAMPLE}.qza \
+#   --o-nonchimeras ${OTU_CHIM_FILT}/nonchimeras_${SAMPLE}.qza \
+#   --o-chimeras ${OTU_CHIM_FILT}/chimeras_${SAMPLE}.qza \
+#   --o-stats ${OTU_CHIM_FILT}/stats_${SAMPLE}.qza
+# done
 
 
 ###############################
