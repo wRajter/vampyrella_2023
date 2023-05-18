@@ -10,7 +10,7 @@
 
 
 # Variables:
-PROJECT="Jamy_2019"
+PROJECT="Suthaus_2022"
 CELL="cell"
 MARKER="rDNA"
 SIM="sim99"
@@ -22,10 +22,12 @@ TAX_LEVELS=";d__ ;p__ ;c__ ;o__ ;f__ ;g__ ;s__"
 RAW_READS_DIR="${RAW_DATA}/PacBio/${PROJECT}_${MARKER}/${CELL}"
 SAMPLE_LABELS=$(ls ${RAW_READS_DIR}/*reads.fastq.gz | \
           awk -F '/' '{ print $NF }' | \
-          awk -F '_' '{ print $1 }' | \
+          awk -F '.' '{ print $1 }' | \
           awk 'BEGIN { ORS = "\t" } { print $1 }')
 TAX_LABELS="Kingdom Domain  Phyllum Class Order Family  Genus Species"
 
+
+echo "$SAMPLE_LABELS"
 
 #####################
 ## PREPARE TABLE 1 ##
@@ -161,16 +163,31 @@ else
   echo 'Oops, it seems that the otu summary table has inconsistent number of columns'
 fi
 
-# Rearrange fields
-echo 'Rearranging columns in the final ASV stats table...'
 
+# # Rearrange fields
+# echo 'Rearranging columns in the final ASV stats table...'
+
+# # Cleaning
+# rm -f ${OTU_SUMMARY_DIR}/otu_summary_table_${MARKER}_${CELL}_${SIM}.tsv
+
+# # Removing convert Windows line endings to Unix line endings and rearanging the the columns
+# sed -e "s/\r//g" ${OTU_SUMMARY_DIR}/otu_summary_table.tsv | \
+# awk 'BEGIN { OFS="\t" } \
+#            { print $1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$15,$16,$17,$18,$19,$20,$21,$22,$14,$13}' \
+#               > ${OTU_SUMMARY_DIR}/otu_summary_table_${MARKER}_${CELL}_${SIM}.tsv
+
+# rm -f ${OTU_SUMMARY_DIR}/otu_summary_table.tsv
+# echo "Done. Your OTU summary table is saved as otu_summary_table_${MARKER}_${CELL}_${SIM}.tsv"
+
+
+
+# Without rearangment
 # Cleaning
 rm -f ${OTU_SUMMARY_DIR}/otu_summary_table_${MARKER}_${CELL}_${SIM}.tsv
 
-# Removing convert Windows line endings to Unix line endings and rearanging the the columns
 sed -e "s/\r//g" ${OTU_SUMMARY_DIR}/otu_summary_table.tsv | \
 awk 'BEGIN { OFS="\t" } \
-           { print $1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$15,$16,$17,$18,$19,$20,$21,$22,$14,$13}' \
+           { print }' \
               > ${OTU_SUMMARY_DIR}/otu_summary_table_${MARKER}_${CELL}_${SIM}.tsv
 
 rm -f ${OTU_SUMMARY_DIR}/otu_summary_table.tsv

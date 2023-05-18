@@ -3,7 +3,7 @@
 # Creating qiime visualization and tsv table from the taxonomic assignemnt result
 
 # Variables
-PROJECT="Jamy_2019"
+PROJECT="Suthaus_2022"
 MARKER="rDNA"
 CELL="cell"
 SIM="sim99"

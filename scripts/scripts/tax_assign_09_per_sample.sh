@@ -4,7 +4,7 @@
 # Note: Activate conda qiime2-2022.11 environment before running the script.
 
 # Variables:
-PROJECT="Jamy_2019"
+PROJECT="Suthaus_2022"
 CELL="cell"
 MARKER="rDNA"
 SIM="sim99"
@@ -12,9 +12,15 @@ RAW_DATA="../../raw_data"
 PER_SAMPLE_DIR="${RAW_DATA}/per_sample_results/${PROJECT}/${MARKER}/${CELL}/${SIM}"
 FILT_OTU_DIR="${RAW_DATA}/OTU_filtered/${PROJECT}/${MARKER}/${CELL}/${SIM}"
 RAW_READS_DIR="${RAW_DATA}/PacBio/${PROJECT}_${MARKER}/${CELL}"
+# SAMPLES=$(ls ${RAW_READS_DIR}/*reads.fastq.gz | \
+#           awk -F '/' '{ print $NF }' | \
+#           awk -F '_' '{ print $1 }')
+
 SAMPLES=$(ls ${RAW_READS_DIR}/*reads.fastq.gz | \
           awk -F '/' '{ print $NF }' | \
-          awk -F '_' '{ print $1 }')
+          awk -F '.' '{ print $1 }')
+
+SAMPLES=$(sed 's/_21R//g' <<<"$SAMPLES")
 
 
 ####################################
@@ -46,17 +52,16 @@ echo "Using transposed table for filtering OTUs into individual samples"
 
 for SAMPLE in ${SAMPLES}
 do
-  rm -f ${PER_SAMPLE_DIR}/otu_seqs_filtered_${SAMPLE}.qza \
-        ${PER_SAMPLE_DIR}/otu_seqs_filtered_${SAMPLE}.qzv
+  # rm -f ${PER_SAMPLE_DIR}/otu_seqs_filtered_${SAMPLE}.qza \
+  #       ${PER_SAMPLE_DIR}/otu_seqs_filtered_${SAMPLE}.qzv
   rm -f ${PER_SAMPLE_DIR}/fasta/otu_seqs_filtered_${SAMPLE}.fasta
 
   # filter asv sequence table
   qiime feature-table filter-seqs \
     --i-data ${FILT_OTU_DIR}/otu_seqs_filtered.qza \
     --m-metadata-file ${PER_SAMPLE_DIR}/transposed_table.qza \
-    --p-where ${SAMPLE} \
+    --p-where ${SAMPLE}_${MARKER}_${CELL} \
     --o-filtered-data ${PER_SAMPLE_DIR}/otu_seqs_filtered_${SAMPLE}.qza
-  # --p-where ${SAMPLE}_${MARKER}_${CELL}
 
 
   qiime feature-table tabulate-seqs \
