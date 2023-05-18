@@ -7,7 +7,7 @@
 
 
 # variables
-PROJECT="Jamy_2019"
+PROJECT="Suthaus_2022"
 TAXON="Vampyrellida"
 MARKER="rDNA"
 CELL="cell"
@@ -18,9 +18,17 @@ VAMP_SEQ_DIR="${RAW_DATA}/vamp_specific_seqs/${PROJECT}/${MARKER}/${CELL}/${SIM}
 SEQTK="${RAW_DATA}/packages/seqtk"
 PER_SAMPLE_DIR="${RAW_DATA}/per_sample_results/${PROJECT}/${MARKER}/${CELL}/${SIM}"
 RAW_READS_DIR="${RAW_DATA}/PacBio/${PROJECT}_${MARKER}/${CELL}"
+# SAMPLES=$(ls ${RAW_READS_DIR}/*reads.fastq.gz | \
+#           awk -F '/' '{ print $NF }' | \
+#           awk -F '_' '{ print $1 }')
+
 SAMPLES=$(ls ${RAW_READS_DIR}/*reads.fastq.gz | \
           awk -F '/' '{ print $NF }' | \
-          awk -F '_' '{ print $1 }')
+          awk -F '.' '{ print $1 }')
+
+SAMPLES=$(sed 's/_21R//g' <<<"$SAMPLES")
+
+
 
 
 mkdir -p ${VAMP_SEQ_DIR}/
