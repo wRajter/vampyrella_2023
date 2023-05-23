@@ -4,7 +4,8 @@
 # Note: Activate conda qiime2-2022.11 environment before running the script.
 
 # Variables
-PROJECT="Suthaus_2022"
+NCORES=12
+PROJECT="Jamy_2022"
 MARKER="rDNA"
 CELL="cell"
 SIM="sim99"
@@ -12,11 +13,40 @@ RAW_DATA="../../raw_data"
 OTU_DIR="${RAW_DATA}/OTU_clust/${PROJECT}/${MARKER}/${CELL}/${SIM}"
 OTU_CHIM_FILT="${RAW_DATA}/OTU_nonchimeric/${PROJECT}/${MARKER}/${CELL}/${SIM}"
 RAW_READS_DIR="${RAW_DATA}/PacBio/${PROJECT}_${MARKER}/${CELL}/filtered"
+DENOISE_DIR="${RAW_DATA}/denoise/${PROJECT}/${MARKER}/${CELL}"
 
 
-# ##############################
-# ## USING INDIVIDUAL SAMPLES ##
-# ##############################
+
+#########################################
+## USING INDIVIDUAL SAMPLES  (VSEARCH) ##
+#########################################
+
+
+SAMPLES=$(ls ${DENOISE_DIR}/*.fasta | \
+          awk -F '/' '{ print $NF }' | \
+          awk -F '_' '{ print $3 }' |
+          awk -F '.' '{ print $1 }')
+
+
+
+mkdir -p ${OTU_CHIM_FILT}/
+
+
+for SAMPLE in ${SAMPLES}
+do
+  rm -f ${OTU_CHIM_FILT}/nonchimeras_${SAMPLE}.fasta \
+  # Chimera removal
+  echo "De novo chimera filtering - sample ${SAMPLE}"
+  vsearch --uchime_denovo ${DENOISE_DIR}/asv_seqs_${SAMPLE}.fasta \
+          --threads 0 \
+          --nonchimeras ${OTU_CHIM_FILT}/nonchimeras_${SAMPLE}.fasta
+done
+
+
+
+# #######################################
+# ## USING INDIVIDUAL SAMPLES  (QIIME) ##
+# #######################################
 
 # SAMPLES=$(ls ${RAW_READS_DIR}/*.fastq.gz | \
 #           awk -F '/' '{ print $NF }' | \
@@ -39,85 +69,89 @@ RAW_READS_DIR="${RAW_DATA}/PacBio/${PROJECT}_${MARKER}/${CELL}/filtered"
 # done
 
 
-###############################
-## DE NOVO CHIMERA FILTERING ##
-###############################
-
-echo "Working on ${PROJECT} project, ${MARKER} marker, ${CELL} cell, and ${SIM} similarity."
-
-# Cleaning
-mkdir -p ${OTU_CHIM_FILT}/
-rm -f ${OTU_CHIM_FILT}/chimeras.qza \
-      ${OTU_CHIM_FILT}/nonchimeras.qza \
-      ${OTU_CHIM_FILT}/stats.qza \
-      ${OTU_CHIM_FILT}/stats.qzv
 
 
-# Chimera removal
-echo "De novo chimera filtering of clustered OTUs..."
-
-qiime vsearch uchime-denovo \
-  --i-table ${OTU_DIR}/otu_table.qza \
-  --i-sequences ${OTU_DIR}/otu_seqs.qza \
-  --o-chimeras ${OTU_CHIM_FILT}/chimeras.qza \
-  --o-nonchimeras ${OTU_CHIM_FILT}/nonchimeras.qza \
-  --o-stats ${OTU_CHIM_FILT}/stats.qza
-
-# Visualize stats file
-qiime metadata tabulate \
-  --m-input-file ${OTU_CHIM_FILT}/stats.qza \
-  --o-visualization ${OTU_CHIM_FILT}/stats.qzv
 
 
-#######################################
-## FILTERING OTU TABLE AND SEQUNECES ##
-#######################################
+# ###############################
+# ## DE NOVO CHIMERA FILTERING ##
+# ###############################
 
-# Cleaning
-rm -f ${OTU_CHIM_FILT}/otu_table_nonchimeric.qza \
-      ${OTU_CHIM_FILT}/otu_seqs_nonchimeric.qza
+# echo "Working on ${PROJECT} project, ${MARKER} marker, ${CELL} cell, and ${SIM} similarity."
 
-# Exclude chimeras in otu table
-qiime feature-table filter-features \
-  --i-table ${OTU_DIR}/otu_table.qza \
-  --m-metadata-file ${OTU_CHIM_FILT}/nonchimeras.qza \
-  --o-filtered-table ${OTU_CHIM_FILT}/otu_table_nonchimeric.qza
-# Exclude chimeras in otu sequences
-qiime feature-table filter-seqs \
-  --i-data ${OTU_DIR}/otu_seqs.qza \
-  --m-metadata-file ${OTU_CHIM_FILT}/nonchimeras.qza \
-  --o-filtered-data ${OTU_CHIM_FILT}/otu_seqs_nonchimeric.qza
+# # Cleaning
+# mkdir -p ${OTU_CHIM_FILT}/
+# rm -f ${OTU_CHIM_FILT}/chimeras.qza \
+#       ${OTU_CHIM_FILT}/nonchimeras.qza \
+#       ${OTU_CHIM_FILT}/stats.qza \
+#       ${OTU_CHIM_FILT}/stats.qzv
 
 
-#############################################
-## VISUALIZATION, STATS, & IMPORT TO FASTA ##
-#############################################
+# # Chimera removal
+# echo "De novo chimera filtering of clustered OTUs..."
 
-# Cleaning
-rm -f ${OTU_CHIM_FILT}/otu_table_nonchimeric.qzv \
-      ${OTU_CHIM_FILT}/otu_table_nonchimeric_summarize.qzv \
-      ${OTU_CHIM_FILT}/otu_seqs_nonchimeric.qzv \
-      ${OTU_CHIM_FILT}/otu_seqs_nonchimeric.fasta
+# qiime vsearch uchime-denovo \
+#   --i-table ${OTU_DIR}/otu_table.qza \
+#   --i-sequences ${OTU_DIR}/otu_seqs.qza \
+#   --o-chimeras ${OTU_CHIM_FILT}/chimeras.qza \
+#   --o-nonchimeras ${OTU_CHIM_FILT}/nonchimeras.qza \
+#   --o-stats ${OTU_CHIM_FILT}/stats.qza
 
-# visualize otu table
-qiime metadata tabulate \
-  --m-input-file ${OTU_CHIM_FILT}/otu_table_nonchimeric.qza \
-  --o-visualization ${OTU_CHIM_FILT}/otu_table_nonchimeric.qzv
+# # Visualize stats file
+# qiime metadata tabulate \
+#   --m-input-file ${OTU_CHIM_FILT}/stats.qza \
+#   --o-visualization ${OTU_CHIM_FILT}/stats.qzv
 
-# summarize otu table
-qiime feature-table summarize \
-  --i-table ${OTU_CHIM_FILT}/otu_table_nonchimeric.qza \
-  --o-visualization ${OTU_CHIM_FILT}/otu_table_nonchimeric_summarize.qzv
 
-# visualizing otu sequences - converting qza to qzv
-qiime feature-table tabulate-seqs \
-  --i-data ${OTU_CHIM_FILT}/otu_seqs_nonchimeric.qza \
-  --o-visualization ${OTU_CHIM_FILT}/otu_seqs_nonchimeric.qzv
+# #######################################
+# ## FILTERING OTU TABLE AND SEQUNECES ##
+# #######################################
 
-# convert qiime2 otu sequences to fasta
-qiime tools export \
-  --input-path ${OTU_CHIM_FILT}/otu_seqs_nonchimeric.qza \
-  --output-path ${OTU_CHIM_FILT}/
+# # Cleaning
+# rm -f ${OTU_CHIM_FILT}/otu_table_nonchimeric.qza \
+#       ${OTU_CHIM_FILT}/otu_seqs_nonchimeric.qza
 
-mv ${OTU_CHIM_FILT}/dna-sequences.fasta \
-   ${OTU_CHIM_FILT}/otu_seqs_nonchimeric.fasta
+# # Exclude chimeras in otu table
+# qiime feature-table filter-features \
+#   --i-table ${OTU_DIR}/otu_table.qza \
+#   --m-metadata-file ${OTU_CHIM_FILT}/nonchimeras.qza \
+#   --o-filtered-table ${OTU_CHIM_FILT}/otu_table_nonchimeric.qza
+# # Exclude chimeras in otu sequences
+# qiime feature-table filter-seqs \
+#   --i-data ${OTU_DIR}/otu_seqs.qza \
+#   --m-metadata-file ${OTU_CHIM_FILT}/nonchimeras.qza \
+#   --o-filtered-data ${OTU_CHIM_FILT}/otu_seqs_nonchimeric.qza
+
+
+# #############################################
+# ## VISUALIZATION, STATS, & IMPORT TO FASTA ##
+# #############################################
+
+# # Cleaning
+# rm -f ${OTU_CHIM_FILT}/otu_table_nonchimeric.qzv \
+#       ${OTU_CHIM_FILT}/otu_table_nonchimeric_summarize.qzv \
+#       ${OTU_CHIM_FILT}/otu_seqs_nonchimeric.qzv \
+#       ${OTU_CHIM_FILT}/otu_seqs_nonchimeric.fasta
+
+# # visualize otu table
+# qiime metadata tabulate \
+#   --m-input-file ${OTU_CHIM_FILT}/otu_table_nonchimeric.qza \
+#   --o-visualization ${OTU_CHIM_FILT}/otu_table_nonchimeric.qzv
+
+# # summarize otu table
+# qiime feature-table summarize \
+#   --i-table ${OTU_CHIM_FILT}/otu_table_nonchimeric.qza \
+#   --o-visualization ${OTU_CHIM_FILT}/otu_table_nonchimeric_summarize.qzv
+
+# # visualizing otu sequences - converting qza to qzv
+# qiime feature-table tabulate-seqs \
+#   --i-data ${OTU_CHIM_FILT}/otu_seqs_nonchimeric.qza \
+#   --o-visualization ${OTU_CHIM_FILT}/otu_seqs_nonchimeric.qzv
+
+# # convert qiime2 otu sequences to fasta
+# qiime tools export \
+#   --input-path ${OTU_CHIM_FILT}/otu_seqs_nonchimeric.qza \
+#   --output-path ${OTU_CHIM_FILT}/
+
+# mv ${OTU_CHIM_FILT}/dna-sequences.fasta \
+#    ${OTU_CHIM_FILT}/otu_seqs_nonchimeric.fasta
