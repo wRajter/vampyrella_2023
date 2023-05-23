@@ -1,0 +1,23 @@
+#!/bin/bash
+
+
+# download the raw PacBio reads from Jamy et al. 2019 paper that are available at ebi database
+
+wget -P PacBio/ ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR645/001/ERR6454461/ERR6454461.fastq.gz
+wget -P PacBio/ ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR645/002/ERR6454462/ERR6454462.fastq.gz
+wget -P PacBio/ ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR645/003/ERR6454463/ERR6454463.fastq.gz
+wget -P PacBio/ ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR645/004/ERR6454464/ERR6454464.fastq.gz
+wget -P PacBio/ ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR645/005/ERR6454465/ERR6454465.fastq.gz
+wget -P PacBio/ ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR645/006/ERR6454466/ERR6454466.fastq.gz
+wget -P PacBio/ ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR645/007/ERR6454467/ERR6454467.fastq.gz
+wget -P PacBio/ ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR645/008/ERR6454468/ERR6454468.fastq.gz
+wget -P PacBio/ ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR645/009/ERR6454469/ERR6454469.fastq.gz
+wget -P PacBio/ ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR645/000/ERR6454470/ERR6454470.fastq.gz
+wget -P PacBio/ ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR645/001/ERR6454471/ERR6454471.fastq.gz
+wget -P PacBio/ ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR645/002/ERR6454472/ERR6454472.fastq.gz
+wget -P PacBio/ ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR645/003/ERR6454473/ERR6454473.fastq.gz
+wget -P PacBio/ ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR645/004/ERR6454474/ERR6454474.fastq.gz
+wget -P PacBio/ ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR645/005/ERR6454475/ERR6454475.fastq.gz
+wget -P PacBio/ ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR645/006/ERR6454476/ERR6454476.fastq.gz
+wget -P PacBio/ ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR645/007/ERR6454477/ERR6454477.fastq.gz
+wget -P PacBio/ ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR645/008/ERR6454478/ERR6454478.fastq.gz

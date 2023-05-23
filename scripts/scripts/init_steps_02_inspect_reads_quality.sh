@@ -5,11 +5,11 @@
 
 # Variables
 NCORES=12
-PROJECT="Suthaus_2022"
+PROJECT="Jamy_2022"
 CELL="cell"
 MARKER="rDNA"
 RAW_DATA="../../raw_data"
-RAW_READS="${RAW_DATA}/PacBio/${PROJECT}_${MARKER}/${CELL}"
+RAW_READS="${RAW_DATA}/PacBio/${PROJECT}_${MARKER}/${CELL}/raw"
 OUTPUT_DIR="${RAW_DATA}/fastqc_out/${PROJECT}/${MARKER}/${CELL}"
 
 
