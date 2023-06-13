@@ -6,7 +6,7 @@
 # Variables
 RAW_DATA="../../raw_data"
 PR2_DIR="${RAW_DATA}/reference_alignments/pr2"
-REF_ALIGN="pr2_version_4.14.0_SSU_UTAX_plus_review_vamp_2022.fasta"
+REF_ALIGN="pr2_version_4.14.0_SSU_UTAX_plus_review_vamp_2023.fasta"
 
 
 
@@ -26,17 +26,17 @@ REF_ALIGN="pr2_version_4.14.0_SSU_UTAX_plus_review_vamp_2022.fasta"
 echo "Reformating reference sequence fasta file and converting it to Qiime2 qza file"
 
 # Cleaning
-rm -f ${PR2_DIR}/ref_align_formated.fasta \
-      ${PR2_DIR}/ref_sequences.qza
+rm -f ${PR2_DIR}/ref_align_2023_formated.fasta \
+      ${PR2_DIR}/ref_sequences_2023.qza
 
 # Format reference alignment
 sed 's/;/ /' ${PR2_DIR}/${REF_ALIGN} > \
-             ${PR2_DIR}/ref_align_formated.fasta
+             ${PR2_DIR}/ref_align_2023_formated.fasta
 
 # Create reference alignment Qiime2 qza file
 qiime tools import \
-  --input-path ${PR2_DIR}/ref_align_formated.fasta \
-  --output-path ${PR2_DIR}/ref_sequences.qza \
+  --input-path ${PR2_DIR}/ref_align_2023_formated.fasta \
+  --output-path ${PR2_DIR}/ref_sequences_2023.qza \
   --type 'FeatureData[Sequence]'
 
 
@@ -77,25 +77,25 @@ qiime tools import \
 echo "Reformating taxonomic path from fasta file and converting it to Qiime2 qza file"
 
 # Cleaning
-rm -f ${PR2_DIR}/ref_taxonomy.qza
+rm -f ${PR2_DIR}/ref_taxonomy_2023.qza
 
 # Format taxonomic path from the fasta file into tsv file
-grep '>' ${PR2_DIR}/ref_align_formated.fasta | sed 's/[>*]//g' | \
+grep '>' ${PR2_DIR}/ref_align_2023_formated.fasta | sed 's/[>*]//g' | \
 sed 's/tax=//g' | \
 sed 's/\s/\t/g' | \
 sed 's/:/__/g' | \
 sed 's/,/;/g' | \
 sed 's/ //g' | \
-sed 's/;/& /g' > ${PR2_DIR}/ref_taxonomy_formatted.tsv
+sed 's/;/& /g' > ${PR2_DIR}/ref_taxonomy_2023_formatted.tsv
 
-# Add header
-sed  -i '1i Feature ID\tTaxon' ${PR2_DIR}/ref_taxonomy_formatted.tsv
+Add header
+sed  -i '1i Feature ID\tTaxon' ${PR2_DIR}/ref_taxonomy_2023_formatted.tsv
 
 # Converting taxonomic path tsv file into qiime qza file
 qiime tools import \
   --type 'FeatureData[Taxonomy]' \
-  --input-path ${PR2_DIR}/ref_taxonomy_formatted.tsv \
-  --output-path ${PR2_DIR}/ref_taxonomy.qza
+  --input-path ${PR2_DIR}/ref_taxonomy_2023_formatted.tsv \
+  --output-path ${PR2_DIR}/ref_taxonomy_2023.qza
 
-rm -f ${PR2_DIR}/ref_taxonomy_formatted.tsv \
-      ${PR2_DIR}/ref_align_formated.fasta
+rm -f ${PR2_DIR}/ref_taxonomy_2023_formatted.tsv \
+      ${PR2_DIR}/ref_align_2023_formated.fasta

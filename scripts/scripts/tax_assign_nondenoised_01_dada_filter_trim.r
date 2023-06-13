@@ -9,7 +9,7 @@ print(paste("your working directory is: ", getwd()))
 # Variables
 cell <- "cell"
 marker <- "rDNA"
-project <- "Suthaus_2022_rDNA"
+project <- "Jamy_2022_rDNA"
 raw_data <- "../../raw_data"
 
 # Specify paths and primers
