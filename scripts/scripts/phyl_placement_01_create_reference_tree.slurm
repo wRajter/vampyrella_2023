@@ -12,12 +12,15 @@
 
 # Variables
 REF_ALIGNMENT="reference_data/${RAW_DATA}"
+OTU_DIR="phyl_placement"
 MODEL="GTR+G"
 NCORES=6
 
 # Activate conda environment
 source /home/lrajter/miniconda3/etc/profile.d/conda.sh
 conda activate phylo_placment
+
+mkdir -p ${OTU_DIR}/
 
 # Check alignment
 raxml-ng --check \
@@ -31,3 +34,6 @@ raxml-ng \
     --model ${MODEL} \
     --prefix T2 \
     --threads ${NCORES}
+
+
+mv T1* T2* ${OTU_DIR}/

@@ -3,20 +3,26 @@
 # Phylogenetic assignment of the environmental sequencies
 
 # Variables
-PROJECT="Suthaus_2022"
+PROJECT="Jamy_2022"
 RAW_DATA="../../raw_data"
 PHYL_PLAC_DIR="${RAW_DATA}/phyl_placement/${PROJECT}"
 TAXON="vampyrellida"
-MARKER="Full18S"
-CELL="cellCombined"
-REF_ALIGNMENT="${RAW_DATA}/reference_alignments/vamp_phylo_placement/review_vamp_ref_2022_adjust_names_mafft.phy"
-REF_TREE="${PHYL_PLAC_DIR}/${TAXON}/reference_tree/T2.raxml.bestTree"
+MARKER="rDNA"
+CELL="cell"
+REF_VERSION="2023"
+REF_ALIGNMENT="${RAW_DATA}/reference_alignments/vamp_phylo_placement/${TAXON}/reference_alignment_${REF_VERSION}/reference_alignment.phy"
+REF_TREE="${RAW_DATA}/phyl_placement/reference_trees/${TAXON}/reference_tree_${REF_VERSION}/T2.raxml.bestTree"
 QUERY_DIR="${PHYL_PLAC_DIR}/eukaryotes/downstream_analyses/extract_otus"
 PLACEMENT_DIR="${PHYL_PLAC_DIR}/${TAXON}/phyl_placement_analysis"
-RAW_READS_DIR="${RAW_DATA}/PacBio/${PROJECT}_${MARKER}/${CELL}"
-SAMPLES=$(ls ${RAW_READS_DIR}/*reads.fastq.gz | \
+RAW_READS_DIR="${RAW_DATA}/PacBio/${PROJECT}_${MARKER}/${CELL}/filtered"
+
+SAMPLES=$(ls ${RAW_READS_DIR}/*.fastq.gz | \
           awk -F '/' '{ print $NF }' | \
-          awk -F '_' '{ print $1 }')
+          awk -F '.' '{ print $1 }')
+
+
+echo "Samples used:"
+echo "$SAMPLES"
 
 
 

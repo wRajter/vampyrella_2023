@@ -9,8 +9,17 @@ print(paste("your working directory is: ", getwd()))
 # Variables
 cell <- "cell"
 marker <- "rDNA"
-project <- "Jamy_2022_rDNA"
+project <- "Jamy_2019_rDNA"
 raw_data <- "../../raw_data"
+min_len <- 3000
+max_len <- 6000
+# Primers
+# long fragment:
+F3nd <- "GGCAAGTCTGGTGCCAG"
+R21 <- "GACGAGGCATTTGGCTACCTT"
+# 18S:
+# f1 <- "CTGGTTGATYCTGCCAGT"
+# EukBr <- "TGATCCTTCTGCAGGTTCACCTAC"
 
 # Specify paths and primers
 path <- sprintf("%s/PacBio/%s/%s", raw_data, project, cell)
@@ -38,10 +47,6 @@ for (i in raw_seqs_names) {
 }
 
 
-# Primers
-F3nd <- "GGCAAGTCTGGTGCCAG"
-R21 <- "GACGAGGCATTTGGCTACCTT"
-
 # Dada2 reverse complement function
 rc <- dada2:::rc
 
@@ -53,4 +58,4 @@ prim <- dada2:::removePrimers(fn, nop, primer.fwd=F3nd, primer.rev=dada2:::rc(R2
 #### Filter
 filt <- file.path(path, "filtered", basename(fn))
 
-track <- dada2:::filterAndTrim(nop, filt, minQ=3, minLen=3000, maxLen=6000, maxN=0, rm.phix=FALSE, maxEE=4, verbose=TRUE)
+track <- dada2:::filterAndTrim(nop, filt, minQ=3, minLen=min_len, maxLen=max_len, maxN=0, rm.phix=FALSE, maxEE=4, verbose=TRUE)

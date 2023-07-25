@@ -13,10 +13,12 @@
 # Variables
 TAXON="vampyrellida"
 RAW_DATA="../../raw_data/"
-REF_ALIGNMENT="${RAW_DATA}/reference_alignments/vamp_phylo_placement/review_vamp_ref_2022_adjust_names_mafft.phy"
+REF_VERSION="2023"
+REF_ALIGNMENT="${RAW_DATA}/reference_alignments/vamp_phylo_placement/${TAXON}/reference_alignment_${REF_VERSION}/reference_alignment.phy"
 MODEL="GTR+G"
-NCORES=6
-OTU_DIR="${RAW_DATA}/phyl_placement/${TAXON}/reference_tree"
+NCORES=12
+TREE_VERSION="2023"
+OTU_DIR="${RAW_DATA}/phyl_placement/reference_trees/${TAXON}/reference_tree_${REF_VERSION}"
 
 
 # Activate conda phylo_placement environment that should contain these three packages:
