@@ -4,10 +4,10 @@
 # Extracted 18S will serve for taxonomic assignemnt
 
 # Variables
-PROJECT="Jamy_2022"
+PROJECT="Suthaus_2022"
 MARKER="rDNA"
 CELL="cell"
-SIM="sim97"
+SIM="sim90"
 F_PRIMER="AACCTGGTTGATCCTGCCAG"
 R_PRIMER="TACAAAGGGCAGGGACGTAAT"
 IDENT_THRESHOLD=0.8 # minimum combined primer match identity threshold
@@ -15,8 +15,6 @@ RAW_DATA="../../raw_data"
 OTU_CHIM_FILT="${RAW_DATA}/OTU_nonchimeric/${PROJECT}/${MARKER}/${CELL}/${SIM}"
 EXTRACTED_18S="${RAW_DATA}/extracted_18S/${PROJECT}/${MARKER}/${CELL}/${SIM}"
 RAW_READS_DIR="${RAW_DATA}/PacBio/${PROJECT}_${MARKER}/${CELL}/filtered"
-CLUST_DIR="${RAW_DATA}/OTU_clust/${PROJECT}/${MARKER}/${CELL}/${SIM}"
-OTU_CHIM_FILT="${RAW_DATA}/OTU_nonchimeric/${PROJECT}/${MARKER}/${CELL}/${SIM}"
 
 
 #############################

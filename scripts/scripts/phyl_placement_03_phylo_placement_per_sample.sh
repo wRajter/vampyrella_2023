@@ -4,21 +4,26 @@
 # Phylogenetic assignment of the environmental sequencies
 
 # Variables
-PROJECT="Suthaus_2022"
-MARKER="Full18S"
-CELL="cellCombined"
+PROJECT="Jamy_2019"
+MARKER="rDNA"
+CELL="cell"
 RAW_DATA="../../raw_data"
-SIM="sim99"
+SIM="sim97"
 TAXON="eukaryotes"
-QUERY_DIR="${RAW_DATA}/per_sample_results/${PROJECT}/${MARKER}/${CELL}/${SIM}/fasta"
-REF_ALIGNMENT="${RAW_DATA}/reference_alignments/euk_ref/euk_ref_plus_vamp_18S_mafft_gblocks.phy"
-REF_TREE="${RAW_DATA}/phyl_placement/${PROJECT}/${TAXON}/reference_tree/T2.raxml.bestTree"
+QUERY_DIR="${RAW_DATA}/OTU_filtered/${PROJECT}/${MARKER}/${CELL}/${SIM}"
+REF_VERSION="2022"
+REF_ALIGNMENT="${RAW_DATA}/reference_alignments/vamp_phylo_placement/${TAXON}/reference_alignment_${REF_VERSION}/reference_alignment.phy"
+REF_TREE="${RAW_DATA}/phyl_placement/reference_trees/${TAXON}/reference_tree_${REF_VERSION}/T2.raxml.bestTree"
 PLACEMENT_DIR="${RAW_DATA}/phyl_placement/${PROJECT}/${TAXON}/phyl_placement_analysis"
-RAW_READS_DIR="${RAW_DATA}/PacBio/${PROJECT}_${MARKER}/${CELL}"
-SAMPLES=$(ls ${RAW_READS_DIR}/*reads.fastq.gz | \
-          awk -F '/' '{ print $NF }' | \
-          awk -F '_' '{ print $1 }')
+RAW_READS_DIR="${RAW_DATA}/PacBio/${PROJECT}_${MARKER}/${CELL}/filtered"
 
+SAMPLES=$(ls ${RAW_READS_DIR}/*.fastq.gz | \
+          awk -F '/' '{ print $NF }' | \
+          awk -F '.' '{ print $1 }')
+
+
+echo "Samples used:"
+echo "$SAMPLES"
 
 # Activate conda phylo_placement environment that should contain these three packages:
     # raxml-ng=1.1.0
@@ -39,7 +44,7 @@ do
   papara \
     -t ${REF_TREE} \
     -s ${REF_ALIGNMENT} \
-    -q ${QUERY_DIR}/otu_seqs_filtered_${SAMPLE}.fasta -r
+    -q ${QUERY_DIR}/nonrare_otu_extracted_18S_${SAMPLE}.fasta -r
 
   # Splitting alignment
   epa-ng --split \

@@ -3,15 +3,18 @@
 # Phylogenetic assignment of the environmental sequencies
 
 # Variables
-PROJECT="Suthaus_2022"
+PROJECT="all_seqs"
 MARKER="Full18S"
 CELL="cellCombined"
 RAW_DATA="../../raw_data"
-SIM="sim99"
+SIM="sim97"
 TAXON="eukaryotes"
-QUERY_SEQS="${RAW_DATA}/OTU_filtered/${PROJECT}/${MARKER}/${CELL}/${SIM}/otu_seqs_filtered.fasta"
-REF_ALIGNMENT="${RAW_DATA}/reference_alignments/euk_ref/euk_ref_plus_vamp_18S_mafft_gblocks.phy"
-REF_TREE="${RAW_DATA}/phyl_placement/${PROJECT}/${TAXON}/reference_tree/T2.raxml.bestTree"
+QUERY_SEQS="${RAW_DATA}/OTU_results/all_projects/all_seqs.fasta"
+# QUERY_SEQS="${RAW_DATA}/OTU_nonchimeric/${PROJECT}/${MARKER}/${CELL}/${SIM}/${PROJECT}_${MARKER}_${SIM}_all_seqs.fasta"
+# QUERY_SEQS="${RAW_DATA}/extracted_18S/${PROJECT}/${MARKER}/${CELL}/${SIM}/${PROJECT}_${MARKER}_${SIM}_all_seqs.fasta"
+REF_VERSION="2022"
+REF_ALIGNMENT="${RAW_DATA}/reference_alignments/vamp_phylo_placement/${TAXON}/reference_alignment_${REF_VERSION}/reference_alignment.phy"
+REF_TREE="${RAW_DATA}/phyl_placement/reference_trees/${TAXON}/reference_tree_${REF_VERSION}/T2.raxml.bestTree"
 OUT_DIR="${RAW_DATA}/phyl_placement/${PROJECT}/${TAXON}/phyl_placement_analysis/allsamples"
 
 
@@ -28,6 +31,7 @@ papara \
     -t ${REF_TREE} \
     -s ${REF_ALIGNMENT} \
     -q ${QUERY_SEQS} -r
+
 
 # Splitting alignment
 epa-ng --split \

@@ -4,10 +4,10 @@
 
 # Variables
 THREADS=12
-PROJECT="Jamy_2022"
+PROJECT="Suthaus_2022"
 MARKER="rDNA"
 CELL="cell"
-SIM="sim97"
+SIM="sim90"
 RAW_DATA="../../raw_data"
 QUERY_SEQ="${RAW_DATA}/extracted_18S/${PROJECT}/${MARKER}/${CELL}/${SIM}"
 DATABASE="${RAW_DATA}/reference_alignments/pr2/pr2_version_4.14.0_SSU_UTAX_plus_review_vamp_2023.fasta"
@@ -44,6 +44,7 @@ mkdir -p ${ASSIGNMENT_DIR}/
 for SAMPLE in ${SAMPLES}
 do
   echo -e "\n\n\n###### Working on sample: $SAMPLE ######"
+  rm -f ${ASSIGNMENT_DIR}/blast6_${SAMPLE}.tab
   vsearch --usearch_global ${QUERY_SEQ}/extracted_18S_${SAMPLE}.fasta \
          --dbmask none \
          --qmask none \
@@ -55,10 +56,13 @@ do
   grep 'Vamp' ${ASSIGNMENT_DIR}/blast6_${SAMPLE}.tab | wc -l
 done
 
+# if using the exrtacted 18S from the long fragment use this path
+# --usearch_global ${QUERY_SEQ}/extracted_18S_${SAMPLE}.fasta
+#  # --usearch_global ${OTU_CHIM_FILT}/otu_${SAMPLE}.fasta \
 
-###############################
-## PULLING OUT THE VAMP SEQS ##
-###############################
+##############################
+# PULLING OUT THE VAMP SEQS ##
+##############################
 
 
 mkdir -p ${VAMP_SEQ_DIR}

@@ -4,16 +4,14 @@
 
 # Variables
 NCORES=12
-PROJECT="Jamy_2022"
+PROJECT="Suthaus_2022"
 MARKER="rDNA"
 CELL="cell"
-SIM="sim97"
+SIM="sim90"
 RAW_DATA="../../raw_data"
 OTU_DIR="${RAW_DATA}/OTU_clust/${PROJECT}/${MARKER}/${CELL}/${SIM}"
-PRECLUST_DIR="${RAW_DATA}/OTU_preclust/${PROJECT}/${MARKER}/${CELL}/${SIM}"
 OTU_CHIM_FILT="${RAW_DATA}/OTU_nonchimeric/${PROJECT}/${MARKER}/${CELL}/${SIM}"
 RAW_READS_DIR="${RAW_DATA}/PacBio/${PROJECT}_${MARKER}/${CELL}/filtered"
-DENOISE_DIR="${RAW_DATA}/denoise/${PROJECT}/${MARKER}/${CELL}"
 
 
 

@@ -7,7 +7,7 @@
 PROJECT="Jamy_2019"
 MARKER="rDNA"
 CELL="cell"
-SIM="sim99"
+SIM="sim97"
 RAW_DATA="../../raw_data"
 OTU_DIR="${RAW_DATA}/OTU_clust/${PROJECT}/${MARKER}/${CELL}/${SIM}"
 OTU_CHIM_FILT="${RAW_DATA}/OTU_nonchimeric/${PROJECT}/${MARKER}/${CELL}/${SIM}"

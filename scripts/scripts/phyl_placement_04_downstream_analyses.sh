@@ -3,23 +3,28 @@
 # Downstream (phylogenetic placement) analyses in GAPPA
 
 # Variables
-PROJECT="Suthaus_2022"
+PROJECT="all_seqs"
 TAXON="eukaryotes"
-MARKER="Full18S"
-CELL="cellCombined"
+MARKER="rDNA"
+CELL="cell"
 RAW_DATA="../../raw_data"
 PHY_PLAC_DIR="${RAW_DATA}/phyl_placement/${PROJECT}/${TAXON}"
 JPLACE_DIR="${PHY_PLAC_DIR}/phyl_placement_analysis"
 OUT_DIR="${PHY_PLAC_DIR}/downstream_analyses"
-TAXON_PATH="euk_ref"
-TAXON_FILE="${RAW_DATA}/reference_alignments/${TAXON_PATH}/taxon_file.tsv"
-RAW_READS_DIR="${RAW_DATA}/PacBio/${PROJECT}_${MARKER}/${CELL}"
-SAMPLES=$(ls ${RAW_READS_DIR}/*reads.fastq.gz | \
-          awk -F '/' '{ print $NF }' | \
-          awk -F '_' '{ print $1 }')
+REF_VERSION="2022"
+TAXON_FILE_DIR="${RAW_DATA}/reference_alignments/vamp_phylo_placement/${TAXON}/reference_alignment_${REF_VERSION}"
+RAW_READS_DIR="${RAW_DATA}/PacBio/${PROJECT}_${MARKER}/${CELL}/filtered"
+
+# SAMPLES=$(ls ${RAW_READS_DIR}/*.fastq.gz | \
+#           awk -F '/' '{ print $NF }' | \
+#           awk -F '.' '{ print $1 }')
+
 
 SAMPLES+=" allsamples" # add all samples combined into our sample names array
 
+
+echo "Samples used:"
+echo "$SAMPLES"
 
 ########################
 ## HEAT TREE ANALYSIS ##
@@ -70,7 +75,7 @@ do
   echo "Working on sample ${SAMPLE}"
   gappa examine assign \
     --jplace-path ${JPLACE_DIR}/${SAMPLE}/epa_result.jplace \
-    --taxon-file ${TAXON_FILE} \
+    --taxon-file ${TAXON_FILE_DIR}/taxon_file.tsv \
     --out-dir ${OUT_DIR}/tax_assignment/ \
     --per-query-results \
     --allow-file-overwriting \
@@ -98,7 +103,7 @@ do
   echo "Working on sample ${SAMPLE}"
   gappa prepare extract \
     --jplace-path ${JPLACE_DIR}/${SAMPLE}/epa_result.jplace \
-    --clade-list-file ${RAW_DATA}/reference_alignments/euk_ref/taxon_vamp.tsv \
+    --clade-list-file ${TAXON_FILE_DIR}/taxon_vamp.tsv \
     --fasta-path ${JPLACE_DIR}/${SAMPLE}/query.fasta \
     --allow-file-overwriting \
     --color-tree-file ${OUT_DIR}/extract_otus/${SAMPLE}_tree \
