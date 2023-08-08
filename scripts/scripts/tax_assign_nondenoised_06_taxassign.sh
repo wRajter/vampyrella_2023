@@ -5,9 +5,9 @@
 # Variables
 THREADS=12
 PROJECT="Suthaus_2022"
-MARKER="rDNA"
-CELL="cell"
-SIM="sim90"
+MARKER="Full18S"
+CELL="cellCombined"
+SIM="Sim99"
 RAW_DATA="../../raw_data"
 QUERY_SEQ="${RAW_DATA}/extracted_18S/${PROJECT}/${MARKER}/${CELL}/${SIM}"
 DATABASE="${RAW_DATA}/reference_alignments/pr2/pr2_version_4.14.0_SSU_UTAX_plus_review_vamp_2023.fasta"
@@ -34,10 +34,7 @@ SAMPLES=$(ls ${RAW_READS_DIR}/*.fastq.gz | \
 echo "Samples used:"
 echo "$SAMPLES"
 
-
-
 mkdir -p ${ASSIGNMENT_DIR}/
-
 
 # Taxonomic assignment analysis
 
@@ -86,20 +83,20 @@ done
 
 
 
-#################################################################
-## CREATING A SINGEL FASTA FILE WITH ALL SEQS FROM ALL SAMPLES ##
-#################################################################
+# #################################################################
+# ## CREATING A SINGEL FASTA FILE WITH ALL SEQS FROM ALL SAMPLES ##
+# #################################################################
 
 
-# Add the sample id to the each sequence in the fasta files
-for SAMPLE in ${SAMPLES}
-do
-  rm -f ${VAMP_SEQ_DIR}/otu_vamp_labeled_${SAMPLE}.fasta
-  sed "/;seqs=/a ;${SAMPLE}" ${VAMP_SEQ_DIR}/otu_vamp_${SAMPLE}.fasta | \
-  sed "/;seqs=/ { N; s/\n// }" > \
-  ${VAMP_SEQ_DIR}/otu_vamp_labeled_${SAMPLE}.fasta
-done
+# # Add the sample id to the each sequence in the fasta files
+# for SAMPLE in ${SAMPLES}
+# do
+#   rm -f ${VAMP_SEQ_DIR}/otu_vamp_labeled_${SAMPLE}.fasta
+#   sed "/;seqs=/a ;${SAMPLE}" ${VAMP_SEQ_DIR}/otu_vamp_${SAMPLE}.fasta | \
+#   sed "/;seqs=/ { N; s/\n// }" > \
+#   ${VAMP_SEQ_DIR}/otu_vamp_labeled_${SAMPLE}.fasta
+# done
 
-# Combine all fasta files into a single fasta file
-cat ${VAMP_SEQ_DIR}/otu_vamp_labeled_* > ${VAMP_SEQ_DIR}/${PROJECT}_${MARKER}_${SIM}_all_seqs.fasta
-rm ${VAMP_SEQ_DIR}/otu_vamp_labeled_*
+# # Combine all fasta files into a single fasta file
+# cat ${VAMP_SEQ_DIR}/otu_vamp_labeled_* > ${VAMP_SEQ_DIR}/${PROJECT}_${MARKER}_${SIM}_all_seqs.fasta
+# rm ${VAMP_SEQ_DIR}/otu_vamp_labeled_*
