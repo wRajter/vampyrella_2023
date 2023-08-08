@@ -7,7 +7,7 @@
 PROJECT="Suthaus_2022"
 MARKER="rDNA"
 CELL="cell"
-SIM="sim90"
+SIM="Sim99"
 F_PRIMER="AACCTGGTTGATCCTGCCAG"
 R_PRIMER="TACAAAGGGCAGGGACGTAAT"
 IDENT_THRESHOLD=0.8 # minimum combined primer match identity threshold
@@ -72,7 +72,6 @@ echo "Samples used:"
 echo "$SAMPLES"
 
 
-
 # Reverse complement the reverse primer
 R_PRIMER_RC=$(echo $R_PRIMER | rev | tr 'ATCGatcg' 'TAGCtagc')
 echo "reverse complement of ${R_PRIMER} is ${R_PRIMER_RC}"
@@ -91,6 +90,8 @@ do
            -o ${EXTRACTED_18S}/extracted_18S_${SAMPLE}.fasta \
               ${OTU_CHIM_FILT}/otu_${SAMPLE}.fasta \
             > ${EXTRACTED_18S}/trimming_${SAMPLE}.log
+
+
 
   # Calculating how many 18S fragments were actually extracted from the long fragments
   NUM_SEQS=$(grep '>' ${OTU_CHIM_FILT}/otu_${SAMPLE}.fasta | wc -l)
