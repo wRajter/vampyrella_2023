@@ -9,7 +9,7 @@ MARKER="Full18S"
 CELL="cellCombined"
 SIM="sim95"
 RAW_DATA="../../raw_data"
-DENOISE_METHOD="FAD"
+DENOISE_METHOD="RAD"
 RAW_READS_DIR="${RAW_DATA}/PacBio/${PROJECT}_${MARKER}/${CELL}/filtered"
 # Input directory
 OTU_DIR="${RAW_DATA}/OTU_clust/${PROJECT}/${MARKER}/${CELL}/${SIM}/${DENOISE_METHOD}"

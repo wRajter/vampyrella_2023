@@ -10,7 +10,7 @@ MARKER="Full18S"
 CELL="cellCombined"
 THRESHOLD=0.95
 SIM="sim95"
-DENOISE_METHOD="FAD"
+DENOISE_METHOD="RAD"
 RAW_DATA="../../raw_data"
 # input directory:
 DENOISE_DIR="${RAW_DATA}/denoise/${PROJECT}/${MARKER}/${CELL}/${DENOISE_METHOD}"
