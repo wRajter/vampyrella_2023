@@ -7,6 +7,16 @@ MAX_RETRIES = 50
 TIME_BETWEEN_RETRIES = 150  # in seconds
 RAW_DATA = os.path.join('..', '..', 'raw_data')
 OUTPUT_PATH = os.path.join(RAW_DATA, 'blast_results')
+PROJECT = 'Suthaus_2022'
+SIM = 'sim90'
+MARKER = 'Full18S'
+DENOISE_METHOD = 'RAD'
+SCORE_THRESHOLD = '80'
+LOW_SIMLARITY_DIR = os.path.join(RAW_DATA, 'low_similarity_OTUs', PROJECT,
+                                 MARKER, DENOISE_METHOD, SIM)
+INPUT_FASTA_FILE = f'low_similarity_OTUs_TH{SCORE_THRESHOLD}.fasta'
+INPUT_PATH = os.path.join(LOW_SIMLARITY_DIR, 'FASTA', INPUT_FASTA_FILE)
+OUTPUT_DIR = os.path.join(LOW_SIMLARITY_DIR, 'BLASTn')
 
 
 def read_fasta(file_path):
@@ -93,30 +103,28 @@ def extract_blast_details_from_xml_to_tsv(xml_content):
 if __name__ == '__main__':
 
     # Read FASTA files
-    fasta_file = 'low_score_seqs.fasta'
-    sequences = read_fasta(fasta_file)
+    sequences = read_fasta(INPUT_PATH)
 
     # BLASTing the FASTA files and saving them as the XML files
     for header, sequence in sequences.items():
         time.sleep(10)
         print(f'Running BLAST for {header}...')
         blast_output = run_blast(sequence)
-        output_file_path = os.path.join(OUTPUT_PATH, f'{header}.xml')
+        output_file_path = os.path.join(OUTPUT_DIR, f'{header}.xml')
         with open(output_file_path, 'w') as file:
             file.write(blast_output)
             print(f'{header} saved to {header}.xml...')
 
     # Extracting BLAST results from XML to TSV files:
-    filenames = os.listdir(OUTPUT_PATH)
+    filenames = os.listdir(OUTPUT_DIR)
     for filename in filenames:
         if filename.endswith(".xml"):
-            with open(os.path.join(OUTPUT_PATH, filename), 'r') as xml_file:
+            with open(os.path.join(OUTPUT_DIR, filename), 'r') as xml_file:
                 xml_content = xml_file.read()
 
             tsv_content = extract_blast_details_from_xml_to_tsv(xml_content)
             file_name_without_ext = os.path.splitext(filename)[0]
 
-            with open(
-                    os.path.join(OUTPUT_PATH, f'{file_name_without_ext}.tsv'),
-                    'w') as tsv_file:
+            with open(os.path.join(OUTPUT_DIR, f'{file_name_without_ext}.tsv'),
+                      'w') as tsv_file:
                 tsv_file.write(tsv_content)
