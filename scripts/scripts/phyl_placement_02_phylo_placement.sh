@@ -3,14 +3,15 @@
 # Phylogenetic assignment of the environmental sequencies
 
 # Variables
-PROJECT="all_seqs"
+PROJECT="Suthaus_2022"
 MARKER="Full18S"
 CELL="cellCombined"
 RAW_DATA="../../raw_data"
-SIM="sim97"
+SIM="sim90"
+DENOISE_METHOD="RAD"
 TAXON="eukaryotes"
 QUERY_SEQS="${RAW_DATA}/OTU_results/all_projects/all_seqs.fasta"
-# QUERY_SEQS="${RAW_DATA}/OTU_nonchimeric/${PROJECT}/${MARKER}/${CELL}/${SIM}/${PROJECT}_${MARKER}_${SIM}_all_seqs.fasta"
+QUERY_SEQS="${RAW_DATA}/OTU_nonchimeric/${PROJECT}/${MARKER}/${CELL}/${SIM}/${DENOISE_METHOD}/${PROJECT}_${MARKER}_${SIM}_all_seqs.fasta"
 # QUERY_SEQS="${RAW_DATA}/extracted_18S/${PROJECT}/${MARKER}/${CELL}/${SIM}/${PROJECT}_${MARKER}_${SIM}_all_seqs.fasta"
 REF_VERSION="2022"
 REF_ALIGNMENT="${RAW_DATA}/reference_alignments/vamp_phylo_placement/${TAXON}/reference_alignment_${REF_VERSION}/reference_alignment.phy"

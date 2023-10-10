@@ -4,22 +4,24 @@
 # Phylogenetic assignment of the environmental sequencies
 
 # Variables
-PROJECT="Jamy_2019"
-MARKER="rDNA"
-CELL="cell"
+PROJECT="Suthaus_2022"
+MARKER="Full18S"
+CELL="cellCombined"
 RAW_DATA="../../raw_data"
-SIM="sim97"
+SIM="sim90"
+DENOISE_METHOD="RAD"
 TAXON="eukaryotes"
-QUERY_DIR="${RAW_DATA}/OTU_filtered/${PROJECT}/${MARKER}/${CELL}/${SIM}"
+QUERY_DIR="${RAW_DATA}/OTU_nonchimeric/${PROJECT}/${MARKER}/${CELL}/${SIM}/${DENOISE_METHOD}"
 REF_VERSION="2022"
 REF_ALIGNMENT="${RAW_DATA}/reference_alignments/vamp_phylo_placement/${TAXON}/reference_alignment_${REF_VERSION}/reference_alignment.phy"
 REF_TREE="${RAW_DATA}/phyl_placement/reference_trees/${TAXON}/reference_tree_${REF_VERSION}/T2.raxml.bestTree"
 PLACEMENT_DIR="${RAW_DATA}/phyl_placement/${PROJECT}/${TAXON}/phyl_placement_analysis"
 RAW_READS_DIR="${RAW_DATA}/PacBio/${PROJECT}_${MARKER}/${CELL}/filtered"
 
-SAMPLES=$(ls ${RAW_READS_DIR}/*.fastq.gz | \
+SAMPLES=$(ls ${QUERY_DIR} | \
           awk -F '/' '{ print $NF }' | \
-          awk -F '.' '{ print $1 }')
+          awk -F '.' '{ print $1 }' | \
+          grep -v 'Mock_18S_otu') # If you want to remove mock community from the samples
 
 
 echo "Samples used:"
@@ -31,9 +33,9 @@ echo "$SAMPLES"
     # papara=2.5
 
 
-
 for SAMPLE in ${SAMPLES}
 do
+
   echo "Working on sample ${SAMPLE}."
 
   mkdir -p ${PLACEMENT_DIR}/${SAMPLE}/
@@ -44,7 +46,7 @@ do
   papara \
     -t ${REF_TREE} \
     -s ${REF_ALIGNMENT} \
-    -q ${QUERY_DIR}/nonrare_otu_extracted_18S_${SAMPLE}.fasta -r
+    -q ${QUERY_DIR}/${SAMPLE}.fasta -r
 
   # Splitting alignment
   epa-ng --split \

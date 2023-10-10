@@ -3,10 +3,12 @@
 # Downstream (phylogenetic placement) analyses in GAPPA
 
 # Variables
-PROJECT="all_seqs"
+PROJECT="Suthaus_2022"
 TAXON="vampyrellida"
-MARKER="rDNA"
-CELL="cell"
+MARKER="Full18S"
+CELL="cellCombined"
+DENOISE_METHOD="RAD"
+SIM="sim90"
 RAW_DATA="../../raw_data"
 PHY_PLAC_DIR="${RAW_DATA}/phyl_placement/${PROJECT}/${TAXON}"
 JPLACE_DIR="${PHY_PLAC_DIR}/phyl_placement_analysis"
@@ -14,15 +16,19 @@ OUT_DIR="${PHY_PLAC_DIR}/downstream_analyses"
 REF_VERSION="2023"
 TAXON_FILE="${RAW_DATA}/reference_alignments/vamp_phylo_placement/${TAXON}/reference_alignment_${REF_VERSION}/taxon_file.tsv"
 RAW_READS_DIR="${RAW_DATA}/PacBio/${PROJECT}_${MARKER}/${CELL}/filtered"
-# SAMPLES=$(ls ${RAW_READS_DIR}/*.fastq.gz | \
-#           awk -F '/' '{ print $NF }' | \
-#           awk -F '.' '{ print $1 }')
 
-SAMPLES+=" allsamples" # add all samples combined into our sample names array
+QUERY_DIR_SAMPLES="${RAW_DATA}/OTU_nonchimeric/${PROJECT}/${MARKER}/${CELL}/${SIM}/${DENOISE_METHOD}"
+SAMPLES=$(ls ${QUERY_DIR_SAMPLES} | \
+          awk -F '/' '{ print $NF }' | \
+          awk -F '.' '{ print $1 }' | \
+          grep -v 'Mock_18S_otu') # If you want to remove mock community from the samples
+
+# SAMPLES+=" allsamples" # add all samples combined into our sample names array
 # SAMPLES+=" allsamples_except_mock" # add all samples except mock combined into our sample names array
 
 echo "Samples used:"
 echo "$SAMPLES"
+# ls $RAW_READS_DIR
 
 #######################
 # HEAT TREE ANALYSIS ##
@@ -96,69 +102,69 @@ done
 
 
 
-###################
-## LABELLED TREE ##
-###################
+##################
+# LABELLED TREE ##
+##################
 
-# merge jplace files for all sampales except the mock community
+merge jplace files for all sampales except the mock community
 
-# cleaning
-# mkdir -p ${OUT_DIR}/labelled_tree/
-# mkdir -p ${JPLACE_DIR}/allsamples_except_mock/
-# rm -f ${OUT_DIR}/labelled_tree/paths.txt
+cleaning
+mkdir -p ${OUT_DIR}/labelled_tree/
+mkdir -p ${JPLACE_DIR}/allsamples_except_mock/
+rm -f ${OUT_DIR}/labelled_tree/paths.txt
 
-# # create a variable with the paths for all the samples except the mock community
-# for SAMPLE in ${SAMPLES}
-# do
-#   if [ ${SAMPLE} != "Mock" ] && [ ${SAMPLE} != "allsamples" ] && [ ${SAMPLE} != "Th40" ]
-#   then
-#     ls ${JPLACE_DIR}/${SAMPLE}/*.jplace >> ${OUT_DIR}/labelled_tree/paths.txt
-#   fi
-# done
+# create a variable with the paths for all the samples except the mock community
+for SAMPLE in ${SAMPLES}
+do
+  if [ ${SAMPLE} != "Mock" ] && [ ${SAMPLE} != "allsamples" ] && [ ${SAMPLE} != "Th40" ]
+  then
+    ls ${JPLACE_DIR}/${SAMPLE}/*.jplace >> ${OUT_DIR}/labelled_tree/paths.txt
+  fi
+done
 
-# # merge jplace files
-# gappa edit merge \
-#   --jplace-path \
-#   ../../raw_data/phyl_placement/Suthaus_2022/vampyrellida/phyl_placement_analysis/A3/epa_result.jplace \
-#   ../../raw_data/phyl_placement/Suthaus_2022/vampyrellida/phyl_placement_analysis/NH1/epa_result.jplace \
-#   ../../raw_data/phyl_placement/Suthaus_2022/vampyrellida/phyl_placement_analysis/NH4/epa_result.jplace \
-#   ../../raw_data/phyl_placement/Suthaus_2022/vampyrellida/phyl_placement_analysis/Sim17/epa_result.jplace \
-#   ../../raw_data/phyl_placement/Suthaus_2022/vampyrellida/phyl_placement_analysis/Sim22/epa_result.jplace \
-#   ../../raw_data/phyl_placement/Suthaus_2022/vampyrellida/phyl_placement_analysis/Th16/epa_result.jplace \
-#   ../../raw_data/phyl_placement/Suthaus_2022/vampyrellida/phyl_placement_analysis/Th38/epa_result.jplace \
-#   ../../raw_data/phyl_placement/Suthaus_2022/vampyrellida/phyl_placement_analysis/Th40/epa_result.jplace \
-#   ../../raw_data/phyl_placement/Suthaus_2022/vampyrellida/phyl_placement_analysis/X17007/epa_result.jplace \
-#   --out-dir ${JPLACE_DIR}/allsamples_except_mock/ \
-#   --log-file ${JPLACE_DIR}/allsamples_except_mock/allsamples_except_mock.log \
-#   --allow-file-overwriting
+# merge jplace files
+gappa edit merge \
+  --jplace-path \
+  ../../raw_data/phyl_placement/Suthaus_2022/vampyrellida/phyl_placement_analysis/A3/epa_result.jplace \
+  ../../raw_data/phyl_placement/Suthaus_2022/vampyrellida/phyl_placement_analysis/NH1/epa_result.jplace \
+  ../../raw_data/phyl_placement/Suthaus_2022/vampyrellida/phyl_placement_analysis/NH4/epa_result.jplace \
+  ../../raw_data/phyl_placement/Suthaus_2022/vampyrellida/phyl_placement_analysis/Sim17/epa_result.jplace \
+  ../../raw_data/phyl_placement/Suthaus_2022/vampyrellida/phyl_placement_analysis/Sim22/epa_result.jplace \
+  ../../raw_data/phyl_placement/Suthaus_2022/vampyrellida/phyl_placement_analysis/Th16/epa_result.jplace \
+  ../../raw_data/phyl_placement/Suthaus_2022/vampyrellida/phyl_placement_analysis/Th38/epa_result.jplace \
+  ../../raw_data/phyl_placement/Suthaus_2022/vampyrellida/phyl_placement_analysis/Th40/epa_result.jplace \
+  ../../raw_data/phyl_placement/Suthaus_2022/vampyrellida/phyl_placement_analysis/X17007/epa_result.jplace \
+  --out-dir ${JPLACE_DIR}/allsamples_except_mock/ \
+  --log-file ${JPLACE_DIR}/allsamples_except_mock/allsamples_except_mock.log \
+  --allow-file-overwriting
 
-# # get all jplace files into one directory except the mock community
-# rm -f jplace_files/*
-# mkdir -p jplace_files/
+# get all jplace files into one directory except the mock community
+rm -f jplace_files/*
+mkdir -p jplace_files/
 
-# for SAMPLE in ${SAMPLES}
-# do
-#   if [ -e ${JPLACE_DIR}/${SAMPLE}/*.jplace ]
-#     then cp ${JPLACE_DIR}/${SAMPLE}/*.jplace jplace_files/epa_result_${SAMPLE}.jplace
-#   fi
-# done
+for SAMPLE in ${SAMPLES}
+do
+  if [ -e ${JPLACE_DIR}/${SAMPLE}/*.jplace ]
+    then cp ${JPLACE_DIR}/${SAMPLE}/*.jplace jplace_files/epa_result_${SAMPLE}.jplace
+  fi
+done
 
-# # merge jplace files
-# gappa edit merge \
-#   --jplace-path jplace_files \
-#   --out-dir ${JPLACE_DIR}/allsamples_except_mock/ \
-#   --log-file ${JPLACE_DIR}/allsamples_except_mock/allsamples_except_mock.log \
-#   --allow-file-overwriting
+# merge jplace files
+gappa edit merge \
+  --jplace-path jplace_files \
+  --out-dir ${JPLACE_DIR}/allsamples_except_mock/ \
+  --log-file ${JPLACE_DIR}/allsamples_except_mock/allsamples_except_mock.log \
+  --allow-file-overwriting
 
 
-# # creating the label tree
-# gappa examine graft \
-#   --jplace-path ${JPLACE_DIR}/allsamples/epa_result.jplace \
-#   --fully-resolve \
-#   --out-dir ${OUT_DIR}/labelled_tree/ \
-#   --file-prefix allsamples_ \
-#   --log-file ${OUT_DIR}/labelled_tree/allsamples_labelled_tree.log \
-#   --allow-file-overwriting
+# creating the label tree
+gappa examine graft \
+  --jplace-path ${JPLACE_DIR}/allsamples/epa_result.jplace \
+  --fully-resolve \
+  --out-dir ${OUT_DIR}/labelled_tree/ \
+  --file-prefix allsamples_ \
+  --log-file ${OUT_DIR}/labelled_tree/allsamples_labelled_tree.log \
+  --allow-file-overwriting
 
 
 # creating the label trees for each sample and all samples together
