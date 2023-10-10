@@ -4,7 +4,7 @@
 # Phylogenetic assignment of the environmental sequencies
 
 # Variables
-PROJECT="all_seqs"
+PROJECT="Suthaus_2022"
 TAXON="vampyrellida"
 RAW_DATA="../../raw_data"
 PHYL_PLAC_DIR="${RAW_DATA}/phyl_placement/${PROJECT}"

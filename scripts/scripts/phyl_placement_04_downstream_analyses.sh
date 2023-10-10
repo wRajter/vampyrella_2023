@@ -3,10 +3,12 @@
 # Downstream (phylogenetic placement) analyses in GAPPA
 
 # Variables
-PROJECT="all_seqs"
+PROJECT="Suthaus_2022"
 TAXON="eukaryotes"
-MARKER="rDNA"
-CELL="cell"
+MARKER="Full18S"
+CELL="cellCombined"
+DENOISE_METHOD="RAD"
+SIM="sim90"
 RAW_DATA="../../raw_data"
 PHY_PLAC_DIR="${RAW_DATA}/phyl_placement/${PROJECT}/${TAXON}"
 JPLACE_DIR="${PHY_PLAC_DIR}/phyl_placement_analysis"
@@ -14,13 +16,15 @@ OUT_DIR="${PHY_PLAC_DIR}/downstream_analyses"
 REF_VERSION="2022"
 TAXON_FILE_DIR="${RAW_DATA}/reference_alignments/vamp_phylo_placement/${TAXON}/reference_alignment_${REF_VERSION}"
 RAW_READS_DIR="${RAW_DATA}/PacBio/${PROJECT}_${MARKER}/${CELL}/filtered"
+QUERY_DIR="${RAW_DATA}/OTU_nonchimeric/${PROJECT}/${MARKER}/${CELL}/${SIM}/${DENOISE_METHOD}"
 
-# SAMPLES=$(ls ${RAW_READS_DIR}/*.fastq.gz | \
-#           awk -F '/' '{ print $NF }' | \
-#           awk -F '.' '{ print $1 }')
+SAMPLES=$(ls ${QUERY_DIR} | \
+          awk -F '/' '{ print $NF }' | \
+          awk -F '.' '{ print $1 }' | \
+          grep -v 'Mock_18S_otu') # If you want to remove mock community from the samples
 
 
-SAMPLES+=" allsamples" # add all samples combined into our sample names array
+# SAMPLES+=" allsamples" # add all samples combined into our sample names array
 
 
 echo "Samples used:"

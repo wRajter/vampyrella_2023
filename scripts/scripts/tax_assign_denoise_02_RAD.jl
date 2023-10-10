@@ -1,6 +1,6 @@
 # tax_assign_denoise.jl
 
-# using Pkg
+using Pkg
 
 # Pkg.add(url="https://github.com/MurrellGroup/NextGenSeqUtils.jl")
 # Pkg.add(url="https://github.com/MurrellGroup/DPMeansClustering.jl")
