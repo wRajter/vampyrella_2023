@@ -5,25 +5,27 @@
 
 # Variables
 RAW_DATA="../../raw_data"
-FASTQ_DIR="${RAW_DATA}/PacBio/SuthausFull18S"
+PROJECT="Suthaus_2022_Full18S"
+FASTQ_DIR="${RAW_DATA}/PacBio/${PROJECT}"
 OUTPUT="${FASTQ_DIR}/cellCombined"
-FILES="A3_18S.hifi_reads.fastq.gz \
-       Mock_18S.hifi_reads.fastq.gz \
-       NH1_18S.hifi_reads.fastq.gz \
-       NH4_18S.hifi_reads.fastq.gz \
-       Sim17_18S.hifi_reads.fastq.gz \
-       Sim22_18S.hifi_reads.fastq.gz \
-       Th16_18S.hifi_reads.fastq.gz \
-       Th38_18S.hifi_reads.fastq.gz \
-       Th40_18S.hifi_reads.fastq.gz \
-       X17007_18S.hifi_reads.fastq.gz"
+
+# Save filenames to a variable
+files=$(basename -a ${FASTQ_DIR}/cell1/*.fastq.gz)
 
 # Cleaning
-rm -rf ${OUTPUT}/
+rm -r ${OUTPUT} 2>/dev/null
 mkdir -p ${OUTPUT}
 
-# Merging cells
-for FILE in ${FILES}
+
+for file in ${files}
 do
-    cat ${FASTQ_DIR}/cell1/${FILE} ${FASTQ_DIR}/cell2/${FILE} > ${OUTPUT}/${FILE}
+  file1="${FASTQ_DIR}/cell1/${file}"
+  file2="${FASTQ_DIR}/cell2/${file}"
+
+  if [ -e "$file1" ] && [ -e "$file2" ]; then
+    cat $file1 $file2 > ${OUTPUT}/${file}
+    echo "Successfully merged ${file} from cell1 and cell2 into cellCombined."
+  else
+    echo "Warning: Missing file in one of the cells for ${file}"
+  fi
 done

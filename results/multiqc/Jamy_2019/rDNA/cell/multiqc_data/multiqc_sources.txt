@@ -1,0 +1,4 @@
+Module	Section	Sample Name	Source
+FastQC	all_sections	ERR2355431_subreads	/home/lubo/code/wRajter/vampyrella_2023/raw_data/fastqc_out/Jamy_2019/rDNA/cell/ERR2355431_subreads_fastqc.zip
+FastQC	all_sections	ERR2355433_subreads	/home/lubo/code/wRajter/vampyrella_2023/raw_data/fastqc_out/Jamy_2019/rDNA/cell/ERR2355433_subreads_fastqc.zip
+FastQC	all_sections	ERR2355432_subreads	/home/lubo/code/wRajter/vampyrella_2023/raw_data/fastqc_out/Jamy_2019/rDNA/cell/ERR2355432_subreads_fastqc.zip
