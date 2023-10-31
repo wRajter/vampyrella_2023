@@ -11,10 +11,10 @@
 # Creating a reference tree based on the reference alignment using RAxML
 
 # Variables
-TAXON="vampyrellida"
-RAW_DATA="../../raw_data/"
-REF_VERSION="2023"
-REF_ALIGNMENT="${RAW_DATA}/reference_alignments/vamp_phylo_placement/${TAXON}/reference_alignment_${REF_VERSION}/reference_alignment.phy"
+TAXON="pr2"
+RAW_DATA="../../raw_data"
+REF_VERSION="gblocks2"
+REF_ALIGNMENT="${RAW_DATA}/reference_alignments/vamp_phylo_placement/${TAXON}/reference_alignment_${REF_VERSION}/reference_alignment.fasta"
 MODEL="GTR+G"
 NCORES=12
 TREE_VERSION="2023"
