@@ -14,7 +14,7 @@
 REF_ALIGNMENT="reference_data/${RAW_DATA}"
 OTU_DIR="phyl_placement"
 MODEL="GTR+G"
-NCORES=6
+NCORES=12
 
 # Activate conda environment
 source /home/lrajter/miniconda3/etc/profile.d/conda.sh
