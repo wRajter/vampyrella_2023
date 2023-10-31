@@ -1,0 +1,53 @@
+[2023-04-28 08:14:18,682] multiqc                                            [DEBUG  ]  No MultiQC config found: /home/lubo/miniconda3/envs/fastqc/lib/python2.7/site-packages/multiqc-1.0.dev0-py2.7.egg/multiqc_config.yaml
+[2023-04-28 08:14:18,683] multiqc                                            [DEBUG  ]  No MultiQC config found: /home/lubo/.multiqc_config.yaml
+[2023-04-28 08:14:18,683] multiqc                                            [DEBUG  ]  No MultiQC config found: multiqc_config.yaml
+[2023-04-28 08:14:18,683] multiqc                                            [DEBUG  ]  Command used: /home/lubo/miniconda3/envs/fastqc/bin/multiqc ../../raw_data/fastqc_out/Suthaus_2022/rDNA/cell/ -o ../../raw_data/fastqc_out/Suthaus_2022/rDNA/cell/
+[2023-04-28 08:14:18,683] multiqc                                            [DEBUG  ]  Could not connect to multiqc.info for version check
+[2023-04-28 08:14:18,683] multiqc                                            [INFO   ]  This is MultiQC v1.0.dev0
+[2023-04-28 08:14:18,683] multiqc                                            [DEBUG  ]  Command     : /home/lubo/miniconda3/envs/fastqc/bin/multiqc ../../raw_data/fastqc_out/Suthaus_2022/rDNA/cell/ -o ../../raw_data/fastqc_out/Suthaus_2022/rDNA/cell/
+[2023-04-28 08:14:18,683] multiqc                                            [DEBUG  ]  Working dir : /home/lubo/code/wRajter/vampyrella_2023/scripts/scripts
+[2023-04-28 08:14:18,683] multiqc                                            [INFO   ]  Template    : default
+[2023-04-28 08:14:18,683] multiqc                                            [INFO   ]  Searching '../../raw_data/fastqc_out/Suthaus_2022/rDNA/cell/'
+[2023-04-28 08:14:18,683] multiqc                                            [DEBUG  ]  Analysing modules: custom_content, peddy, methylQA, qualimap, preseq, quast, rseqc, busco, goleft_indexcov, snpeff, gatk, htseq, bcftools, featureCounts, picard, prokka, samblaster, samtools, bamtools, bismark, hicup, salmon, kallisto, slamdunk, star, tophat, bowtie2, bowtie1, cutadapt, trimmomatic, skewer, fastq_screen, fastqc, clusterflow
+[2023-04-28 08:14:18,683] multiqc                                            [DEBUG  ]  Using temporary directory for creating report: /tmp/tmph1HJnM
+[2023-04-28 08:14:18,928] multiqc.modules.custom_content.custom_content      [DEBUG  ]  No custom content found
+[2023-04-28 08:14:18,933] multiqc.modules.peddy.peddy                        [DEBUG  ]  Could not find any reports in ('../../raw_data/fastqc_out/Suthaus_2022/rDNA/cell/',)
+[2023-04-28 08:14:18,936] multiqc.modules.methylQA.methylQA                  [DEBUG  ]  Could not find any reports in ('../../raw_data/fastqc_out/Suthaus_2022/rDNA/cell/',)
+[2023-04-28 08:14:18,937] multiqc.modules.qualimap.QM_BamQC                  [DEBUG  ]  Using default Qualimap thresholds: 1, 5, 10, 30, 50
+[2023-04-28 08:14:18,944] multiqc.modules.qualimap.qualimap                  [DEBUG  ]  Could not find any reports in ('../../raw_data/fastqc_out/Suthaus_2022/rDNA/cell/',)
+[2023-04-28 08:14:18,994] multiqc.modules.preseq.preseq                      [DEBUG  ]  Could not find any preseq data in ('../../raw_data/fastqc_out/Suthaus_2022/rDNA/cell/',)
+[2023-04-28 08:14:18,998] multiqc.modules.quast.quast                        [DEBUG  ]  Could not find any reports in ('../../raw_data/fastqc_out/Suthaus_2022/rDNA/cell/',)
+[2023-04-28 08:14:19,189] multiqc.modules.rseqc.rseqc                        [DEBUG  ]  Could not find any reports in ('../../raw_data/fastqc_out/Suthaus_2022/rDNA/cell/',)
+[2023-04-28 08:14:19,193] multiqc.modules.busco.busco                        [DEBUG  ]  Could not find any reports in ('../../raw_data/fastqc_out/Suthaus_2022/rDNA/cell/',)
+[2023-04-28 08:14:19,196] multiqc.modules.goleft_indexcov.goleft_indexcov    [DEBUG  ]  Did not find goleft indexcov outputs in ('../../raw_data/fastqc_out/Suthaus_2022/rDNA/cell/',)
+[2023-04-28 08:14:19,241] multiqc.modules.snpeff.snpeff                      [DEBUG  ]  Could not find any data in ('../../raw_data/fastqc_out/Suthaus_2022/rDNA/cell/',)
+[2023-04-28 08:14:19,287] multiqc.modules.gatk.gatk                          [DEBUG  ]  Could not find any reports in ('../../raw_data/fastqc_out/Suthaus_2022/rDNA/cell/',)
+[2023-04-28 08:14:19,335] multiqc.modules.htseq.htseq                        [DEBUG  ]  Could not find any reports in ('../../raw_data/fastqc_out/Suthaus_2022/rDNA/cell/',)
+[2023-04-28 08:14:19,378] multiqc.modules.bcftools.bcftools                  [DEBUG  ]  Could not find any reports in ('../../raw_data/fastqc_out/Suthaus_2022/rDNA/cell/',)
+[2023-04-28 08:14:19,381] multiqc.modules.featureCounts.feature_counts       [DEBUG  ]  Could not find any reports in ('../../raw_data/fastqc_out/Suthaus_2022/rDNA/cell/',)
+[2023-04-28 08:14:19,810] multiqc.modules.picard.picard                      [DEBUG  ]  Could not find any reports in ('../../raw_data/fastqc_out/Suthaus_2022/rDNA/cell/',)
+[2023-04-28 08:14:19,822] multiqc.modules.prokka.prokka                      [DEBUG  ]  Could not find any Prokka data in ('../../raw_data/fastqc_out/Suthaus_2022/rDNA/cell/',)
+[2023-04-28 08:14:19,865] multiqc.modules.samblaster.samblaster              [DEBUG  ]  Could not find any data in ('../../raw_data/fastqc_out/Suthaus_2022/rDNA/cell/',)
+[2023-04-28 08:14:19,992] multiqc.modules.samtools.samtools                  [DEBUG  ]  Could not find any reports in ('../../raw_data/fastqc_out/Suthaus_2022/rDNA/cell/',)
+[2023-04-28 08:14:20,036] multiqc.modules.bamtools.bamtools                  [DEBUG  ]  Could not find any reports in ('../../raw_data/fastqc_out/Suthaus_2022/rDNA/cell/',)
+[2023-04-28 08:14:20,043] multiqc.modules.bismark.bismark                    [DEBUG  ]  Could not find any reports in ('../../raw_data/fastqc_out/Suthaus_2022/rDNA/cell/',)
+[2023-04-28 08:14:20,046] multiqc.modules.hicup.hicup                        [DEBUG  ]  Could not find any HiCUP data in ('../../raw_data/fastqc_out/Suthaus_2022/rDNA/cell/',)
+[2023-04-28 08:14:20,049] multiqc.modules.salmon.salmon                      [DEBUG  ]  Could not find any Salmon data in ('../../raw_data/fastqc_out/Suthaus_2022/rDNA/cell/',)
+[2023-04-28 08:14:20,093] multiqc.modules.kallisto.kallisto                  [DEBUG  ]  Could not find any reports in ('../../raw_data/fastqc_out/Suthaus_2022/rDNA/cell/',)
+[2023-04-28 08:14:20,353] multiqc.modules.slamdunk.slamdunk                  [DEBUG  ]  No slamdunk reports found.
+[2023-04-28 08:14:20,358] multiqc.modules.star.star                          [DEBUG  ]  Could not find any reports in ('../../raw_data/fastqc_out/Suthaus_2022/rDNA/cell/',)
+[2023-04-28 08:14:20,361] multiqc.modules.tophat.tophat                      [DEBUG  ]  Could not find any reports in ('../../raw_data/fastqc_out/Suthaus_2022/rDNA/cell/',)
+[2023-04-28 08:14:20,404] multiqc.modules.bowtie2.bowtie2                    [DEBUG  ]  Could not find any reports in ('../../raw_data/fastqc_out/Suthaus_2022/rDNA/cell/',)
+[2023-04-28 08:14:20,448] multiqc.modules.bowtie1.bowtie1                    [DEBUG  ]  Could not find any reports in ('../../raw_data/fastqc_out/Suthaus_2022/rDNA/cell/',)
+[2023-04-28 08:14:20,501] multiqc.modules.cutadapt.cutadapt                  [DEBUG  ]  Could not find any reports in ('../../raw_data/fastqc_out/Suthaus_2022/rDNA/cell/',)
+[2023-04-28 08:14:20,554] multiqc.modules.trimmomatic.trimmomatic            [DEBUG  ]  Could not find any Trimmomatic data in ('../../raw_data/fastqc_out/Suthaus_2022/rDNA/cell/',)
+[2023-04-28 08:14:20,596] multiqc.modules.skewer.skewer                      [DEBUG  ]  Could not find any data in ('../../raw_data/fastqc_out/Suthaus_2022/rDNA/cell/',)
+[2023-04-28 08:14:20,599] multiqc.modules.fastq_screen.fastq_screen          [DEBUG  ]  Could not find any reports in ('../../raw_data/fastqc_out/Suthaus_2022/rDNA/cell/',)
+[2023-04-28 08:14:20,698] multiqc.modules.fastqc.fastqc                      [INFO   ]  Found 21 reports
+[2023-04-28 08:14:21,382] multiqc.modules.clusterflow.clusterflow            [DEBUG  ]  Could not find any reports in ('../../raw_data/fastqc_out/Suthaus_2022/rDNA/cell/',)
+[2023-04-28 08:14:21,384] multiqc                                            [INFO   ]  Report      : ../../raw_data/fastqc_out/Suthaus_2022/rDNA/cell/multiqc_report.html
+[2023-04-28 08:14:21,384] multiqc                                            [INFO   ]  Data        : ../../raw_data/fastqc_out/Suthaus_2022/rDNA/cell/multiqc_data
+[2023-04-28 08:14:21,384] multiqc                                            [DEBUG  ]  Moving data file from '/tmp/tmph1HJnM/multiqc_data/multiqc_fastqc.txt' to '../../raw_data/fastqc_out/Suthaus_2022/rDNA/cell/multiqc_data'
+[2023-04-28 08:14:21,384] multiqc                                            [DEBUG  ]  Moving data file from '/tmp/tmph1HJnM/multiqc_data/multiqc_general_stats.txt' to '../../raw_data/fastqc_out/Suthaus_2022/rDNA/cell/multiqc_data'
+[2023-04-28 08:14:21,384] multiqc                                            [DEBUG  ]  Moving data file from '/tmp/tmph1HJnM/multiqc_data/multiqc_sources.txt' to '../../raw_data/fastqc_out/Suthaus_2022/rDNA/cell/multiqc_data'
+[2023-04-28 08:14:21,440] multiqc                                            [INFO   ]  MultiQC complete

@@ -1,0 +1,4 @@
+Sample	FastQC_percent_duplicates	FastQC_percent_gc	FastQC_avg_sequence_length	FastQC_total_sequences	FastQC_percent_fails
+ERR2355431_subreads	83.3541927409	46.0	3838.01856487	4794.0	40.0
+ERR2355432_subreads	87.2250908395	51.0	4120.27270989	10458.0	40.0
+ERR2355433_subreads	87.7590548131	49.0	3996.14468332	10326.0	30.0
