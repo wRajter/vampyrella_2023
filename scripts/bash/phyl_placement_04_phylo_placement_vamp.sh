@@ -5,41 +5,26 @@
 # Variables
 PROJECT="Suthaus_2022"
 RAW_DATA="../../raw_data"
-PHYL_PLAC_DIR="${RAW_DATA}/phyl_placement/${PROJECT}"
 TAXON="vampyrellida"
 MARKER="Full18S"
-CELL="cellCombined"
 DENOISE_METHOD="RAD"
-SIM="sim90"
+SIM="sim_90"
 REF_VERSION="2023"
+PHYL_PLAC_DIR="${RAW_DATA}/phyl_placement/${PROJECT}/${MARKER}/${DENOISE_METHOD}/${SIM}"
 REF_ALIGNMENT="${RAW_DATA}/reference_alignments/vamp_phylo_placement/${TAXON}/reference_alignment_${REF_VERSION}/reference_alignment.phy"
 REF_TREE="${RAW_DATA}/phyl_placement/reference_trees/${TAXON}/reference_tree_${REF_VERSION}/T2.raxml.bestTree"
 QUERY_DIR="${PHYL_PLAC_DIR}/eukaryotes/downstream_analyses/extract_otus"
 PLACEMENT_DIR="${PHYL_PLAC_DIR}/${TAXON}/phyl_placement_analysis"
-RAW_READS_DIR="${RAW_DATA}/PacBio/${PROJECT}_${MARKER}/${CELL}/filtered"
-
-QUERY_DIR_SAMPLES="${RAW_DATA}/OTU_nonchimeric/${PROJECT}/${MARKER}/${CELL}/${SIM}/${DENOISE_METHOD}"
-SAMPLES=$(ls ${QUERY_DIR_SAMPLES} | \
-          awk -F '/' '{ print $NF }' | \
-          awk -F '.' '{ print $1 }' | \
-          grep -v 'Mock_18S_otu') # If you want to remove mock community from the samples
 
 
-# SAMPLES=$(ls ${RAW_READS_DIR}/*.fastq.gz | \
-#           awk -F '/' '{ print $NF }' | \
-#           awk -F '.' '{ print $1 }')
+# samples
+SAMPLES=$(ls ${QUERY_DIR} | \
+          awk -F '_' '{ print $1 "_" $2 }' |
+          sort -u)
 
 
 echo "Samples used:"
 echo "$SAMPLES"
-
-
-
-# # Activate conda phylo_placement environment that should contain these three packages:
-#     # raxml-ng=1.1.0
-#     # epa-ng=0.3.8
-#     # papara=2.5
-
 
 
 for SAMPLE in ${SAMPLES}
