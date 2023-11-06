@@ -21,11 +21,6 @@ TREE_VERSION="2023"
 OTU_DIR="${RAW_DATA}/phyl_placement/reference_trees/${TAXON}/reference_tree_${REF_VERSION}"
 
 
-# Activate conda phylo_placement environment that should contain these three packages:
-    # raxml-ng=1.1.0
-    # epa-ng=0.3.8
-    # papara=2.5
-
 mkdir -p ${OTU_DIR}
 
 # Check alignment

@@ -6,29 +6,25 @@
 PROJECT="Suthaus_2022"
 TAXON="eukaryotes"
 MARKER="Full18S"
-CELL="cellCombined"
 DENOISE_METHOD="RAD"
-SIM="sim90"
+SIM="sim_90"
 RAW_DATA="../../raw_data"
-PHY_PLAC_DIR="${RAW_DATA}/phyl_placement/${PROJECT}/${TAXON}"
+PHY_PLAC_DIR="${RAW_DATA}/phyl_placement/${PROJECT}/${MARKER}/${DENOISE_METHOD}/${SIM}/${TAXON}"
 JPLACE_DIR="${PHY_PLAC_DIR}/phyl_placement_analysis"
 OUT_DIR="${PHY_PLAC_DIR}/downstream_analyses"
 REF_VERSION="2022"
 TAXON_FILE_DIR="${RAW_DATA}/reference_alignments/vamp_phylo_placement/${TAXON}/reference_alignment_${REF_VERSION}"
-RAW_READS_DIR="${RAW_DATA}/PacBio/${PROJECT}_${MARKER}/${CELL}/filtered"
-QUERY_DIR="${RAW_DATA}/OTU_nonchimeric/${PROJECT}/${MARKER}/${CELL}/${SIM}/${DENOISE_METHOD}"
+QUERY_DIR="${RAW_DATA}/chimera_filtered/${PROJECT}/${MARKER}/${DENOISE_METHOD}/${SIM}"
 
-SAMPLES=$(ls ${QUERY_DIR} | \
+# samples
+SAMPLES=$(ls ${QUERY_DIR}/*.fasta | \
           awk -F '/' '{ print $NF }' | \
           awk -F '.' '{ print $1 }' | \
-          grep -v 'Mock_18S_otu') # If you want to remove mock community from the samples
-
-
-# SAMPLES+=" allsamples" # add all samples combined into our sample names array
-
+          awk -F '_' '{ print $1 "_" $2 }')
 
 echo "Samples used:"
 echo "$SAMPLES"
+
 
 ########################
 ## HEAT TREE ANALYSIS ##
