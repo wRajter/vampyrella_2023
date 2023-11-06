@@ -3,16 +3,20 @@
 ## Project description
 
 This project aims to explore Vampyrellid's diversity using long-read metabarcoding of the eukaryotic rDNA operon.
-In total, we collected nine environmental samples and one mock sample (Table 1). All environmental DNA has been extraced using the Qiagen's PowerSoil Powerlyser Kit, and sent to Integrated Microbiome Resource (IMR) for sequencing. IMR sequenced the full 18S and ITS rRNA amplicon fragments by PacBio Sequel 2.
-The details on librabry preparation, and sequencing are described on the IMR website: https://imr.bio/protocols.html.
 
 ## Initial data
 
-### Raw reads
+In total, we collected nine environmental samples and one mock sample (Table 1). All environmental DNA has been extraced using the Qiagen's PowerSoil Powerlyser Kit, and sent to sequencing facility at Dalhousie University (Halifax, Canada). The IMR sequenced the full 18S rRNA amplicon fragments using the Sequel II instrument (Pacific Biosciences) on an SMRT Cell 8M Tray.
+The details on librabry preparation, and sequencing are described on the IMR website: https://imr.bio/protocols.html.
+
+## Raw reads
 
 We received demultiplexed raw reads in fastq format with phred+33 encoding from IMR. \
-Files: /raw_data/PacBio/{SuthausFull18S, SuthausFullITS}/{cell1, cell2}
-The reads were from full 18S and ITS rRNA amplicon fragments. For each sample, we received two version of the reads - cell1 and cell2. Cell1 samples were sequenced with 1x depth and cell2 with 2x depth.
+Files: /raw_data/PacBio/SuthausFull18S/{cell1, cell2}
+The reads from cell1 and cell2 were combined together using: init_steps_01_merge_cells.sh script \
+
+
+Reads were subsequently
 
 ### Reference alignments and trees
 
