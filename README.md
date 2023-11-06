@@ -1,6 +1,15 @@
 # Vampyrellid diversity exploration 2023
 
-## Project description
+## Table of Contents
+1. [Project Description](#project-description)
+2. [Initial Data](#initial-data)
+3. [Project Workflow Overview](#project-workflow-overview)
+4. [Step-by-Step Process Flow](#step-by-step-process-flow)
+5. [Reference Alignments and Trees](#reference-alignments-and-trees)
+6. [Project Folder Hierarchy](#project-folder-hierarchy)
+7. [How to Replicate the Project Analyzes](#how-to-replicate-the-project-analyzes)
+
+## Project Description
 
 This project aims to explore Vampyrellid's diversity using long-read metabarcoding of the eukaryotic rDNA operon.
 
@@ -9,107 +18,88 @@ This project aims to explore Vampyrellid's diversity using long-read metabarcodi
 In total, we collected nine environmental samples and one mock sample (Table 1). All environmental DNA has been extraced using the Qiagen's PowerSoil Powerlyser Kit, and sent to sequencing facility at Dalhousie University (Halifax, Canada). The IMR sequenced the full 18S rRNA amplicon fragments using the Sequel II instrument (Pacific Biosciences) on an SMRT Cell 8M Tray.
 The details on librabry preparation, and sequencing are described on the IMR website: https://imr.bio/protocols.html.
 
-## Raw reads
-
 We received demultiplexed raw reads in fastq format with phred+33 encoding from IMR. \
-Files: /raw_data/PacBio/SuthausFull18S/{cell1, cell2}
-The reads from cell1 and cell2 were combined together using: init_steps_01_merge_cells.sh script \
+Files: /raw_data/PacBio/<project_name>/{cell1, cell2}
 
 
-Reads were subsequently
+## Project workflow overview
 
-### Reference alignments and trees
+![Workflow Schematic](results/main_figures/pipeline.png)
 
-For **taxonomic assignment** of the environmental sequences, we used full PR2 reference alignment (version 4.14.0). We manually updated the PR2 alignment with TODO:number vampyrellid sequences (TODO: create a list of seqs - names and GB ids) to have more accurate and refine taxonomic assignment of vampyrellids.
-For **phylogenetic assignment**, we... TODO
+## Step-by-Step Process Flow: Scripts and Data I/O
+The table below provides a detailed look at each step in our bioinformatics analysis pipeline, including the scripts used and the corresponding input and output data.
 
-## Project folder hierarchy
+|Step                 | Script                                            | Input                            | Output                                         |
+|---------------------|---------------------------------------------------|----------------------------------|------------------------------------------------|
+|Initial steps        | [`init_steps_01_merge_cells.sh`][script1]         | raw_data/PacBio -> Cell 1, 2     | raw_data/PacBio -> cellCombined                |
+|Quality check        | [`init_steps_02_read_quality.sh`][script2]        | raw_data/PacBio -> cellCombined  | results -> [multiqc][multiqc]                  |
+|Trimming             | [`tax_assign_01a_dada2_trimming.r`][script3]      | raw_data/PacBio -> cellCombined  | raw_data/dada2 -> noprimers                    |
+|Filtering            | [`tax_assign_01b_dada2_filtering.r`][script4]     | raw_data/dada2 -> noprimers      | raw_data/dada2 -> filtered                     |
+|Denoising            | [`tax_assign_02_RAD.sh`][script5]                 | raw_data/dada2 -> filtered       | raw_data/denoised -> RAD                       |
+|Clustering           | [`tax_assign_03_cluster_otu.sh`][script6]         | raw_data/denoised -> RAD         | raw_data/clustered -> sim_xy                   |
+|Chimera filtering    | [`tax_assign_04_chimera_filt.sh`][script7]        | raw_data/clustered -> sim_xy     | raw_data -> chimera_filtered                   |
+|Taxonomic assignment | [`tax_assign_05_taxassign.sh`][script8]           | raw_data -> chimera_filtered     | results -> [tax_assignment_vsearch][tax_assign]|
 
-**analysis:** the main output files from the analyses are stored here. (Not present at GitHub for storage size and possession purposes). Please, contact me if you want to access to any of these data.
-**notebooks:** all the jupyter notebooks are stored here.
-**raw_data:** the initial data and intermediate results are stored here. (Not present at GitHub for storage size and possession purposes). Please, contact me if you want to access to any of these data.
+[script1]: https://github.com/wRajter/vampyrella_2023/blob/master/scripts/bash/init_steps_01_merge_cells.sh
+[script2]: https://github.com/wRajter/vampyrella_2023/blob/master/scripts/bash/init_steps_02_inspect_reads_quality.sh
+[script3]: https://github.com/wRajter/vampyrella_2023/blob/master/scripts/bash/tax_assign_01a_dada2_trimming.r
+[script4]: https://github.com/wRajter/vampyrella_2023/blob/master/scripts/bash/tax_assign_01b_dada2_filtering.r
+[script5]: https://github.com/wRajter/vampyrella_2023/blob/master/scripts/bash/tax_assign_02_RAD.sh
+[script6]: https://github.com/wRajter/vampyrella_2023/blob/master/scripts/bash/tax_assign_03_cluster_otu.sh
+[script7]: https://github.com/wRajter/vampyrella_2023/blob/master/scripts/bash/tax_assign_04_chimera_filt.sh
+[script8]: https://github.com/wRajter/vampyrella_2023/blob/master/scripts/bash/tax_assign_05_taxassign.sh
+[multiqc]: https://github.com/wRajter/vampyrella_2023/blob/master/results/multiqc
+[tax_assign]: https://github.com/wRajter/vampyrella_2023/blob/master/results/tax_assignment_vsearch
 
-- fastqc_out: output from the quality assessment of the raw reads
-- PacBio: raw reads in fastq format received from IMR
-- packages: all the programms installed from binaries
-- qiime_input: input data (mostly manifest files) needed for qiime2 analyses
-- qiime_output: all the intermediate output files from qiime2 analyses (artifact files, tax and assignment intermediate results)
-- reference alignments: PR2 databases and reference alignments for phylogenetic placement
-  **scripts:** the code written during this project is stored here:
-- bash_scripts: script that are executed by the bash program
-- python_functions: all the python files
-- r_scripts: all the R files
-  **test:** directory for testing the code.
 
-## Chronology of the analyses
+## Reference alignments and trees
 
-### Inspecting read quality
+For the **taxonomic assignment**, we used the full [PR2 SSU UTAX database (version 5.0.0)](https://github.com/pr2database/pr2database/releases/tag/v5.0.0). We updated the PR2 database with 128 vampyrellid sequences using Python code, see the [modify_pr2_database](https://github.com/wRajter/vampyrella_2023/blob/master/notebooks/modify_pr2_database.ipynb) Jupyter notebook, for a more accurate and refined taxonomic assignment of vampyrellids.
 
-In this step, we generate quality reports from the raw PacBio reads. Input files represent `fastq` files from raw reads. The quality reports are genereted using FastQC (TODO: add version) and MultiQC (TODO: add version) packages. The output files (quality reports) are in HTML format - one output file per each `fastq` input file and one aggregated report for all samples (multiqc report).
-Script: `reads_quality.sh`
-Output directory: raw_data/fastqc_data/
+## Project Folder Hierarchy
 
-### Converting raw reads (in FASTQ format) into Qiime2 artifact files
+Below is the structure of the project directory explaining the purpose of each folder:
 
-For importing the raw reads into Qiime2 artifacts, we need the raw reads in `fastq` format and so-called manifest file. The manifest file has to contain a specific header and two columns: i) sample name and ii) full path for raw reades (review qiime2 manual https://docs.qiime2.org/2022.11/tutorials/importing/ for more details). After the manifest file is prepared, Qiime2 (version 2022.11) is used to convert the reads to Qiime2 artifact format (`qza` extension) and generate reads summary file (`qzv` extension).
-Script: `reads2asv.sh`
-Manifest files: raw_data/qiime_input/
-Output directory: raw_data/qiime_output/reads_qza/
 
-### Denoising reads and creating ASVs using DADA2 (via Qiime2)
+- **results/**: Contains output from various stages of analysis.
+- **notebooks/**: Jupyter notebooks with executable code blocks for analyses.
+- **raw_data/**: Raw datasets and intermediate files (not on GitHub due to size constraints; available upon request).
+- **scripts/**: This folder contains different subfolders organized by the scripting language or environment used:
+  - **bash_scripts/**: Bash scripts for automating command-line tasks.
+  - **python_functions/**: Python scripts and modules used in the project.
+  - **r_scripts/**: R scripts for data processing and statistical analysis.
+  - **sbatch/**: SLURM batch scripts used on a computing cluster.
+  - **julia/**: Scripts written in Julia programming language.
+- **tests/**: Includes scripts and files used for testing code functionality.
+- **vampyrella_2023/**: A directory for the virtual environment to manage project dependencies.
 
-The Qiime2's DADA2 denoiser is used to correct reads and get amplicon sequence variants (ASVs). This step also removes primers and filters sequences based on the length. The input files represent raw reads in Qiime2 format that were created in the previous step. The output represent three files: 1) abundance ASV table (also called a feature table), 2) ASVs with corresponding sequences in Qiime2 `qza` format (similar to fasta format), and 3) summary statistic file.
-Script: `reads2asv.sh`
-Output directory: raw_data/qiime_output/dada2_denoise/
 
-### Post denoising summary statistics and visualizations
+## How to Replicate the Project Analyzes
 
-Afer the denoising the raw reads into ASVs, we make the following steps:
+To replicate the analyses performed in this project, follow the steps below:
 
-1. Summarizing DADA2 output using the Qiime2 feature table from the denoising step.
-2. Visualizing the representative (ASV) sequences, which basicly means to convert the representative sequence `qza` files to `qzv` files.
-3. Converting ASV sequences from the `qza` to fasta format.
+### Prerequisites
 
-Script: `qiime_reads2asv.sh`
-Output direcoty: raw_data/qiime_output/dada2_post_denoise/
+- [Git](https://git-scm.com/)
+- [Python](https://www.python.org/) v3.11
+- [Julia](https://julialang.org/) v1.9.2
+- [vsearch](https://github.com/torognes/vsearch) v2.22.1
+- [FastQC](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/) v0.11.9
+- [MultiQC](https://multiqc.info/) v1.17
+- [R](https://www.r-project.org/) v4.3.1
+- [EPA-ng](https://github.com/pierrebarbera/epa-ng) v0.3.8
+- [PaPaRa](https://cme.h-its.org/exelixis/web/software/papara/index.html) v2.5
+- [GAPPA](https://github.com/lczech/gappa) v0.8.1
 
-### Filtering ASVs sequences into individual samples
+### Environment Setup
 
-In this step, the ASVs are split based on the sample they belong to. Then, a fasta file and an abundance table is created for each sample.
-This step is not trivial. To best of my knowledge, there is no a single commnand in the Qiime2 environmnet to separate the ASV based on the samples and then generate fasta files. Nevertheless, there are several ways how to tackle it.
-First, the feature table is transposed flipping the sample and feature axes. After transposing the table, the x-axis contained samples and y-axis contained ASVs. In this way, it is possible to use the transposed table as feature metadata, and filter ASVs based on the samples they belong to using the SQL `where` clause syntax. The ASVs are at first filtered into the Qiime2 format and then into the fasta files. The procedure is summarized by the following steps:
-
-1. Transposing the qiime2 ASV table in the qza and qzv formats.
-2. Filtering ASVs into the individual samples using the transposed ASV table.
-3. Converting ASV sequences from qza to fasta format.
-
-Script: `qiime_reads2asv.sh`
-Output direcoty: raw_data/qiime_output/dada2_post_denoise/
-
-### Converting reference sequences and taxonomy into the qiime2 artifact files
-
-TODO: add this part
-
-### Taxonomic assignment using v-search through qiime2
-
-As taxonomic assignment is computationally intensive, it is done at CHEOPS cluster (https://rrzk.uni-koeln.de/hpc-projekte/hpc). We use the full PR2 reference alignment (version 4.14.0) enriched by vampyrellid sequences (TODO: add list of the seqs names and GB ids). We run two scripts at the cluster: one for all samples combined (`qiime_taxassign.slurm`), and the other that creates taxonomic assignemnt for each sample separatelly (`qiime_taxassign_persample.slurm`). The input files for the taxonomic assignement are ASV sequences, reference sequences and reference taxonomy, all in Qiime2 (`gza`) format. The output is vsearch taxonomy file in Qiime2 format.
-Scripts: `qiime_taxassign.slurm` and `qiime_taxassign_persample.slurm`
-Output directory: raw_data/qiime_output/assignment_results/
-
-### Post-taxonomic assignment
-
-After the taxonomic assignment is done, we convert the output file into Qiime2 visualization format (`gzv`) and the taxonomic assignemnt tsv table.
-Output directory: raw_data/qiime_output/assignment_results/
-Script: `qiime_post_taxassign.sh`
-
-### Filtering Vampyrella-specific ASVs
-
-In this step, we filter sequences that were assigned into Vampyrellida. The input files are ASVs in fasta files and taxonomic assignment tsv table. The vampyrellid sequences are outputed in form of fasta files for all samples and per each sample separetelly.
-Script: `filter_vamp_seqs.sh`
-Output directory: raw_data/qiime_output/dada2_post_denoise/fasta
-
-### Creating an ASV summary table
-
-As the ASV taxonomic assignemnt part is finished, we summarizes all the output data we have yielded so far into a final table. This table contains the following information: ASV ID, abundance per sample, taxonomic assignemnt at various taxonomic level, percentage similarity of the assignment, and the sequence for each ASV. As those pieces of information are scattered in several output files, we created a custome script to process the files and assembled the information in a summary tsv table (asv_summary_table). This table is used for data visualization in the following steps.
-Script: `create_summary_table.sh`
-Output directory: raw_data/qiime_output/dada2_post_denoise/
+1. Clone the project repository:
+   ```bash
+   git clone https://github.com/wRajter/vampyrella_2023.git
+   cd vampyrella_2023
+2. (Optional) Create a virtual environment:
+    ```bash
+    python3.11 -m venv vampyrella_2023
+3. Install the required Python packages:
+    ```bash
+    pip install -r requirements.txt
