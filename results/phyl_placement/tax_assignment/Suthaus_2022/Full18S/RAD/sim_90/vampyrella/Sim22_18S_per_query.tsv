@@ -1,0 +1,16 @@
+name	LWR	fract	aLWR	afract	taxopath
+centroid=seq114_23;seqs=1	0	0	1	1	Vampyrellida
+centroid=seq114_23;seqs=1	0	0	1	1	Vampyrellida;Placopodidae
+centroid=seq114_23;seqs=1	0.7267	0.7267	1	1	Vampyrellida;Placopodidae;Placopus
+centroid=seq114_23;seqs=1	0.2733	0.2733	0.2733	0.2733	Vampyrellida;Placopodidae;Placopus;Placopus_melkoniani_strain_MAC_1
+centroid=seq123_26;seqs=5	0	0	1	1	Vampyrellida
+centroid=seq123_26;seqs=5	1	1	1	1	Vampyrellida;Leptophryidae
+centroid=seq123_26;seqs=5	0	0	4.248e-06	4.248e-06	Vampyrellida;Leptophryidae;Arachnomyxa
+centroid=seq123_26;seqs=5	4.248e-06	4.248e-06	4.248e-06	4.248e-06	Vampyrellida;Leptophryidae;Arachnomyxa;Arachnomyxa_cryptophaga
+centroid=seq226_21;seqs=1	0.08531	0.08531	1	1	Vampyrellida
+centroid=seq226_21;seqs=1	0	0	0.9147	0.9147	Vampyrellida;Sericomyxidae
+centroid=seq226_21;seqs=1	0.9147	0.9147	0.9147	0.9147	Vampyrellida;Sericomyxidae;Sericomyxidae_X
+centroid=seq385_27;seqs=1	0	0	0.3111	1	Vampyrellida
+centroid=seq385_27;seqs=1	0	0	0.3111	1	Vampyrellida;Vampyrellida_clade_PurpleVamp
+centroid=seq385_27;seqs=1	0	0	0.3111	1	Vampyrellida;Vampyrellida_clade_PurpleVamp;clade_PurpleVamp_X
+centroid=seq385_27;seqs=1	0.3111	1	0.3111	1	Vampyrellida;Vampyrellida_clade_PurpleVamp;clade_PurpleVamp_X;clade_PurpleVamp_XX

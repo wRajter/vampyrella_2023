@@ -1,0 +1,4 @@
+name	LWR	fract	aLWR	afract	taxopath
+centroid=seq154_8;seqs=2	0.9996	0.9996	1	1	Vampyrellida
+centroid=seq154_8;seqs=2	0	0	0.0003983	0.0003983	Vampyrellida;Sericomyxidae
+centroid=seq154_8;seqs=2	0.0003983	0.0003983	0.0003983	0.0003983	Vampyrellida;Sericomyxidae;Sericomyxidae_X

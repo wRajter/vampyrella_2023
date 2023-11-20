@@ -1,0 +1,5 @@
+name	LWR	fract	aLWR	afract	taxopath
+centroid=seq56_37;seqs=1	0.5651	0.6853	0.8246	1	Vampyrellida
+centroid=seq56_37;seqs=1	0.2595	0.3147	0.2595	0.3147	Vampyrellida;Arachnulidae
+centroid=seq15_113;seqs=1	0.258	0.9799	0.2633	1	Vampyrellida
+centroid=seq15_113;seqs=1	0.005282	0.02006	0.005282	0.02006	Vampyrellida;Placopodidae

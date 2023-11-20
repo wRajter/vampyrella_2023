@@ -1,0 +1,13 @@
+LWR	fract	aLWR	afract	taxopath
+0.08531	0.02576	3.311	1	Vampyrellida
+0	0	1	0.302	Vampyrellida;Placopodidae
+0.7267	0.2195	1	0.302	Vampyrellida;Placopodidae;Placopus
+0.2733	0.08253	0.2733	0.08253	Vampyrellida;Placopodidae;Placopus;Placopus_melkoniani_strain_MAC_1
+1	0.302	1	0.302	Vampyrellida;Leptophryidae
+0	0	4.248e-06	1.283e-06	Vampyrellida;Leptophryidae;Arachnomyxa
+4.248e-06	1.283e-06	4.248e-06	1.283e-06	Vampyrellida;Leptophryidae;Arachnomyxa;Arachnomyxa_cryptophaga
+0	0	0.9147	0.2762	Vampyrellida;Sericomyxidae
+0.9147	0.2762	0.9147	0.2762	Vampyrellida;Sericomyxidae;Sericomyxidae_X
+0	0	0.3111	0.09396	Vampyrellida;Vampyrellida_clade_PurpleVamp
+0	0	0.3111	0.09396	Vampyrellida;Vampyrellida_clade_PurpleVamp;clade_PurpleVamp_X
+0.3111	0.09396	0.3111	0.09396	Vampyrellida;Vampyrellida_clade_PurpleVamp;clade_PurpleVamp_X;clade_PurpleVamp_XX

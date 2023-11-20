@@ -1,0 +1,5 @@
+name	LWR	fract	aLWR	afract	taxopath
+centroid=seq132_10;seqs=3	0	0	1	1	Vampyrellida
+centroid=seq132_10;seqs=3	0	0	1	1	Vampyrellida;Leptophryidae
+centroid=seq132_10;seqs=3	0.2421	0.2421	1	1	Vampyrellida;Leptophryidae;Leptophryidae_X
+centroid=seq132_10;seqs=3	0.7579	0.7579	0.7579	0.7579	Vampyrellida;Leptophryidae;Leptophryidae_X;Leptophryidae_X_strain_VI01
