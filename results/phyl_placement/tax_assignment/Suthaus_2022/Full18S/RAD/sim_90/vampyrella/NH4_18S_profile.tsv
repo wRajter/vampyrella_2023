@@ -1,0 +1,8 @@
+LWR	fract	aLWR	afract	taxopath
+0	0	2	1	Vampyrellida
+0	0	1	0.5	Vampyrellida;Leptophryidae
+0.7437	0.3719	1	0.5	Vampyrellida;Leptophryidae;Leptophryidae_X
+0.2563	0.1281	0.2563	0.1281	Vampyrellida;Leptophryidae;Leptophryidae_X;Leptophryidae_X_strainVm
+0	0	1	0.5	Vampyrellida;Vampyrellidae
+0.01954	0.009772	1	0.5	Vampyrellida;Vampyrellidae;Vampyrella
+0.9805	0.4902	0.9805	0.4902	Vampyrellida;Vampyrellidae;Vampyrella;Vampyrella_strain_NV01

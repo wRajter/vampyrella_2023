@@ -1,0 +1,9 @@
+name	LWR	fract	aLWR	afract	taxopath
+centroid=seq65_61;seqs=1	0	0	0.9995	1	Vampyrellida
+centroid=seq65_61;seqs=1	0	0	0.9995	1	Vampyrellida;Vampyrellida_clade_PurpleVamp
+centroid=seq65_61;seqs=1	0	0	0.9995	1	Vampyrellida;Vampyrellida_clade_PurpleVamp;clade_PurpleVamp_X
+centroid=seq65_61;seqs=1	0.9995	1	0.9995	1	Vampyrellida;Vampyrellida_clade_PurpleVamp;clade_PurpleVamp_X;clade_PurpleVamp_XX
+centroid=seq302_33;seqs=2	0	0	1	1	Vampyrellida
+centroid=seq302_33;seqs=2	0.5361	0.5361	1	1	Vampyrellida;Leptophryidae
+centroid=seq302_33;seqs=2	0	0	0.4639	0.4639	Vampyrellida;Leptophryidae;Arachnomyxa
+centroid=seq302_33;seqs=2	0.4639	0.4639	0.4639	0.4639	Vampyrellida;Leptophryidae;Arachnomyxa;Arachnomyxa_cryptophaga
