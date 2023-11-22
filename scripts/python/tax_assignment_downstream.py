@@ -5,6 +5,8 @@ import os
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
+from matplotlib_venn import venn2
+
 
 def standardize_taxopath(taxopath):
     parts = taxopath.split(';')
@@ -192,3 +194,147 @@ def tax_composition_per_sample_percentages(pivot_table,
 
     # Save the plot
     plt.savefig(os.path.join(save_dir, f'tax_comp_at_{taxonomic_level}_level_per_sample_percent.png'), bbox_inches='tight', dpi=600)
+
+
+
+def create_venn(save_dir, plot_data, project):
+
+    '''
+    Create and save a series of Venn diagrams comparing OTUs between two approaches.
+
+    This function generates a 2x2 grid of Venn diagrams, each representing the overlap of OTUs
+    between 'GAPPA' and 'VSEARCH' at different taxonomic levels (order, family, genus, species).
+    The generated figure is saved in the specified directory with a filename based on the given project name.
+
+    Parameters:
+    save_dir (str): The directory path where the plot image will be saved. If the directory
+                    does not exist, it will be created.
+    plot_data (dict): A dictionary with keys in the format 'otus_{tax_level}_{approach}' where
+                      'tax_level' is one of 'order', 'family', 'genus', or 'species', and
+                      'approach' is either 'gappa' or 'vsearch'. Each key maps to a set of OTUs.
+    project (str): A project identifier that will be included in the filename of the saved plot.
+    '''
+
+    # Create a figure with subplots
+    fig, axs = plt.subplots(2, 2, figsize=(8, 6))  # Adjust the size as needed
+
+    # Add a main title to the figure
+    fig.suptitle('Venn Diagram of OTUs between Gappa and VSEARCH', fontsize=14)
+
+    # Define colors for the sets
+    set_colors = ['#d95f02', '#7570b3']
+    labels = ['GAPPA', 'VSEARCH']
+
+    # Define a function to increase text size in the Venn diagrams
+    def increase_text_size(venn):
+        for text in venn.set_labels:
+            if text: text.set_fontsize(0)  # Increase set label size
+        for text in venn.subset_labels:
+            if text: text.set_fontsize(14)  # Increase subset label size
+
+    # Plot A: OTUs
+    v = venn2([plot_data['otus_order_gappa'], plot_data['otus_order_vsearch']], set_labels=(None, None), ax=axs[0, 0], set_colors=set_colors)
+    increase_text_size(v)
+    axs[0, 0].set_title('A) Order-level', loc='left')
+
+    # Plot B: Family-level
+    v = venn2([plot_data['otus_family_gappa'], plot_data['otus_family_vsearch']], set_labels=(None, None), ax=axs[0, 1], set_colors=set_colors)
+    increase_text_size(v)
+    axs[0, 1].set_title('B) Family-level', loc='left')
+
+    # Plot C: Genus-level
+    v = venn2([plot_data['otus_genus_gappa'], plot_data['otus_genus_vsearch']], set_labels=(None, None), ax=axs[1, 0], set_colors=set_colors)
+    increase_text_size(v)
+    axs[1, 0].set_title('C) Genus-level', loc='left')
+
+    # Plot D: Species-level
+    v = venn2([plot_data['otus_species_gappa'], plot_data['otus_species_vsearch']], set_labels=(None, None), ax=axs[1, 1], set_colors=set_colors)
+    increase_text_size(v)
+    axs[1, 1].set_title('D) Species-level', loc='left')
+
+    from matplotlib.patches import Patch
+    legend_handles = [Patch(facecolor=set_colors[i], edgecolor=None, label=labels[i]) for i in range(len(labels))]
+    fig.legend(handles=legend_handles, loc='upper center', bbox_to_anchor=(0.5, 0.02), ncol=len(labels), frameon=False, fontsize=12)
+
+    # Adjust layout for better spacing with the main title
+    plt.tight_layout(rect=[0, 0.03, 1, 0.95])  # Adjust the rect parameter as needed for your figure
+
+    # Show the figure
+    # plt.show()
+
+    # Check if save_dir exists and create if not
+    if not os.path.exists(save_dir):
+        os.makedirs(save_dir)
+
+    # Save the plot
+    plt.savefig(os.path.join(save_dir, f'venn_comp_gappa_and_vsearch_{project}.png'), bbox_inches='tight', dpi=600)
+
+
+
+def count_tax_assigned_otus(melted_df, save_dir):
+
+
+    '''
+    Create and save a count plot for the number of taxonomically assigned OTUs.
+
+    This function takes a DataFrame with taxonomic assignments at different levels and approaches,
+    and creates a count plot comparing the number of OTUs assigned in each category. The plot
+    is then saved to the specified directory.
+
+    Parameters:
+    melted_df (pd.DataFrame): A pandas DataFrame containing the melted data with columns
+                              'taxonomic_level' and 'approach'.
+    save_dir (str): The directory path where the plot image will be saved. If the directory
+                    does not exist, it will be created.
+
+    The DataFrame should have the following columns:
+    - 'taxonomic_level': The level of taxonomy (order, family, genus, species).
+    - 'approach': The approach used for taxonomic assignment ('GAPPA' or 'VSEARCH').
+    - 'status': The assignment status ('Assigned' or 'Unassigned').
+
+    The function will create a count plot with 'taxonomic_level' on the x-axis, the count of OTUs on
+    the y-axis, and different hues representing each approach. The plot is saved with a filename
+    'count_assigned_otus_gappa_vd_vsearch.png' at a resolution of 600 dpi.
+
+    '''
+
+    # Set the style of the visualization
+    sns.set_style('white')
+
+    # Now create the count plot
+    plt.figure(figsize=(10, 6))
+    ax = sns.countplot(data=melted_df,
+                    x='taxonomic_level',
+                    hue='approach',
+                    palette=['#d95f02', '#7570b3'],
+                    edgecolor = '.2',
+                    dodge=True,
+                    width= 0.7,
+                    linewidth=0.7)
+
+    # Add horizontal gridlines for better readability
+    plt.grid(axis='y', linestyle='-', alpha=0.7)
+
+    sns.despine()
+
+    # Enhance the plot
+    plt.title('Number of assigned OTUs (GAPPA vs. VSEARCH)')
+    plt.ylabel('Count of taxonomically assigned OTUs')
+    plt.xlabel('')
+
+    # Adjust the subplot params to give some space for the external legend
+    plt.subplots_adjust(right=0.75)
+
+    # Adding legend
+    plt.legend(title='Approach', loc='upper left', bbox_to_anchor=(1, 1), frameon=False, fontsize='medium')
+
+
+    plt.tight_layout(rect=[0, 0, 0.85, 1])
+
+    # plt.show()
+
+    # Create path to the save directory if not exist
+    if not os.path.exists(save_dir):
+        os.makedirs(save_dir)
+
+    plt.savefig(os.path.join(save_dir, f'count_assigned_otus_gappa_vd_vsearch.png'), bbox_inches='tight', dpi=600)
