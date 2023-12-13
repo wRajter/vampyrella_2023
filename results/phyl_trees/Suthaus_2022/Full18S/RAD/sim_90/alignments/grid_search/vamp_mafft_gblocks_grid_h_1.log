@@ -1,0 +1,20 @@
+stdout:
+
+116 sequences and 2006 positions in the first alignment file:
+../results/phyl_trees/Suthaus_2022/Full18S/RAD/sim_90/alignments/vamp_mafft.fasta
+
+../results/phyl_trees/Suthaus_2022/Full18S/RAD/sim_90/alignments/vamp_mafft.fasta
+Original alignment: 2006 positions
+Gblocks alignment:  1166 positions (58 %) in 23 selected block(s)
+
+
+stderr:
+
+
+
+Parameters used:
+Minimum Number Of Sequences For A Conserved Position: 79
+Minimum Number Of Sequences For A Flanking Position: 79
+Maximum Number Of Contiguous Nonconserved Positions: 13
+Minimum Length Of A Block: 15
+Allowed Gap Positions: With Half

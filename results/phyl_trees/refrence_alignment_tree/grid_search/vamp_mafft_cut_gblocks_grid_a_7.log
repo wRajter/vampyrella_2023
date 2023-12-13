@@ -1,0 +1,26 @@
+stdout:
+
+103 sequences and 1959 positions in the first alignment file:
+../results/phyl_trees/refrence_alignment_tree/vamp_mafft_cut.fasta
+
+
+WARNING: Parameter -b1 not properly entered.
+The minimum number of sequences for a conserved position must be lower than or equal to the minimum number of sequences for a flank position
+
+WARNING: Parameter -b2 not properly entered.
+The minimum number of sequences for a flank position must be lower than or equal to 103 (the number of sequences)
+../results/phyl_trees/refrence_alignment_tree/vamp_mafft_cut.fasta
+Original alignment: 1959 positions
+Gblocks alignment:  1114 positions (56 %) in 19 selected block(s)
+
+
+stderr:
+
+
+
+Parameters used:
+Minimum Number Of Sequences For A Conserved Position: 52
+Minimum Number Of Sequences For A Flanking Position: 87
+Maximum Number Of Contiguous Nonconserved Positions: 43
+Minimum Length Of A Block: 45
+Allowed Gap Positions: All

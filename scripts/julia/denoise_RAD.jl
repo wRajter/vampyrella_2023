@@ -10,14 +10,14 @@ using Pkg
 using NextGenSeqUtils, RobustAmpliconDenoising, CodecZlib
 
 # Define project information
-project = "Suthaus_2022"
-marker = "Full18S"
+project = "Jamy_2022"
+marker = "rDNA"
 denoised_method = "RAD"
 raw_data = "../../raw_data"
 suffix = ".fastq"
 
 # Construct the raw_reads_dir path
-reads_dir = joinpath(raw_data, "dada2", project, marker, "filtered")
+reads_dir = joinpath(raw_data, "extracted_18S", project, marker)
 
 # List files in the raw_reads_dir directory
 files = [file for file in readdir(reads_dir) if endswith(file, suffix)]
@@ -36,7 +36,7 @@ for file in files
   templates, template_sizes, template_indices = denoise(seqs)
 
   # Construct the save_fasta path for the denoised sequences
-  save_fasta = joinpath(raw_data, "denoised", project, marker, denoised_method, "$sample_name" * "_asv.fasta")
+  save_fasta = joinpath(raw_data, "denoised", project, marker, denoised_method, "asv_$sample_name" * ".fasta")
 
   # Write denoised sequences to a fasta file
   write_fasta(save_fasta, templates, names = ["seq$(j)_$(template_sizes[j])" for j in 1:length(template_sizes)])
