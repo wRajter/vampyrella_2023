@@ -1,0 +1,138 @@
+
+RAxML-NG v. 1.1.0 released on 29.11.2021 by The Exelixis Lab.
+Developed by: Alexey M. Kozlov and Alexandros Stamatakis.
+Contributors: Diego Darriba, Tomas Flouri, Benoit Morel, Sarah Lutteropp, Ben Bettisworth.
+Latest version: https://github.com/amkozlov/raxml-ng
+Questions/problems/suggestions? Please visit: https://groups.google.com/forum/#!forum/raxml
+
+System: 11th Gen Intel(R) Core(TM) i7-11850H @ 2.50GHz, 8 cores, 11 GB RAM
+
+RAxML-NG was called at 07-Dec-2023 19:35:51 as follows:
+
+raxml-ng --msa ../results/phyl_trees/refrence_alignment_tree/vamp_mafft_cut_gblocks.fasta --model GTR+G --prefix T2_gblocks --threads 3 --seed 2 --tree pars{25},rand{25}
+
+Analysis options:
+  run mode: ML tree search
+  start tree(s): random (25) + parsimony (25)
+  random seed: 2
+  tip-inner: OFF
+  pattern compression: ON
+  per-rate scalers: OFF
+  site repeats: ON
+  fast spr radius: AUTO
+  spr subtree cutoff: 1.000000
+  branch lengths: proportional (ML estimate, algorithm: NR-FAST)
+  SIMD kernels: AVX2
+  parallelization: coarse-grained (auto), PTHREADS (3 threads), thread pinning: OFF
+
+[00:00:00] Reading alignment from file: ../results/phyl_trees/refrence_alignment_tree/vamp_mafft_cut_gblocks.fasta
+[00:00:00] Loaded alignment with 103 taxa and 1204 sites
+
+WARNING: Sequences Thalassomyxa_strain_KibAr_KC779519 and Thalassomyxa_strain_V1ld4_KC779520 are exactly identical!
+WARNING: Sequences Theratromyxa_strain_BaikalA155_EU567294 and Theratromyxa_weberi_GQ377666 are exactly identical!
+WARNING: Sequences Theratromyxa_strain_BaikalA155_EU567294 and Theratromyxa_strain_Wara_KC779513 are exactly identical!
+WARNING: Sequences Placopus_X_GU385615 and Placopus_XX_GU385647 are exactly identical!
+WARNING: Duplicate sequences found: 4
+
+NOTE: Reduced alignment (with duplicates and gap-only sites/taxa removed) 
+NOTE: was saved to: /home/lubo/code/wRajter/vampyrella_2023/notebooks/T2_gblocks.raxml.reduced.phy
+
+Alignment comprises 1 partitions and 818 patterns
+
+Partition 0: noname
+Model: GTR+FO+G4m
+Alignment sites / patterns: 1204 / 818
+Gaps: 18.04 %
+Invariant sites: 44.02 %
+
+
+NOTE: Binary MSA file created: T2_gblocks.raxml.rba
+
+Parallelization scheme autoconfig: 3 worker(s) x 1 thread(s)
+
+Parallel reduction/worker buffer size: 1 KB  / 0 KB
+
+[00:00:00] Generating 25 random starting tree(s) with 103 taxa
+[00:00:00] Generating 25 parsimony starting tree(s) with 103 taxa
+[00:00:00] Data distribution: max. partitions/sites/weight per thread: 1 / 818 / 13088
+[00:00:00] Data distribution: max. searches per worker: 17
+
+Starting ML tree search with 50 distinct starting trees
+
+[00:00:24] [worker #1] ML tree search #2, logLikelihood: -17965.011914
+[00:00:26] [worker #2] ML tree search #3, logLikelihood: -17965.098167
+[00:00:31] [worker #0] ML tree search #1, logLikelihood: -17965.081059
+[00:00:48] [worker #2] ML tree search #6, logLikelihood: -17965.139601
+[00:00:50] [worker #1] ML tree search #5, logLikelihood: -17965.170126
+[00:00:58] [worker #0] ML tree search #4, logLikelihood: -17964.653039
+[00:01:13] [worker #2] ML tree search #9, logLikelihood: -17965.005999
+[00:01:15] [worker #1] ML tree search #8, logLikelihood: -17964.655675
+[00:01:21] [worker #0] ML tree search #7, logLikelihood: -17965.154638
+[00:01:39] [worker #2] ML tree search #12, logLikelihood: -17965.141087
+[00:01:40] [worker #1] ML tree search #11, logLikelihood: -17964.677603
+[00:01:52] [worker #0] ML tree search #10, logLikelihood: -17965.002615
+[00:02:08] [worker #1] ML tree search #14, logLikelihood: -17965.097439
+[00:02:12] [worker #2] ML tree search #15, logLikelihood: -17964.755069
+[00:02:20] [worker #0] ML tree search #13, logLikelihood: -17965.018795
+[00:02:36] [worker #1] ML tree search #17, logLikelihood: -17964.676276
+[00:02:37] [worker #2] ML tree search #18, logLikelihood: -17965.051742
+[00:02:52] [worker #0] ML tree search #16, logLikelihood: -17965.043416
+[00:03:04] [worker #2] ML tree search #21, logLikelihood: -17965.066012
+[00:03:05] [worker #1] ML tree search #20, logLikelihood: -17965.004951
+[00:03:23] [worker #0] ML tree search #19, logLikelihood: -17965.110944
+[00:03:33] [worker #1] ML tree search #23, logLikelihood: -17965.034777
+[00:03:37] [worker #2] ML tree search #24, logLikelihood: -17965.097051
+[00:03:48] [worker #0] ML tree search #22, logLikelihood: -17965.003907
+[00:03:54] [worker #1] ML tree search #26, logLikelihood: -17965.178716
+[00:03:58] [worker #2] ML tree search #27, logLikelihood: -17966.807612
+[00:04:13] [worker #0] ML tree search #25, logLikelihood: -17965.004845
+[00:04:25] [worker #1] ML tree search #29, logLikelihood: -17965.105667
+[00:04:31] [worker #2] ML tree search #30, logLikelihood: -17965.117075
+[00:04:39] [worker #0] ML tree search #28, logLikelihood: -17964.699839
+[00:04:51] [worker #1] ML tree search #32, logLikelihood: -17964.809238
+[00:04:54] [worker #2] ML tree search #33, logLikelihood: -17965.124878
+[00:04:59] [worker #0] ML tree search #31, logLikelihood: -17964.693451
+[00:05:17] [worker #1] ML tree search #35, logLikelihood: -17965.166750
+[00:05:26] [worker #2] ML tree search #36, logLikelihood: -17965.117799
+[00:05:32] [worker #0] ML tree search #34, logLikelihood: -17965.102822
+[00:05:37] [worker #1] ML tree search #38, logLikelihood: -17965.178568
+[00:05:56] [worker #0] ML tree search #37, logLikelihood: -17965.200967
+[00:06:00] [worker #2] ML tree search #39, logLikelihood: -17965.125084
+[00:06:05] [worker #1] ML tree search #41, logLikelihood: -17965.121230
+[00:06:23] [worker #0] ML tree search #40, logLikelihood: -17966.791268
+[00:06:26] [worker #1] ML tree search #44, logLikelihood: -17964.692017
+[00:06:39] [worker #2] ML tree search #42, logLikelihood: -17967.891806
+[00:06:44] [worker #0] ML tree search #43, logLikelihood: -17967.062311
+[00:06:56] [worker #1] ML tree search #47, logLikelihood: -17967.421420
+[00:07:01] [worker #2] ML tree search #45, logLikelihood: -17965.202065
+[00:07:05] [worker #0] ML tree search #46, logLikelihood: -17964.707710
+[00:07:26] [worker #2] ML tree search #48, logLikelihood: -17964.809106
+[00:07:28] [worker #1] ML tree search #50, logLikelihood: -17965.082057
+[00:07:30] [worker #0] ML tree search #49, logLikelihood: -17964.785704
+
+Optimized model parameters:
+
+   Partition 0: noname
+   Rate heterogeneity: GAMMA (4 cats, mean),  alpha: 0.349245 (ML),  weights&rates: (0.250000,0.010124) (0.250000,0.142968) (0.250000,0.669954) (0.250000,3.176954) 
+   Base frequencies (ML): 0.295599 0.154829 0.243500 0.306073 
+   Substitution rates (ML): 1.666749 3.346045 1.606839 0.905504 7.248101 1.000000 
+
+
+Final LogLikelihood: -17964.653039
+
+AIC score: 36353.306077 / AICc score: 36444.438267 / BIC score: 37433.107858
+Free parameters (model + branch lengths): 212
+
+WARNING: Best ML tree contains 7 near-zero branches!
+
+Best ML tree with collapsed near-zero branches saved to: /home/lubo/code/wRajter/vampyrella_2023/notebooks/T2_gblocks.raxml.bestTreeCollapsed
+Best ML tree saved to: /home/lubo/code/wRajter/vampyrella_2023/notebooks/T2_gblocks.raxml.bestTree
+All ML trees saved to: /home/lubo/code/wRajter/vampyrella_2023/notebooks/T2_gblocks.raxml.mlTrees
+Optimized model saved to: /home/lubo/code/wRajter/vampyrella_2023/notebooks/T2_gblocks.raxml.bestModel
+
+Execution log saved to: /home/lubo/code/wRajter/vampyrella_2023/notebooks/T2_gblocks.raxml.log
+
+Analysis started: 07-Dec-2023 19:35:51 / finished: 07-Dec-2023 19:43:21
+
+Elapsed time: 450.064 seconds
+

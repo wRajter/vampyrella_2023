@@ -1,0 +1,51 @@
+
+RAxML-NG v. 1.1.0 released on 29.11.2021 by The Exelixis Lab.
+Developed by: Alexey M. Kozlov and Alexandros Stamatakis.
+Contributors: Diego Darriba, Tomas Flouri, Benoit Morel, Sarah Lutteropp, Ben Bettisworth.
+Latest version: https://github.com/amkozlov/raxml-ng
+Questions/problems/suggestions? Please visit: https://groups.google.com/forum/#!forum/raxml
+
+System: 11th Gen Intel(R) Core(TM) i7-11850H @ 2.50GHz, 8 cores, 11 GB RAM
+
+RAxML-NG was called at 07-Dec-2023 18:58:27 as follows:
+
+raxml-ng --check --msa ../results/phyl_trees/refrence_alignment_tree/vamp_mafft_cut_gblocks.fasta --model GTR+G --prefix T1_gblocks
+
+Analysis options:
+  run mode: Alignment validation
+  start tree(s): 
+  random seed: 1701971907
+  SIMD kernels: AVX2
+  parallelization: coarse-grained (auto), PTHREADS (auto)
+
+[00:00:00] Reading alignment from file: ../results/phyl_trees/refrence_alignment_tree/vamp_mafft_cut_gblocks.fasta
+[00:00:00] Loaded alignment with 103 taxa and 1204 sites
+
+WARNING: Sequences Thalassomyxa_strain_KibAr_KC779519 and Thalassomyxa_strain_V1ld4_KC779520 are exactly identical!
+WARNING: Sequences Theratromyxa_strain_BaikalA155_EU567294 and Theratromyxa_weberi_GQ377666 are exactly identical!
+WARNING: Sequences Theratromyxa_strain_BaikalA155_EU567294 and Theratromyxa_strain_Wara_KC779513 are exactly identical!
+WARNING: Sequences Placopus_X_GU385615 and Placopus_XX_GU385647 are exactly identical!
+WARNING: Duplicate sequences found: 4
+
+NOTE: Reduced alignment (with duplicates and gap-only sites/taxa removed) 
+NOTE: was saved to: /home/lubo/code/wRajter/vampyrella_2023/notebooks/T1_gblocks.raxml.reduced.phy
+
+Alignment comprises 1 partitions and 1204 sites
+
+Partition 0: noname
+Model: GTR+FO+G4m
+Alignment sites: 1204
+Gaps: 18.04 %
+Invariant sites: 44.02 %
+
+
+
+Alignment can be successfully read by RAxML-NG.
+
+
+Execution log saved to: /home/lubo/code/wRajter/vampyrella_2023/notebooks/T1_gblocks.raxml.log
+
+Analysis started: 07-Dec-2023 18:58:27 / finished: 07-Dec-2023 18:58:27
+
+Elapsed time: 0.047 seconds
+

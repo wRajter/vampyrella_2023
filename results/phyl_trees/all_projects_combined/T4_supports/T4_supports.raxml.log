@@ -1,0 +1,34 @@
+
+RAxML-NG v. 1.1.0 released on 29.11.2021 by The Exelixis Lab.
+Developed by: Alexey M. Kozlov and Alexandros Stamatakis.
+Contributors: Diego Darriba, Tomas Flouri, Benoit Morel, Sarah Lutteropp, Ben Bettisworth.
+Latest version: https://github.com/amkozlov/raxml-ng
+Questions/problems/suggestions? Please visit: https://groups.google.com/forum/#!forum/raxml
+
+System: 11th Gen Intel(R) Core(TM) i7-11850H @ 2.50GHz, 8 cores, 11 GB RAM
+
+RAxML-NG was called at 11-Dec-2023 19:03:02 as follows:
+
+raxml-ng --support --tree ../results/phyl_trees/all_projects_combined/T2_MLtree/T2_MLtree.raxml.bestTree --bs-trees ../results/phyl_trees/all_projects_combined/T3_bootstraps/T3_bootstraps.raxml.bootstraps --prefix T4_supports --threads 3
+
+Analysis options:
+  run mode: Compute bipartition support (Felsenstein Bootstrap)
+  start tree(s): user
+  random seed: 1702317782
+  SIMD kernels: AVX2
+  parallelization: coarse-grained (auto), PTHREADS (3 threads), thread pinning: OFF
+
+Reading reference tree from file: ../results/phyl_trees/all_projects_combined/T2_MLtree/T2_MLtree.raxml.bestTree
+Reference tree size: 183
+
+Reading bootstrap trees from file: ../results/phyl_trees/all_projects_combined/T3_bootstraps/T3_bootstraps.raxml.bootstraps
+Loaded 550 trees with 183 taxa.
+
+Best ML tree with Felsenstein bootstrap (FBP) support values saved to: /home/lubo/code/wRajter/vampyrella_2023/notebooks/T4_supports.raxml.support
+
+Execution log saved to: /home/lubo/code/wRajter/vampyrella_2023/notebooks/T4_supports.raxml.log
+
+Analysis started: 11-Dec-2023 19:03:02 / finished: 11-Dec-2023 19:03:02
+
+Elapsed time: 0.228 seconds
+

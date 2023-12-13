@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Define project information
-PROJECT="Suthaus_2022"
-MARKER="Full18S"
+PROJECT="Jamy_2022"
+MARKER="rDNA"
 RAW_DATA="../../raw_data"
 SUFFIX=".fastq.gz"
 JL_SCRIPT="../julia/denoise_RAD.jl"
@@ -10,7 +10,8 @@ JL_SCRIPT="../julia/denoise_RAD.jl"
 
 
 # Construct the reads directory path
-READS_DIR="${RAW_DATA}/dada2/${PROJECT}/${MARKER}/filtered"
+READS_DIR="${RAW_DATA}/extracted_18S/${PROJECT}/${MARKER}"
+
 
 # Decompress all .gz files in the directory
 echo "Decompressing all .gz files in ${READS_DIR}"

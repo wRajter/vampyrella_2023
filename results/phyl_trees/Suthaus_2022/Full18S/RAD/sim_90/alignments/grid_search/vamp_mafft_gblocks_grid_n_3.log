@@ -1,0 +1,26 @@
+stdout:
+
+116 sequences and 2006 positions in the first alignment file:
+../results/phyl_trees/Suthaus_2022/Full18S/RAD/sim_90/alignments/vamp_mafft.fasta
+
+
+WARNING: Parameter -b1 not properly entered.
+The minimum number of sequences for a conserved position must be lower than or equal to the minimum number of sequences for a flank position
+
+WARNING: Parameter -b2 not properly entered.
+The minimum number of sequences for a flank position must be lower than or equal to 116 (the number of sequences)
+../results/phyl_trees/Suthaus_2022/Full18S/RAD/sim_90/alignments/vamp_mafft.fasta
+Original alignment: 2006 positions
+Gblocks alignment:  0 positions (0 %) in 0 selected block(s)
+
+
+stderr:
+
+
+
+Parameters used:
+Minimum Number Of Sequences For A Conserved Position: 59
+Minimum Number Of Sequences For A Flanking Position: 98
+Maximum Number Of Contiguous Nonconserved Positions: 23
+Minimum Length Of A Block: 25
+Allowed Gap Positions: None

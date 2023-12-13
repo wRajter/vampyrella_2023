@@ -1,0 +1,57 @@
+
+RAxML-NG v. 1.1.0 released on 29.11.2021 by The Exelixis Lab.
+Developed by: Alexey M. Kozlov and Alexandros Stamatakis.
+Contributors: Diego Darriba, Tomas Flouri, Benoit Morel, Sarah Lutteropp, Ben Bettisworth.
+Latest version: https://github.com/amkozlov/raxml-ng
+Questions/problems/suggestions? Please visit: https://groups.google.com/forum/#!forum/raxml
+
+System: 11th Gen Intel(R) Core(TM) i7-11850H @ 2.50GHz, 8 cores, 11 GB RAM
+
+RAxML-NG was called at 11-Dec-2023 11:53:07 as follows:
+
+raxml-ng --check --msa ../results/phyl_trees/all_projects_combined/vamp_mafft.fasta --model GTR+G --prefix T1_data_check
+
+Analysis options:
+  run mode: Alignment validation
+  start tree(s): 
+  random seed: 1702291987
+  SIMD kernels: AVX2
+  parallelization: coarse-grained (auto), PTHREADS (auto)
+
+[00:00:00] Reading alignment from file: ../results/phyl_trees/all_projects_combined/vamp_mafft.fasta
+[00:00:00] Loaded alignment with 183 taxa and 2038 sites
+
+WARNING: Fully undetermined columns found: 7
+
+WARNING: Sequences Thalassomyxa_strain_KibAr_KC779519 and Thalassomyxa_strain_V1ld4_KC779520 are exactly identical!
+WARNING: Sequences 93ec799fa70cc9a684fdbec04fb423d8_Sim17 and 93ec799fa70cc9a684fdbec04fb423d8_Sim22 are exactly identical!
+WARNING: Sequences 91b1f98492eba26f9f791cf7949afb56_NH4 and 91b1f98492eba26f9f791cf7949afb56_Sim17 are exactly identical!
+WARNING: Sequences 91b1f98492eba26f9f791cf7949afb56_NH4 and 91b1f98492eba26f9f791cf7949afb56_Sim22 are exactly identical!
+WARNING: Sequences 91b1f98492eba26f9f791cf7949afb56_NH4 and 91b1f98492eba26f9f791cf7949afb56_Th38 are exactly identical!
+WARNING: Sequences 91b1f98492eba26f9f791cf7949afb56_NH4 and 91b1f98492eba26f9f791cf7949afb56_Th40 are exactly identical!
+WARNING: Sequences fa04010ef186193e6af2567e8e77c9fd_Sim17 and fa04010ef186193e6af2567e8e77c9fd_Sim22 are exactly identical!
+WARNING: Sequences Placopus_X_GU385615 and Placopus_XX_GU385647 are exactly identical!
+WARNING: Duplicate sequences found: 8
+
+NOTE: Reduced alignment (with duplicates and gap-only sites/taxa removed) 
+NOTE: was saved to: /home/lubo/code/wRajter/vampyrella_2023/notebooks/T1_data_check.raxml.reduced.phy
+
+Alignment comprises 1 partitions and 2031 sites
+
+Partition 0: noname
+Model: GTR+FO+G4m
+Alignment sites: 2031
+Gaps: 32.33 %
+Invariant sites: 41.36 %
+
+
+
+Alignment can be successfully read by RAxML-NG.
+
+
+Execution log saved to: /home/lubo/code/wRajter/vampyrella_2023/notebooks/T1_data_check.raxml.log
+
+Analysis started: 11-Dec-2023 11:53:07 / finished: 11-Dec-2023 11:53:07
+
+Elapsed time: 0.081 seconds
+
